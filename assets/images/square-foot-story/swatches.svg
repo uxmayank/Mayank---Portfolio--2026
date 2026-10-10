@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="76" height="20" viewBox="0 0 76 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Swatches" clip-path="url(#clip0_0_99)">
+<circle id="Ellipse" cx="10" cy="10" r="9" fill="#FA6000" stroke="white" stroke-width="2"/>
+<circle id="Ellipse_2" cx="24" cy="10" r="9" fill="#F5A833" stroke="white" stroke-width="2"/>
+<circle id="Ellipse_3" cx="38" cy="10" r="9" fill="#2EA44F" stroke="white" stroke-width="2"/>
+<circle id="Ellipse_4" cx="52" cy="10" r="9" fill="#0052BD" stroke="white" stroke-width="2"/>
+<circle id="Ellipse_5" cx="66" cy="10" r="9" fill="#111111" stroke="white" stroke-width="2"/>
+</g>
+<defs>
+<clipPath id="clip0_0_99">
+<rect width="76" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
