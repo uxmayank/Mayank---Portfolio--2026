@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MechServi — Mayank Pal</title>
+  <meta name="description" content="How Mayank Pal designed the MechServi website, a marketplace that connects vehicle owners with verified vendors for doorstep car and bike care.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Base -->
   <link rel="stylesheet" href="../css/base/reset.css">
@@ -20,30 +21,164 @@
   <link rel="stylesheet" href="../css/components/nav.css">
   <link rel="stylesheet" href="../css/components/footer.css">
   <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/browser-mockup.css">
+  <link rel="stylesheet" href="../css/components/mechservi-cover.css">
 
   <!-- Page -->
   <link rel="stylesheet" href="../css/pages/case-study.css">
 </head>
 <body>
-  <div class="page">
+  <div class="page page--case-study page--case-study-compact">
 
     <header class="nav">
       <nav class="nav__tabs" aria-label="Main">
+        <a class="nav__tab nav__tab--back" href="../index.html#work">←  Project</a>
         <a class="nav__tab" href="../index.html">Home</a>
-        <a class="nav__tab" href="../index.html#work">Work</a>
         <a class="nav__tab" href="../about.html">About</a>
       </nav>
       <a class="button button--primary button--pill" href="../assets/docs/resume.pdf" download>Download Resume</a>
     </header>
 
-    <main class="page__main"></main>
+    <main class="page__main">
+
+      <!-- ============ Hero ============ -->
+      <section class="cs-hero cs-hero--compact">
+        <div class="cs-hero__text">
+          <ul class="cs-tags cs-tags--pills">
+            <li class="cs-tag">Freelance project</li>
+            <li class="cs-tag">Website</li>
+            <li class="cs-tag">Automotive services</li>
+          </ul>
+          <h1 class="cs-hero__title">A marketplace for car and bike care</h1>
+          <p class="cs-hero__intro">MechServi connects vehicle owners with verified vendors for doorstep cleaning, servicing, spare parts and accessories. I designed the marketing website that explains the service, earns trust and brings in both customers and vendors.</p>
+          <a class="cs-links__link cs-hero__link" href="#">Check live website ↗</a>
+        </div>
+
+        <dl class="cs-meta cs-meta--lined">
+          <div class="cs-meta__item"><dt class="cs-meta__label">Role</dt><dd class="cs-meta__value">UI/UX designer</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Type</dt><dd class="cs-meta__value">Freelance</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Platform</dt><dd class="cs-meta__value">Website · Desktop</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Scope</dt><dd class="cs-meta__value">Marketing landing page</dd></div>
+        </dl>
+
+        <!-- Same cover as the home page card, at full width -->
+        <div class="mechservi-cover mechservi-cover--hero">
+          <div class="mechservi-cover__stage">
+            <div class="glow mechservi-cover__glow"><img class="glow__image" src="../assets/images/mechservi/glow-cover.svg" alt=""></div>
+            <div class="browser mechservi-cover__browser">
+              <div class="browser__bar">
+                <img class="browser__dot" src="../assets/icons/browser-dot-red.svg" alt="">
+                <img class="browser__dot" src="../assets/icons/browser-dot-yellow.svg" alt="">
+                <img class="browser__dot" src="../assets/icons/browser-dot-green.svg" alt="">
+                <span class="browser__url"><span class="browser__url-text">mechservi.com</span></span>
+              </div>
+              <img class="browser__page" src="../assets/images/mechservi/landing.webp" alt="MechServi landing page: India’s fastest growing car and bike care marketplace">
+            </div>
+            <div class="stat stat--customers">
+              <div class="stat__chip"><span class="stat__value">50,000+</span><span class="stat__label">Happy customers</span></div>
+            </div>
+            <div class="stat stat--vendors">
+              <div class="stat__chip stat__chip--red"><span class="stat__value">1,200+</span><span class="stat__label">Verified vendors</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 01 The product ============ -->
+      <section class="cs-overview">
+        <div class="cs-head cs-head--overview">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">01</span>The product</p>
+          <h2 class="cs-head__title cs-head__title--tight">What the website needed to do</h2>
+          <p class="cs-head__text">MechServi serves two audiences at once: car and bike owners looking for reliable service, and vendors who want more customers. The landing page had to explain a new kind of service quickly and give both groups a clear next step.</p>
+        </div>
+        <ol class="cs-highlights">
+          <li class="cs-highlight">
+            <span class="cs-highlight__num">01</span>
+            <div class="cs-highlight__text">
+              <h3 class="cs-highlight__title">Two clear paths</h3>
+              <p class="cs-highlight__description">Explore Marketplace for owners and Join as Vendor for businesses, side by side in the hero.</p>
+            </div>
+          </li>
+          <li class="cs-highlight">
+            <span class="cs-highlight__num">02</span>
+            <div class="cs-highlight__text">
+              <h3 class="cs-highlight__title">Explain the recommendation flow</h3>
+              <p class="cs-highlight__description">A four-step visual shows how MechServi looks at a vehicle, collects preferences and suggests what it needs.</p>
+            </div>
+          </li>
+          <li class="cs-highlight">
+            <span class="cs-highlight__num">03</span>
+            <div class="cs-highlight__text">
+              <h3 class="cs-highlight__title">Build trust early</h3>
+              <p class="cs-highlight__description">Verified vendors, secure payments and customer numbers sit high on the page, before any product pitch.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ 02 Inside the website ============ -->
+      <section class="cs-section">
+        <div class="cs-head cs-head--compact">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">02</span>Inside the website</p>
+          <h2 class="cs-head__title cs-head__title--tight">Key screens</h2>
+        </div>
+        <div class="cs-shots">
+          <figure class="browser-shot">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/mechservi/screen-stats-growth.webp" alt="MechServi stats section with customer and vendor growth numbers" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">Stats &amp; growth</figcaption>
+          </figure>
+          <figure class="browser-shot">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/mechservi/screen-how-it-works.webp" alt="How it works section showing the four-step recommendation flow" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">How it works</figcaption>
+          </figure>
+          <figure class="browser-shot">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/mechservi/screen-featured-products.webp" alt="Featured products section with car care products" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">Featured products</figcaption>
+          </figure>
+          <figure class="browser-shot">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/mechservi/screen-why-people-trust-us.webp" alt="Why people trust us section with trust badges" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">Why people trust us</figcaption>
+          </figure>
+          <figure class="browser-shot cs-shots__wide">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/mechservi/screen-shop-by-categories.webp" alt="Shop by categories section with product categories" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">Shop by categories</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ Next project ============ -->
+      <section class="cs-next">
+        <div class="cs-next__text">
+          <p class="cs-next__label">Next project</p>
+          <h2 class="cs-next__title">Designed a resume builder website</h2>
+          <p class="cs-next__meta">BuildMyCV · Website · Freelance</p>
+        </div>
+        <a class="button button--primary button--pill cs-next__button" href="buildmycv.html">View project →</a>
+      </section>
+    </main>
 
     <footer class="footer">
       <p class="footer__text">© 2026 Mayank Pal  ·  Delhi NCR, India</p>
       <nav class="footer__links" aria-label="Social">
         <a class="footer__link" href="#">LinkedIn</a>
         <a class="footer__link" href="#">X (Twitter)</a>
-        <a class="footer__link" href="../assets/docs/resume.pdf" download>Resume</a>
+        <a class="footer__link" href="mailto:Mayankoct2004@gmail.com">Mayankoct2004@gmail.com</a>
       </nav>
     </footer>
 

@@ -592,9 +592,209 @@
 }
 
 /* ==========================================================
+   Compact case study (freelance projects, e.g. MechServi):
+   tighter page rhythm, pill tags, a lined meta row,
+   an overview with highlights and a grid of browser shots
+   ========================================================== */
+.page--case-study-compact,
+.page--case-study-compact .page__main {
+  gap: var(--space-96);
+}
+
+.cs-hero--compact {
+  gap: var(--space-40);
+  padding-top: 0;
+}
+
+.cs-tags--pills .cs-tag {
+  border-radius: var(--radius-round);
+  color: var(--color-text-strong);
+  line-height: normal;
+}
+
+/* Single "Check live website ↗" link under the intro */
+.cs-hero__link {
+  align-self: flex-start;
+}
+
+/* Meta row with lines above and below instead of a card */
+.cs-meta--lined {
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: var(--space-20) 0;
+  background: none;
+  border: 0;
+  border-top: 1px solid var(--color-browser-border);
+  border-bottom: 1px solid var(--color-browser-border);
+  border-radius: 0;
+  line-height: normal;
+}
+
+.cs-meta--lined .cs-meta__item {
+  flex: 1;
+  gap: var(--space-6);
+}
+
+.cs-meta--lined .cs-meta__label {
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+}
+
+.cs-meta--lined .cs-meta__value {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-17);
+  line-height: normal;
+}
+
+/* Bigger section title (34px) used by the compact layout */
+.cs-head__title--tight {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-34);
+  line-height: 40px;
+  letter-spacing: -1.02px;
+}
+
+.cs-head--overview {
+  gap: var(--space-14);
+}
+
+.cs-head--overview .cs-head__eyebrow,
+.cs-head--compact .cs-head__eyebrow {
+  line-height: normal;
+}
+
+.cs-head--compact {
+  gap: var(--space-10);
+}
+
+/* Overview: text on the left, numbered highlights on the right */
+.cs-overview {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-64);
+}
+
+.cs-overview > * {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-16);
+  padding: var(--space-20) var(--space-22);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-16);
+}
+
+.cs-highlight__num {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: var(--color-green-50);
+  border-radius: var(--radius-10);
+  color: var(--color-green-900);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cs-highlight__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cs-highlight__title {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-17);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cs-highlight__description {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+  line-height: 21px;
+}
+
+/* "Key screens": browser shots in rows of two, the last one full width */
+.cs-shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-24);
+}
+
+.cs-shots__wide {
+  grid-column: 1 / -1;
+}
+
+/* The wide shot is cropped to a banner shape, as in Figma */
+.cs-shots__wide .browser-shot__image {
+  aspect-ratio: 1246 / 704;
+}
+
+/* ==========================================================
    Mobile (matches the 402px Figma frame)
    ========================================================== */
 @media (max-width: 767px) {
+  .page--case-study-compact,
+  .page--case-study-compact .page__main {
+    gap: var(--space-64);
+  }
+
+  .page--case-study-compact {
+    padding-bottom: var(--space-32);
+  }
+
+  .cs-hero--compact {
+    gap: var(--space-28);
+  }
+
+  /* Two columns; the extra class beats the general .cs-meta mobile rule below */
+  .cs-meta.cs-meta--lined {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-16) var(--space-20);
+  }
+
+  .cs-meta--lined .cs-meta__item {
+    flex: 0 0 calc(50% - var(--space-10));
+  }
+
+  .cs-head__title--tight {
+    font-size: var(--font-size-26);
+    line-height: 31px;
+    letter-spacing: -0.78px;
+  }
+
+  .cs-overview {
+    flex-direction: column;
+    gap: var(--space-24);
+  }
+
+  .cs-highlight {
+    padding: var(--space-20) var(--space-16);
+  }
+
+  .cs-shots {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+
   .page--case-study,
   .page--case-study .page__main {
     gap: var(--space-72);
