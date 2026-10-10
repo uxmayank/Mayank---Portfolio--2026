@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mayank Pal — Product Designer</title>
+  <meta name="description" content="Mayank Pal is a product designer who thinks in systems and plans like a PM.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Base -->
   <link rel="stylesheet" href="css/base/reset.css">
@@ -19,16 +20,291 @@
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/chips.css">
+  <link rel="stylesheet" href="css/components/cards.css">
+  <link rel="stylesheet" href="css/components/phone-mockup.css">
+  <link rel="stylesheet" href="css/components/browser-mockup.css">
 
   <!-- Page -->
   <link rel="stylesheet" href="css/pages/home.css">
 </head>
 <body>
-  <header></header>
+  <div class="page">
 
-  <main></main>
+    <header class="nav">
+      <nav class="nav__tabs" aria-label="Main">
+        <a class="nav__tab" href="index.html" aria-current="page">Home</a>
+        <a class="nav__tab" href="index.html#work">Work</a>
+        <a class="nav__tab" href="about.html">About</a>
+      </nav>
+      <a class="button button--primary button--pill" href="assets/docs/resume.pdf" download>Download Resume</a>
+    </header>
 
-  <footer></footer>
+    <main class="page__main">
+
+      <!-- Hero -->
+      <section class="hero">
+        <img class="hero__avatar" src="assets/images/home/avatar.webp" alt="Portrait of Mayank Pal" width="80" height="80">
+        <h1 class="hero__title">Mayank Pal</h1>
+        <p class="hero__intro">
+          <strong>Product designer</strong> who thinks in <strong>systems</strong> and <strong>plans like a PM</strong>:
+          starting from the user’s problem, then building the foundation that lets the whole team <strong>ship consistently.</strong>
+        </p>
+        <div class="button-group">
+          <a class="button button--primary" href="#work">My latest work</a>
+          <a class="button button--secondary" href="assets/docs/resume.pdf" download>Download resume</a>
+        </div>
+      </section>
+
+      <!-- Toolkit -->
+      <section class="toolkit">
+        <div class="section-head">
+          <p class="section-head__eyebrow">Toolkit</p>
+          <h2 class="section-head__title">My Building toolkit</h2>
+        </div>
+        <div class="toolkit__marquee">
+          <ul class="toolkit__strip">
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-figma.webp" alt="Figma logo"><span class="tool__text"><span class="tool__name">Figma</span><span class="tool__category">Design</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-framer.webp" alt="Framer logo"><span class="tool__text"><span class="tool__name">Framer</span><span class="tool__category">Prototype</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-jitter.webp" alt="Jitter logo"><span class="tool__text"><span class="tool__name">Jitter</span><span class="tool__category">Motion</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-lovable.webp" alt="Lovable logo"><span class="tool__text"><span class="tool__name">Lovable</span><span class="tool__category">AI</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-claude.webp" alt="Claude logo"><span class="tool__text"><span class="tool__name">Claude</span><span class="tool__category">AI</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-chatgpt.webp" alt="ChatGPT logo"><span class="tool__text"><span class="tool__name">ChatGPT</span><span class="tool__category">AI</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-notion.webp" alt="Notion logo"><span class="tool__text"><span class="tool__name">Notion</span><span class="tool__category">Docs</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-canva.webp" alt="Canva logo"><span class="tool__text"><span class="tool__name">Canva</span><span class="tool__category">Design</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-affinity.webp" alt="Affinity logo"><span class="tool__text"><span class="tool__name">Affinity</span><span class="tool__category">Design</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-miro.webp" alt="Miro logo"><span class="tool__text"><span class="tool__name">Miro</span><span class="tool__category">Whiteboard</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-adobe-xd.webp" alt="Adobe XD logo"><span class="tool__text"><span class="tool__name">Adobe XD</span><span class="tool__category">Design</span></span></li>
+            <li class="tool"><img class="tool__logo" src="assets/images/home/logo-sketch.webp" alt="Sketch logo"><span class="tool__text"><span class="tool__name">Sketch</span><span class="tool__category">Design</span></span></li>
+            <!-- Second copy so the loop scrolls seamlessly; hidden from screen readers -->
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-figma.webp" alt=""><span class="tool__text"><span class="tool__name">Figma</span><span class="tool__category">Design</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-framer.webp" alt=""><span class="tool__text"><span class="tool__name">Framer</span><span class="tool__category">Prototype</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-jitter.webp" alt=""><span class="tool__text"><span class="tool__name">Jitter</span><span class="tool__category">Motion</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-lovable.webp" alt=""><span class="tool__text"><span class="tool__name">Lovable</span><span class="tool__category">AI</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-claude.webp" alt=""><span class="tool__text"><span class="tool__name">Claude</span><span class="tool__category">AI</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-chatgpt.webp" alt=""><span class="tool__text"><span class="tool__name">ChatGPT</span><span class="tool__category">AI</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-notion.webp" alt=""><span class="tool__text"><span class="tool__name">Notion</span><span class="tool__category">Docs</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-canva.webp" alt=""><span class="tool__text"><span class="tool__name">Canva</span><span class="tool__category">Design</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-affinity.webp" alt=""><span class="tool__text"><span class="tool__name">Affinity</span><span class="tool__category">Design</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-miro.webp" alt=""><span class="tool__text"><span class="tool__name">Miro</span><span class="tool__category">Whiteboard</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-adobe-xd.webp" alt=""><span class="tool__text"><span class="tool__name">Adobe XD</span><span class="tool__category">Design</span></span></li>
+            <li class="tool" aria-hidden="true"><img class="tool__logo" src="assets/images/home/logo-sketch.webp" alt=""><span class="tool__text"><span class="tool__name">Sketch</span><span class="tool__category">Design</span></span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Empty grid frame from the desktop design -->
+      <div class="home-placeholder" aria-hidden="true"></div>
+
+      <!-- Case studies -->
+      <section class="case-studies" id="work">
+        <div class="section-head">
+          <p class="section-head__eyebrow">Selected work</p>
+          <h2 class="section-head__title">Case studies</h2>
+        </div>
+
+        <!-- Square Foot Story (animated cover) -->
+        <article class="work-card">
+          <div class="work-card__meta">
+            <div class="work-card__text">
+              <h3 class="work-card__title work-card__title--large">Making real estate decisions trustworthy</h3>
+              <p class="work-card__subtitle">Square Foot Story · Mobile app &amp; Website</p>
+            </div>
+            <span class="chip chip--round"><img class="chip__dot" src="assets/icons/dot-green.svg" alt="">Live</span>
+          </div>
+          <div class="work-card__cover cover-sfs">
+            <div class="work-card__stage">
+              <div class="glow cover-sfs__glow-1"><img class="glow__image" src="assets/images/home/glow-sfs-1.svg" alt=""></div>
+              <div class="glow cover-sfs__glow-2"><img class="glow__image" src="assets/images/home/glow-sfs-2.svg" alt=""></div>
+
+              <div class="phone cover-sfs__phone cover-sfs__phone--home">
+                <div class="phone__screens">
+                  <img class="phone__screen" src="assets/images/home/sfs-home-1.webp" alt="Square Foot Story home screen with a property search and trending properties">
+                  <img class="phone__screen" src="assets/images/home/sfs-home-2.webp" alt="Square Foot Story home screen, second view">
+                  <img class="phone__screen" src="assets/images/home/sfs-home-3.webp" alt="Square Foot Story home screen, third view">
+                </div>
+              </div>
+              <div class="phone cover-sfs__phone cover-sfs__phone--splash">
+                <div class="phone__screens">
+                  <img class="phone__screen" src="assets/images/home/sfs-splash-1.webp" alt="Square Foot Story welcome screen: Find properties without the chaos">
+                  <img class="phone__screen" src="assets/images/home/sfs-splash-2.webp" alt="Square Foot Story onboarding screen, second step">
+                  <img class="phone__screen" src="assets/images/home/sfs-splash-3.webp" alt="Square Foot Story onboarding screen, third step">
+                </div>
+              </div>
+              <div class="phone cover-sfs__phone cover-sfs__phone--builder">
+                <div class="phone__screens">
+                  <img class="phone__screen" src="assets/images/home/sfs-builder-1.webp" alt="Builder credibility screen showing a 54 out of 100 score">
+                  <img class="phone__screen" src="assets/images/home/sfs-builder-2.webp" alt="Builder credibility screen, details view">
+                </div>
+              </div>
+              <div class="phone cover-sfs__phone cover-sfs__phone--calculator">
+                <div class="phone__screens">
+                  <img class="phone__screen" src="assets/images/home/sfs-calculator-1.webp" alt="Circle rate calculator screen with property inputs">
+                  <img class="phone__screen" src="assets/images/home/sfs-calculator-2.webp" alt="Circle rate calculator result screen">
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="grid-2">
+          <!-- AstroBharat AI -->
+          <article class="work-card">
+            <div class="work-card__meta">
+              <div class="work-card__text">
+                <h3 class="work-card__title">Designing an AI astrology experience</h3>
+                <p class="work-card__subtitle">AstroBharat AI · Mobile app</p>
+              </div>
+              <p class="work-card__tag">Freelance</p>
+            </div>
+            <div class="work-card__cover cover-astro">
+              <div class="work-card__stage">
+                <div class="glow cover-astro__glow-1"><img class="glow__image" src="assets/images/home/glow-astro-1.svg" alt=""></div>
+                <div class="glow cover-astro__glow-2"><img class="glow__image" src="assets/images/home/glow-astro-2.svg" alt=""></div>
+                <div class="phone phone--bezel cover-astro__phone--1"><img class="phone__screen" src="assets/images/home/astro-1.webp" alt="AstroBharat AI chat screen" loading="lazy"></div>
+                <div class="phone phone--bezel cover-astro__phone--2"><img class="phone__screen" src="assets/images/home/astro-2.webp" alt="AstroBharat AI reading screen" loading="lazy"></div>
+                <div class="phone phone--bezel cover-astro__phone--3"><img class="phone__screen" src="assets/images/home/astro-3.webp" alt="AstroBharat AI welcome screen" loading="lazy"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- MechServi -->
+          <article class="work-card">
+            <div class="work-card__meta">
+              <div class="work-card__text">
+                <h3 class="work-card__title">Making car service easy to doorstep services</h3>
+                <p class="work-card__subtitle">MechServi · Website</p>
+              </div>
+              <p class="work-card__tag">Freelance</p>
+            </div>
+            <div class="work-card__cover cover-mechservi">
+              <div class="work-card__stage">
+                <div class="glow cover-mechservi__glow"><img class="glow__image" src="assets/images/home/glow-mechservi.svg" alt=""></div>
+                <div class="browser cover-mechservi__browser">
+                  <div class="browser__bar">
+                    <img class="browser__dot" src="assets/icons/browser-dot-red.svg" alt="">
+                    <img class="browser__dot" src="assets/icons/browser-dot-yellow.svg" alt="">
+                    <img class="browser__dot" src="assets/icons/browser-dot-green.svg" alt="">
+                    <span class="browser__url"><span class="browser__url-text">mechservi.com</span></span>
+                  </div>
+                  <img class="browser__page" src="assets/images/home/mechservi-landing.webp" alt="MechServi landing page: India’s fastest growing car and bike care marketplace" loading="lazy">
+                </div>
+                <div class="stat stat--customers">
+                  <div class="stat__chip"><span class="stat__value">50,000+</span><span class="stat__label">Happy customers</span></div>
+                </div>
+                <div class="stat stat--vendors">
+                  <div class="stat__chip stat__chip--red"><span class="stat__value">1,200+</span><span class="stat__label">Verified vendors</span></div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- BuildMyCV -->
+        <article class="work-card">
+          <div class="work-card__meta">
+            <div class="work-card__text">
+              <h3 class="work-card__title">Simplifying resume creation</h3>
+              <p class="work-card__subtitle">BuildMyCV · Web platform</p>
+            </div>
+            <p class="work-card__tag">Freelance</p>
+          </div>
+          <div class="work-card__cover cover-buildmycv">
+            <div class="work-card__stage">
+              <div class="glow cover-buildmycv__glow"><img class="glow__image" src="assets/images/home/glow-buildmycv.svg" alt=""></div>
+              <div class="browser browser--cool cover-buildmycv__browser">
+                <div class="browser__bar">
+                  <img class="browser__dot" src="assets/icons/browser-dot-red.svg" alt="">
+                  <img class="browser__dot" src="assets/icons/browser-dot-yellow.svg" alt="">
+                  <img class="browser__dot" src="assets/icons/browser-dot-green.svg" alt="">
+                  <span class="browser__url"><span class="browser__url-text">buildmycv.com</span></span>
+                </div>
+                <img class="browser__page" src="assets/images/home/buildmycv-landing.webp" alt="BuildMyCV landing page: Build a job winning resume in minutes" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- Capabilities -->
+      <section class="capabilities">
+        <div class="section-head">
+          <p class="section-head__eyebrow">Capabilities</p>
+          <h2 class="section-head__title">What I bring to a product team</h2>
+          <p class="section-head__description">Four skills, one goal: products that look right, make sense, and ship fast.</p>
+        </div>
+        <div class="capabilities__grid">
+          <div class="capabilities__row">
+            <div class="capability capability--wide">
+              <h3 class="capability__title"><span class="capability__number">01</span>Product design</h3>
+              <p class="capability__text">Mobile apps and websites designed end to end, from framing the user’s problem and mapping flows to polished, high-fidelity UI.</p>
+            </div>
+            <div class="capability">
+              <h3 class="capability__title"><span class="capability__number">02</span>Design systems</h3>
+              <p class="capability__text">Token-based foundations that keep every designer and developer building the same product.</p>
+            </div>
+          </div>
+          <div class="capabilities__row">
+            <div class="capability capability--dark">
+              <h3 class="capability__title"><span class="capability__number">03</span>AI-assisted prototyping</h3>
+              <p class="capability__text">Prompt, generate, pick the strongest direction, then refine it into production quality.</p>
+            </div>
+            <div class="capability capability--wide capability--green">
+              <h3 class="capability__title"><span class="capability__number">04</span>Developer-ready handoff</h3>
+              <p class="capability__text">Annotated, MCP-ready files backed by working knowledge of HTML, CSS and JS, so what ships matches Figma.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="experience">
+        <div class="section-head">
+          <p class="section-head__eyebrow">Experience</p>
+          <h2 class="section-head__title">Where I’ve worked</h2>
+        </div>
+        <ul class="experience__list">
+          <li class="experience__item">
+            <div class="experience__text"><span class="experience__company">Square Foot Story</span><span class="experience__role">UI/UX Designer</span></div>
+            <span class="chip"><img class="chip__dot" src="assets/icons/dot-green.svg" alt="">Working Full Time</span>
+          </li>
+          <li class="experience__item">
+            <div class="experience__text"><span class="experience__company">AstroBharat AI</span><span class="experience__role">Mobile app design</span></div>
+            <span class="experience__type">Freelance</span>
+          </li>
+          <li class="experience__item">
+            <div class="experience__text"><span class="experience__company">MechServi</span><span class="experience__role">Website design</span></div>
+            <span class="experience__type">Freelance</span>
+          </li>
+          <li class="experience__item">
+            <div class="experience__text"><span class="experience__company">BuildMyCV</span><span class="experience__role">Web platform design</span></div>
+            <span class="experience__type">Freelance</span>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="contact">
+        <h2 class="contact__title">Have a product that needs to feel consistent?</h2>
+        <p class="contact__text">Open to full-time roles and freelance projects.</p>
+        <div class="button-group">
+          <a class="button button--primary" href="mailto:Mayankoct2004@gmail.com">Mayankoct2004@gmail.com</a>
+          <a class="button button--white" href="mailto:Mayankoct2004@gmail.com?subject=Let%E2%80%99s%20schedule%20a%20call">Schedule a call</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">© 2026 Mayank Pal  ·  Delhi NCR, India</p>
+      <nav class="footer__links" aria-label="Social">
+        <a class="footer__link" href="#">LinkedIn</a>
+        <a class="footer__link" href="#">X (Twitter)</a>
+        <a class="footer__link" href="assets/docs/resume.pdf" download>Resume</a>
+      </nav>
+    </footer>
+
+  </div>
 
   <script src="js/main.js"></script>
 </body>

@@ -1,1 +1,670 @@
 /* Styles for the Home page (index.html). */
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+  padding-top: var(--space-24);
+}
+
+.hero__avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-round);
+  object-fit: cover;
+}
+
+.hero__title {
+  line-height: 46px;
+  letter-spacing: -2.24px;
+}
+
+.hero__intro {
+  color: var(--color-text-body);
+  font-size: var(--font-size-18);
+  line-height: 24px;
+}
+
+.hero__intro strong {
+  font-weight: var(--font-weight-bold);
+}
+
+/* ==========================================================
+   Toolkit: an endless scrolling row of tool tiles
+   ========================================================== */
+.toolkit {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.toolkit__marquee {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fade the row into the page background at both edges */
+.toolkit__marquee::before,
+.toolkit__marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.toolkit__marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-page), transparent);
+}
+
+.toolkit__marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-page), transparent);
+}
+
+.toolkit__strip {
+  display: flex;
+  gap: var(--space-10);
+  width: max-content;
+  animation: toolkit-scroll 40s linear infinite;
+}
+
+.toolkit__marquee:hover .toolkit__strip {
+  animation-play-state: paused;
+}
+
+/* The strip holds two identical sets, so moving by half (plus half a gap) loops seamlessly */
+@keyframes toolkit-scroll {
+  to { translate: calc(-50% - var(--space-10) / 2) 0; }
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  padding: var(--space-4) var(--space-16) var(--space-4) var(--space-4);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-12);
+  white-space: nowrap;
+}
+
+.tool__logo {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-10);
+}
+
+.tool__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.tool__name {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: 18px;
+}
+
+.tool__category {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-11);
+  line-height: 14px;
+}
+
+/* ==========================================================
+   Empty grid frame (desktop only, as in the Figma file)
+   ========================================================== */
+.home-placeholder {
+  aspect-ratio: 793 / 446;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-20);
+  background-color: var(--color-surface);
+  background-image:
+    linear-gradient(to right, var(--color-border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--color-border) 1px, transparent 1px);
+  background-size: 44px 54px;
+}
+
+/* ==========================================================
+   Case studies
+   ========================================================== */
+.case-studies {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+/* ---------- Square Foot Story cover (1230 × 562 in Figma) ---------- */
+.cover-sfs {
+  aspect-ratio: 1230 / 562;
+  background: var(--gradient-sfs);
+}
+
+.cover-sfs .work-card__stage {
+  font-size: calc(100cqw / 1230);
+}
+
+.cover-sfs__glow-1 { left: 147.6em; top: 309.1em; width: 360em; height: 360em; }
+.cover-sfs__glow-1 .glow__image { inset: -33.33%; width: 166.66%; height: 166.66%; }
+.cover-sfs__glow-2 { left: 861em; top: -80em; width: 420em; height: 420em; }
+.cover-sfs__glow-2 .glow__image { inset: -28.57%; width: 157.14%; height: 157.14%; }
+
+.cover-sfs__phone { top: 21em; }
+.cover-sfs__phone--home { left: 25em; }
+.cover-sfs__phone--splash { left: 333.84em; rotate: 4deg; }
+.cover-sfs__phone--builder { left: 647em; }
+.cover-sfs__phone--calculator { left: 958em; }
+
+/* ---------- AstroBharat AI cover (598 × 345) ---------- */
+.cover-astro {
+  aspect-ratio: 598 / 345;
+  background: var(--gradient-astro);
+}
+
+.cover-astro .work-card__stage {
+  font-size: calc(100cqw / 598);
+}
+
+.cover-astro__glow-1 { left: 39em; top: 85em; width: 260em; height: 260em; }
+.cover-astro__glow-1 .glow__image { inset: -30.77%; width: 161.54%; height: 161.54%; }
+.cover-astro__glow-2 { left: 379.86em; top: -66em; width: 240em; height: 240em; }
+.cover-astro__glow-2 .glow__image { inset: -33.33%; width: 166.66%; height: 166.66%; }
+
+.cover-astro__phone--1 { left: 57.1em; top: 16em; width: 144em; height: 301em; }
+.cover-astro__phone--2 { left: 228.2em; top: 46.19em; width: 133em; height: 278em; rotate: 6deg; }
+.cover-astro__phone--3 { left: 397.49em; top: 79.98em; width: 122em; height: 254em; rotate: 9deg; }
+
+/* ---------- MechServi cover (598 × 345) ---------- */
+.cover-mechservi {
+  aspect-ratio: 598 / 345;
+  background: var(--gradient-mechservi);
+}
+
+.cover-mechservi .work-card__stage {
+  font-size: calc(100cqw / 598);
+}
+
+.cover-mechservi__glow { left: 328.9em; top: 86.25em; width: 300em; height: 300em; }
+.cover-mechservi__glow .glow__image { inset: -30%; width: 160%; height: 160%; }
+
+.cover-mechservi__browser { width: 478em; height: 373em; }
+.cover-mechservi__browser .browser__page { height: 349em; }
+
+/* Floating stat chips */
+.stat {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat--customers { left: 24em; top: 241.61em; width: 113.71em; height: 64.53em; rotate: -4deg; }
+.stat--vendors { left: 474.02em; top: 102em; width: 107.72em; height: 64.12em; rotate: 4deg; }
+
+.stat__chip {
+  display: flex;
+  flex-direction: column;
+  padding: 10em 14em;
+  background: var(--color-white);
+  border-radius: 8em;
+  box-shadow: var(--shadow-stat);
+  white-space: nowrap;
+}
+
+.stat__chip--red {
+  background: var(--color-mechservi-red);
+  color: var(--color-white);
+}
+
+.stat__value {
+  font-family: var(--font-stat);
+  font-size: 20em;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.2;
+}
+
+.stat__label {
+  color: var(--color-text-muted);
+  font-size: 10em;
+  font-weight: var(--font-weight-medium);
+}
+
+.stat__chip--red .stat__label {
+  color: var(--color-mechservi-red-light);
+}
+
+/* ---------- BuildMyCV cover (1230 × 400) ---------- */
+.cover-buildmycv {
+  aspect-ratio: 1230 / 400;
+  background: var(--gradient-buildmycv);
+}
+
+.cover-buildmycv .work-card__stage {
+  font-size: calc(100cqw / 1230);
+}
+
+.cover-buildmycv__glow { left: 320.1em; top: 78.75em; width: 300em; height: 300em; }
+.cover-buildmycv__glow .glow__image { inset: -30%; width: 160%; height: 160%; }
+
+.cover-buildmycv__browser { width: 466em; height: 360em; }
+.cover-buildmycv__browser .browser__page { height: 336em; }
+
+/* ==========================================================
+   Capabilities bento
+   ========================================================== */
+.capabilities {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.capabilities__grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+/* Cards share each row in a 517 : 715 ratio, like the Figma frames */
+.capabilities__row {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.capability {
+  flex: 517 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  min-height: 132px;
+  padding: var(--space-28);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-20);
+}
+
+.capability--wide {
+  flex-grow: 715;
+}
+
+.capability--dark {
+  background: var(--color-grey-900);
+  border-color: var(--color-grey-900);
+  color: var(--color-white);
+}
+
+.capability--green {
+  background: var(--color-green-50);
+  border-color: var(--color-green-200);
+}
+
+.capability__title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-10);
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
+  line-height: 26px;
+}
+
+.capability__number {
+  font-family: var(--font-body);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.capability--dark .capability__number { color: var(--color-grey-50); }
+.capability--green .capability__number { color: var(--color-green-900); }
+
+.capability__text {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+  line-height: 21px;
+}
+
+.capability--dark .capability__text { color: var(--color-grey-200); }
+
+/* ==========================================================
+   Experience
+   ========================================================== */
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.experience__list {
+  padding: var(--space-8) var(--space-20);
+  background: var(--color-surface);
+  border-radius: var(--radius-20);
+}
+
+.experience__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+  padding: var(--space-14) 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.experience__item:last-child {
+  border-bottom: 0;
+}
+
+.experience__text {
+  display: flex;
+  flex-direction: column;
+}
+
+.experience__company {
+  font-size: var(--font-size-15);
+  font-weight: var(--font-weight-medium);
+  line-height: 22px;
+}
+
+.experience__role,
+.experience__type {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-13);
+  line-height: 18px;
+}
+
+/* ==========================================================
+   Contact call-to-action
+   ========================================================== */
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+  padding: var(--space-40) var(--space-32);
+  background: var(--color-orange-900);
+  border-radius: var(--radius-20);
+  text-align: center;
+}
+
+.contact__title {
+  max-width: 560px;
+  color: var(--color-white);
+  font-size: var(--font-size-48);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  letter-spacing: -1.92px;
+}
+
+.contact__text {
+  color: var(--color-orange-200);
+  font-size: var(--font-size-15);
+  line-height: 22px;
+}
+
+.contact .button-group {
+  justify-content: center;
+}
+
+/* ==========================================================
+   Square Foot Story animation: one 10s loop, timings from Figma
+   ========================================================== */
+.cover-sfs__glow-1 { animation: glow-fade 10s linear infinite, glow-pulse-1 10s linear infinite; }
+.cover-sfs__glow-2 { animation: glow-fade 10s linear infinite, glow-pulse-2 10s linear infinite; }
+
+@keyframes glow-fade {
+  0%   { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  12%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes glow-pulse-1 {
+  0%   { scale: 0.6; animation-timing-function: var(--ease-in-out); }
+  15%  { scale: 1;   animation-timing-function: var(--ease-in-out); }
+  40%  { scale: 1.2; animation-timing-function: var(--ease-in-out); }
+  100% { scale: 1; }
+}
+
+@keyframes glow-pulse-2 {
+  0%   { scale: 0.6; animation-timing-function: var(--ease-in-out); }
+  15%  { scale: 1;   animation-timing-function: var(--ease-in-out); }
+  50%  { scale: 1.2; animation-timing-function: var(--ease-in-out); }
+  100% { scale: 1; }
+}
+
+/* Phones rise in one after another, then gently float */
+.cover-sfs__phone--home       { animation: home-in 10s linear infinite, home-float 10s linear infinite; }
+.cover-sfs__phone--splash     { animation: splash-in 10s linear infinite, splash-float 10s linear infinite, splash-tilt 10s linear infinite; }
+.cover-sfs__phone--builder    { animation: builder-in 10s linear infinite, builder-float 10s linear infinite; }
+.cover-sfs__phone--calculator { animation: calculator-in 10s linear infinite, calculator-float 10s linear infinite; }
+
+@keyframes home-in {
+  0%   { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  6%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes home-float {
+  0%   { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  11%  { translate: 0 0; }
+  22%  { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  38%  { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  56%  { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  74%  { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  100% { translate: 0 0; }
+}
+
+@keyframes splash-in {
+  0%, 1.5% { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  7.5%     { opacity: 1; }
+  100%     { opacity: 1; }
+}
+
+@keyframes splash-float {
+  0%, 1.5% { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  12.5%    { translate: 0 0; }
+  25%      { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  41%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  59%      { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  77%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  100%     { translate: 0 0; }
+}
+
+@keyframes splash-tilt {
+  0%, 14% { rotate: 8deg;   animation-timing-function: var(--ease-in-out); }
+  50%     { rotate: 5.5deg; animation-timing-function: var(--ease-in-out); }
+  100%    { rotate: 8deg; }
+}
+
+@keyframes builder-in {
+  0%, 3% { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  9%     { opacity: 1; }
+  100%   { opacity: 1; }
+}
+
+@keyframes builder-float {
+  0%, 3% { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  14%    { translate: 0 0; }
+  28%    { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  44%    { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  62%    { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  80%    { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  100%   { translate: 0 0; }
+}
+
+@keyframes calculator-in {
+  0%, 4.5% { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  10.5%    { opacity: 1; }
+  100%     { opacity: 1; }
+}
+
+@keyframes calculator-float {
+  0%, 4.5% { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  15.5%    { translate: 0 0; }
+  31%      { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  47%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  65%      { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  83%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  100%     { translate: 0 0; }
+}
+
+/* Screens inside each phone: the current screen slides left and dims
+   while the next one slides in from the right */
+.cover-sfs__phone--home .phone__screen:nth-child(1)       { animation: home-screen-1 10s linear infinite; }
+.cover-sfs__phone--home .phone__screen:nth-child(2)       { animation: home-screen-2 10s linear infinite; }
+.cover-sfs__phone--home .phone__screen:nth-child(3)       { animation: home-screen-3 10s linear infinite; }
+.cover-sfs__phone--splash .phone__screen:nth-child(1)     { animation: splash-screen-1 10s linear infinite; }
+.cover-sfs__phone--splash .phone__screen:nth-child(2)     { animation: splash-screen-2 10s linear infinite; }
+.cover-sfs__phone--splash .phone__screen:nth-child(3)     { animation: splash-screen-3 10s linear infinite; }
+.cover-sfs__phone--builder .phone__screen:nth-child(1)    { animation: builder-screen-1 10s linear infinite; }
+.cover-sfs__phone--builder .phone__screen:nth-child(2)    { animation: builder-screen-2 10s linear infinite; }
+.cover-sfs__phone--calculator .phone__screen:nth-child(1) { animation: calculator-screen-1 10s linear infinite; }
+.cover-sfs__phone--calculator .phone__screen:nth-child(2) { animation: calculator-screen-2 10s linear infinite; }
+
+@keyframes home-screen-1 {
+  0%, 26%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  33%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes home-screen-2 {
+  0%, 26%   { translate: 100% 0;  opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  33%, 64%  { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  71%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes home-screen-3 {
+  0%, 64%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  71%, 100% { translate: 0 0; }
+}
+
+@keyframes splash-screen-1 {
+  0%, 35%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  42%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes splash-screen-2 {
+  0%, 35%   { translate: 100% 0;  opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  42%, 73%  { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  80%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes splash-screen-3 {
+  0%, 73%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  80%, 100% { translate: 0 0; }
+}
+
+@keyframes builder-screen-1 {
+  0%, 44%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  51%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes builder-screen-2 {
+  0%, 44%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  51%, 100% { translate: 0 0; }
+}
+
+@keyframes calculator-screen-1 {
+  0%, 53%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  60%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes calculator-screen-2 {
+  0%, 53%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  60%, 100% { translate: 0 0; }
+}
+
+/* ==========================================================
+   Mobile (matches the 402px Figma frame)
+   ========================================================== */
+@media (max-width: 767px) {
+  .hero {
+    padding-top: var(--space-8);
+  }
+
+  .hero__avatar {
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero__title {
+    font-size: var(--font-size-40);
+    letter-spacing: -1.6px;
+  }
+
+  .hero__intro {
+    font-size: var(--font-size-16);
+  }
+
+  /* Not part of the mobile design */
+  .home-placeholder {
+    display: none;
+  }
+
+  /* Square Foot Story: half-size phones, cropped to the middle of the composition */
+  .cover-sfs {
+    aspect-ratio: 346 / 281;
+    background: var(--gradient-sfs-mobile);
+  }
+
+  .cover-sfs .work-card__stage {
+    font-size: calc(100cqw / 692);
+    translate: -269em 0;
+  }
+
+  /* BuildMyCV: same browser (already centred), cropped to the centre,
+     so only the glow needs shifting by the cropped amount (326.67) */
+  .cover-buildmycv {
+    aspect-ratio: 346 / 240;
+    background: var(--gradient-buildmycv-mobile);
+  }
+
+  .cover-buildmycv .work-card__stage {
+    font-size: calc(100cqw / 576.67);
+  }
+
+  .cover-buildmycv__glow {
+    left: -6.57em;
+  }
+
+  .capabilities {
+    gap: var(--space-12);
+  }
+
+  .capabilities__grid,
+  .capabilities__row {
+    gap: var(--space-12);
+  }
+
+  .capabilities__row {
+    flex-direction: column;
+  }
+
+  /* Stacked cards size to their content instead of sharing the row width */
+  .capability {
+    flex: none;
+    min-height: 0;
+    padding: var(--space-22);
+  }
+
+  .capability__title {
+    font-size: var(--font-size-18);
+  }
+
+  .experience__list {
+    padding: var(--space-4) var(--space-16);
+  }
+
+  .contact {
+    padding: var(--space-32) var(--space-20);
+  }
+
+  .contact__title {
+    font-size: var(--font-size-30);
+    letter-spacing: -1.2px;
+  }
+
+  .contact .button-group {
+    flex-direction: column;
+    align-self: stretch;
+  }
+}
