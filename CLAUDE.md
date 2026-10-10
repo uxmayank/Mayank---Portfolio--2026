@@ -38,6 +38,7 @@ js/
 assets/
   images/home/, images/about/, images/square-foot-story/, images/mechservi/, images/buildmycv/, images/astrobharat-ai/
   icons/
+  videos/home/          showreel.mp4 (keep each video under ~20 MB; GitHub rejects files over 100 MB)
   docs/                 resume.pdf
 ```
 
