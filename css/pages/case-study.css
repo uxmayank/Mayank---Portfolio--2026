@@ -354,6 +354,7 @@
   gap: var(--space-32);
   padding: var(--space-32);
   background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-20);
 }
 
@@ -465,6 +466,7 @@
   gap: var(--space-8);
   padding: var(--space-20);
   background: var(--color-surface);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-20);
 }
 
@@ -489,6 +491,7 @@
 
 .cs-step--dark {
   background: var(--color-grey-900);
+  border-color: var(--color-grey-900);
 }
 
 .cs-step--dark .cs-step__title {
