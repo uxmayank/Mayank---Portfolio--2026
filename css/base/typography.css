@@ -1,13 +1,48 @@
 /* Heading and body text styles. */
 
 body {
-  background: var(--color-grey-50);
-  color: var(--color-grey-900);
+  background: var(--color-page);
+  color: var(--color-text);
   font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Bricolage headings use a fixed optical size of 14, as set in Figma */
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-variation-settings: "opsz" 14;
 }
 
 h1 {
-  font-family: var(--font-heading);
-  font-size: var(--font-size-h1);
+  font-size: var(--font-size-56);
   font-weight: var(--font-weight-semibold);
+}
+
+/* Section heading: small grey eyebrow + title (+ optional description) */
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.section-head__eyebrow {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.section-head__title {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semibold);
+  line-height: 30px;
+  letter-spacing: -0.72px;
+}
+
+.section-head__description {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-14);
+  line-height: 21px;
 }
