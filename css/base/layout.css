@@ -1,0 +1,5 @@
+/* Page layout: container, section spacing and grid helpers. */
+
+body {
+  padding: var(--space-40);
+}

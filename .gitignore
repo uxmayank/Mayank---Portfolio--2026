@@ -1,0 +1,5 @@
+# Local backups (not part of the site)
+.backup/
+
+# macOS
+.DS_Store

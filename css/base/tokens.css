@@ -1,0 +1,19 @@
+/* Design tokens: the only place for raw colour, font, spacing, radius and shadow values. */
+
+:root {
+  /* Colours */
+  --color-grey-50: #FAFAFA;
+  --color-grey-900: #0A0A0A;
+  --color-primary: #0052BD;
+
+  /* Fonts */
+  --font-heading: "Bricolage Grotesque", sans-serif;
+  --font-body: "Geist", sans-serif;
+
+  /* Font sizes and weights */
+  --font-size-h1: 56px;
+  --font-weight-semibold: 600;
+
+  /* Spacing */
+  --space-40: 40px;
+}

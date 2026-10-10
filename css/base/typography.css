@@ -1,0 +1,13 @@
+/* Heading and body text styles. */
+
+body {
+  background: var(--color-grey-50);
+  color: var(--color-grey-900);
+  font-family: var(--font-body);
+}
+
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-semibold);
+}
