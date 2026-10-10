@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+/* Jumping to a section (e.g. the Work tab) glides instead of snapping */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -35,6 +40,10 @@ a {
 
 /* Respect the "reduce motion" accessibility setting on every page */
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
