@@ -4,11 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Square Foot Story — Mayank Pal</title>
+  <meta name="description" content="How Mayank Pal designed Square Foot Story, a real estate app that helps homebuyers in Delhi NCR check builder credibility, track construction and see the true cost of a home.">
 
-  <!-- Fonts -->
+  <!-- Fonts (DM Sans is the Square Foot Story app's own font, shown in the design system panel) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:wght@400..700&family=Geist:wght@100..900&display=swap" rel="stylesheet">
 
   <!-- Base -->
   <link rel="stylesheet" href="../css/base/reset.css">
@@ -20,30 +21,578 @@
   <link rel="stylesheet" href="../css/components/nav.css">
   <link rel="stylesheet" href="../css/components/footer.css">
   <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/phone-mockup.css">
+  <link rel="stylesheet" href="../css/components/sfs-cover.css">
+  <link rel="stylesheet" href="../css/components/media-frame.css">
 
   <!-- Page -->
   <link rel="stylesheet" href="../css/pages/case-study.css">
+  <link rel="stylesheet" href="../css/pages/square-foot-story.css">
 </head>
 <body>
-  <div class="page">
+  <div class="page page--case-study">
 
     <header class="nav">
       <nav class="nav__tabs" aria-label="Main">
+        <a class="nav__tab nav__tab--back" href="../index.html#work">←  Project</a>
         <a class="nav__tab" href="../index.html">Home</a>
-        <a class="nav__tab" href="../index.html#work">Work</a>
         <a class="nav__tab" href="../about.html">About</a>
       </nav>
       <a class="button button--primary button--pill" href="../assets/docs/resume.pdf" download>Download Resume</a>
     </header>
 
-    <main class="page__main"></main>
+    <main class="page__main">
+
+      <!-- ============ Hero ============ -->
+      <section class="cs-hero">
+        <div class="cs-hero__text">
+          <ul class="cs-tags">
+            <li class="cs-tag"><img class="cs-tag__dot" src="../assets/icons/dot-green-700.svg" alt="">Live on Play Store &amp; App Store</li>
+            <li class="cs-tag">Case study</li>
+            <li class="cs-tag">Real estate · Mobile app &amp; web</li>
+          </ul>
+          <h1 class="cs-hero__title">Making real estate decisions trustworthy</h1>
+          <p class="cs-hero__intro">How I designed Square Foot Story from a blank canvas: a real estate app that helps homebuyers in Delhi NCR check builder credibility, track construction and see the true cost of a home, built on a design system I created from scratch.</p>
+          <div class="cs-links">
+            <p class="cs-links__row">
+              <span class="cs-links__label">Check Live Website :-</span>
+              <a class="cs-links__link" href="#">Website</a>
+            </p>
+            <p class="cs-links__row">
+              <span class="cs-links__label">Check Square Foot Story app on :-</span>
+              <a class="cs-links__link" href="#">Google Play ↗</a>
+              <span class="cs-links__separator" aria-hidden="true">·</span>
+              <a class="cs-links__link" href="#">App Store ↗</a>
+            </p>
+          </div>
+        </div>
+
+        <dl class="cs-meta">
+          <div class="cs-meta__item"><dt class="cs-meta__label">Role</dt><dd class="cs-meta__value">Product designer</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Worked with</dt><dd class="cs-meta__value">Founder &amp; developers</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Platforms</dt><dd class="cs-meta__value">Android · iOS · Web</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Scope</dt><dd class="cs-meta__value">50+ screens · Design system</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Status</dt><dd class="cs-meta__value cs-meta__value--live">Live</dd></div>
+        </dl>
+
+        <!-- Same animated cover as the home page card, in its wider hero layout -->
+        <div class="sfs-cover sfs-cover--hero">
+          <div class="sfs-cover__stage">
+            <div class="glow sfs-cover__glow-1"><img class="glow__image" src="../assets/images/square-foot-story/glow-cover-1.svg" alt=""></div>
+            <div class="glow sfs-cover__glow-2"><img class="glow__image" src="../assets/images/square-foot-story/glow-cover-2.svg" alt=""></div>
+            <div class="phone sfs-cover__phone sfs-cover__phone--home">
+              <div class="phone__screens">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-home.webp" alt="Square Foot Story home screen with a property search and trending properties">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-interior-designer.webp" alt="Interior designer profile screen">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-interior-designer-project.webp" alt="Interior designer project details screen">
+              </div>
+            </div>
+            <div class="phone sfs-cover__phone sfs-cover__phone--splash">
+              <div class="phone__screens">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-splash.webp" alt="Welcome screen: Find properties without the chaos">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-phone-number.webp" alt="Sign-in screen asking for a phone number">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-credibility-onboarding.webp" alt="Builder credibility onboarding screen">
+              </div>
+            </div>
+            <div class="phone sfs-cover__phone sfs-cover__phone--builder">
+              <div class="phone__screens">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-credibility-score.webp" alt="Builder credibility screen showing a score of 54 out of 100">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-comparison.webp" alt="Property comparison screen">
+              </div>
+            </div>
+            <div class="phone sfs-cover__phone sfs-cover__phone--calculator">
+              <div class="phone__screens">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-circle-rate-calculator.webp" alt="Circle rate calculator screen with property inputs">
+                <img class="phone__screen" src="../assets/images/square-foot-story/screen-brands.webp" alt="Home brands screen">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Impact numbers ============ -->
+      <ul class="cs-impact" aria-label="Impact">
+        <li class="cs-impact__card"><p class="cs-impact__value">100 → 1.6K+</p><p class="cs-impact__label">App downloads</p><p class="cs-impact__note">Download growth after launch</p></li>
+        <li class="cs-impact__card"><p class="cs-impact__value">50+</p><p class="cs-impact__label">Screens designed</p><p class="cs-impact__note">Across the mobile app and website</p></li>
+        <li class="cs-impact__card"><p class="cs-impact__value">3–5 days → same day</p><p class="cs-impact__label">Dev implementation</p><p class="cs-impact__note">Per developer feedback, using MCP-ready files</p></li>
+        <li class="cs-impact__card"><p class="cs-impact__value">0 → 1</p><p class="cs-impact__label">Design system</p><p class="cs-impact__note">Built from scratch as a single source of truth</p></li>
+      </ul>
+
+      <!-- ============ 01 The problem ============ -->
+      <section class="cs-section cs-section--roomy">
+        <div class="cs-head">
+          <p class="cs-head__eyebrow"><span class="cs-head__number">01</span>The problem</p>
+          <h2 class="cs-head__title">Buying a home in Delhi NCR runs on trust you can’t verify</h2>
+          <p class="cs-head__text">Homebuyers make one of the biggest financial decisions of their lives with very little reliable information. Three problems sit at the center of it.</p>
+        </div>
+        <ul class="cs-cards">
+          <li class="cs-card">
+            <span class="cs-card__badge">Problem 01</span>
+            <h3 class="cs-card__title">Not knowing which builders to trust</h3>
+            <p class="cs-card__text">Every builder looks credible in an ad. Buyers have no simple way to check track records, approvals or delivery history.</p>
+          </li>
+          <li class="cs-card">
+            <span class="cs-card__badge">Problem 02</span>
+            <h3 class="cs-card__title">Delays nobody warns you about</h3>
+            <p class="cs-card__text">Possession dates slip quietly. Buyers find out late, often after paying a large share of the price.</p>
+          </li>
+          <li class="cs-card">
+            <span class="cs-card__badge">Problem 03</span>
+            <h3 class="cs-card__title">Costs that appear at the end</h3>
+            <p class="cs-card__text">Stamp duty, registration, circle rates and interiors add up to far more than the listed price.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Empty grid frame from the design (ready for a video or image) -->
+      <div class="media-frame" aria-hidden="true"></div>
+
+      <!-- ============ 02 Starting point ============ -->
+      <section class="cs-split">
+        <div class="cs-head cs-split__main">
+          <p class="cs-head__eyebrow"><span class="cs-head__number">02</span>Starting point</p>
+          <h2 class="cs-head__title">No product. No design. No system.</h2>
+          <p class="cs-head__text">When I joined, there was nothing to iterate on: no app, no screens and no design language. As the only designer, working directly with the founder and the developers, I owned the product experience end to end.</p>
+        </div>
+        <aside class="cs-role-card">
+          <p class="cs-role-card__label">What I owned</p>
+          <ul class="cs-role-card__list">
+            <li class="cs-role-card__item"><img class="cs-role-card__bullet" src="../assets/images/square-foot-story/bullet-green.svg" alt="">Turning founder ideas into scoped, buildable features</li>
+            <li class="cs-role-card__item"><img class="cs-role-card__bullet" src="../assets/images/square-foot-story/bullet-green.svg" alt="">User flows and information architecture</li>
+            <li class="cs-role-card__item"><img class="cs-role-card__bullet" src="../assets/images/square-foot-story/bullet-green.svg" alt="">High-fidelity UI for app and website</li>
+            <li class="cs-role-card__item"><img class="cs-role-card__bullet" src="../assets/images/square-foot-story/bullet-green.svg" alt="">The design system, from tokens to components</li>
+            <li class="cs-role-card__item"><img class="cs-role-card__bullet" src="../assets/images/square-foot-story/bullet-green.svg" alt="">Developer handoff and design QA on built screens</li>
+          </ul>
+        </aside>
+      </section>
+
+      <!-- ============ 03 Design foundation ============ -->
+      <section class="sfs-foundation">
+        <div class="cs-head">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">03</span>Design foundation</p>
+          <h2 class="cs-head__title">Before any screen, I built the system every screen would use</h2>
+          <p class="cs-head__text">With one designer, short deadlines and a growing product, consistency couldn’t depend on memory. I built a token-based foundation in Figma variables so every designer and developer works from the same source of truth.</p>
+        </div>
+
+        <ul class="sfs-tokens" aria-label="Design system size">
+          <li class="sfs-tokens__item"><strong class="sfs-tokens__count">70</strong> color tokens</li>
+          <li class="sfs-tokens__item"><strong class="sfs-tokens__count">15</strong> type styles</li>
+          <li class="sfs-tokens__item"><strong class="sfs-tokens__count">19</strong> spacing steps</li>
+          <li class="sfs-tokens__item"><strong class="sfs-tokens__count">13</strong> radii</li>
+          <li class="sfs-tokens__item"><strong class="sfs-tokens__count">124</strong> icons</li>
+        </ul>
+
+        <div class="sfs-foundation__row">
+          <!-- Colour -->
+          <div class="sfs-panel sfs-panel--color">
+            <div class="sfs-panel__head"><h3 class="sfs-panel__title">Color</h3><p class="sfs-panel__meta">7 scales · 50 → 900</p></div>
+            <ul class="sfs-scales">
+              <li class="sfs-scale sfs-scale--grey"><span class="sfs-scale__strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="sfs-scale__name">Grey</span><span class="sfs-scale__hex">#0A0A0A</span></li>
+              <li class="sfs-scale sfs-scale--orange"><span class="sfs-scale__strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="sfs-scale__name">Orange</span><span class="sfs-scale__hex">#FA6000</span></li>
+              <li class="sfs-scale sfs-scale--yellow"><span class="sfs-scale__strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="sfs-scale__name">Yellow</span><span class="sfs-scale__hex">#503D19</span></li>
+              <li class="sfs-scale sfs-scale--green"><span class="sfs-scale__strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="sfs-scale__name">Green</span><span class="sfs-scale__hex">#008700</span></li>
+              <li class="sfs-scale sfs-scale--red"><span class="sfs-scale__strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="sfs-scale__name">Red</span><span class="sfs-scale__hex">#BD0000</span></li>
+              <li class="sfs-scale sfs-scale--blue"><span class="sfs-scale__strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="sfs-scale__name">Blue</span><span class="sfs-scale__hex">#0052BD</span></li>
+              <li class="sfs-scale sfs-scale--purple"><span class="sfs-scale__strip" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span><span class="sfs-scale__name">Purple</span><span class="sfs-scale__hex">#130033</span></li>
+            </ul>
+          </div>
+
+          <!-- Typography -->
+          <div class="sfs-panel sfs-panel--type">
+            <div class="sfs-panel__head"><h3 class="sfs-panel__title">Typography</h3><p class="sfs-panel__meta">DM Sans · 15 styles</p></div>
+            <div class="sfs-specimen">
+              <p class="sfs-specimen__glyphs" aria-hidden="true">Aa</p>
+              <div class="sfs-specimen__text"><p class="sfs-specimen__name">DM Sans</p><p class="sfs-specimen__weights">Regular · Medium · SemiBold · Bold</p></div>
+            </div>
+            <ul class="sfs-type-scale">
+              <li class="sfs-type-scale__row"><span class="sfs-type-scale__sample sfs-type-scale__sample--display">Display Large</span><span class="sfs-type-scale__size">56 / 64</span></li>
+              <li class="sfs-type-scale__row"><span class="sfs-type-scale__sample sfs-type-scale__sample--h1">Heading / H1</span><span class="sfs-type-scale__size">40 / 48</span></li>
+              <li class="sfs-type-scale__row"><span class="sfs-type-scale__sample sfs-type-scale__sample--h3">Heading / H3</span><span class="sfs-type-scale__size">28 / 36</span></li>
+              <li class="sfs-type-scale__row"><span class="sfs-type-scale__sample sfs-type-scale__sample--title">Title Large</span><span class="sfs-type-scale__size">18 / 28</span></li>
+              <li class="sfs-type-scale__row"><span class="sfs-type-scale__sample sfs-type-scale__sample--body">Body Medium</span><span class="sfs-type-scale__size">14 / 20</span></li>
+              <li class="sfs-type-scale__row"><span class="sfs-type-scale__sample sfs-type-scale__sample--caption">Caption Medium</span><span class="sfs-type-scale__size">10 / 14</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sfs-foundation__row">
+          <!-- Spacing -->
+          <div class="sfs-panel">
+            <div class="sfs-panel__head"><h3 class="sfs-panel__title">Spacing</h3><p class="sfs-panel__meta">0 → 192 · 19 steps</p></div>
+            <ul class="sfs-spacing">
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-2</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--2"></span></span><span class="sfs-spacing__value">2px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-4</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--4"></span></span><span class="sfs-spacing__value">4px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-8</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--8"></span></span><span class="sfs-spacing__value">8px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-12</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--12"></span></span><span class="sfs-spacing__value">12px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-16</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--16"></span></span><span class="sfs-spacing__value">16px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-24</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--24"></span></span><span class="sfs-spacing__value">24px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-32</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--32"></span></span><span class="sfs-spacing__value">32px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-48</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--48"></span></span><span class="sfs-spacing__value">48px</span></li>
+              <li class="sfs-spacing__row"><span class="sfs-spacing__name">Space-64</span><span class="sfs-spacing__track"><span class="sfs-spacing__fill sfs-spacing__fill--64"></span></span><span class="sfs-spacing__value">64px</span></li>
+            </ul>
+          </div>
+
+          <!-- Corner radius -->
+          <div class="sfs-panel">
+            <div class="sfs-panel__head"><h3 class="sfs-panel__title">Corner radius</h3><p class="sfs-panel__meta">0 → 1000 · 13 radii</p></div>
+            <div class="sfs-radii">
+              <ul class="sfs-radii__row">
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--0"></span>0</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--2"></span>2</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--4"></span>4</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--6"></span>6</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--8"></span>8</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--10"></span>10</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--12"></span>12</li>
+              </ul>
+              <ul class="sfs-radii__row">
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--16"></span>16</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--20"></span>20</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--24"></span>24</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--32"></span>32</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--32"></span>40</li>
+                <li class="sfs-radius"><span class="sfs-radius__shape sfs-radius__shape--32"></span>1000</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Icon library -->
+          <div class="sfs-panel">
+            <div class="sfs-panel__head"><h3 class="sfs-panel__title">Icon library</h3><p class="sfs-panel__meta">124 icons · 24px</p></div>
+            <ul class="sfs-icons">
+              <li class="sfs-icons__tile"><span class="sfs-icons__shape sfs-icons__shape--home"><img src="../assets/images/square-foot-story/icons/home-shape.svg" alt="Home icon"></span></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/location.svg" alt="Location icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/notification.svg" alt="Notification icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/search.svg" alt="Search icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/calculator.svg" alt="Calculator icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/bank.svg" alt="Bank icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/stamp-duty.svg" alt="Stamp duty icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/interior.svg" alt="Interior icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/wallet.svg" alt="Wallet icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/legal.svg" alt="Legal icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/building.svg" alt="Building icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/verified.svg" alt="Verified icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/shield-verified.svg" alt="Verified shield icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/analytics.svg" alt="Analytics icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/towers.svg" alt="Towers icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/award.svg" alt="Award icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/hospital.svg" alt="Hospital icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/swimming.svg" alt="Swimming pool icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/security.svg" alt="Security icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/commercial.svg" alt="Commercial property icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/apartment.svg" alt="Apartment icon"></li>
+              <li class="sfs-icons__tile"><span class="sfs-icons__shape"><img src="../assets/images/square-foot-story/icons/comparison-shape.svg" alt="Comparison icon"></span></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/parking.svg" alt="Parking icon"></li>
+              <li class="sfs-icons__tile"><img src="../assets/images/square-foot-story/icons/construction.svg" alt="Construction icon"></li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="sfs-principles">
+          <li class="sfs-principle">
+            <div class="sfs-principle__top"><img class="sfs-principle__dots" src="../assets/images/square-foot-story/semantic-dots.svg" alt=""><h3 class="sfs-principle__title">Semantic roles</h3></div>
+            <p class="sfs-principle__text">Blue for actions, green for success, yellow for warnings, red for errors, so color always carries meaning.</p>
+          </li>
+          <li class="sfs-principle">
+            <div class="sfs-principle__top"><span class="sfs-principle__badge"><img src="../assets/images/square-foot-story/icons/auto-layout.svg" alt=""></span><h3 class="sfs-principle__title">Auto Layout everywhere</h3></div>
+            <p class="sfs-principle__text">Every screen is built to reflow, so developers get real structure instead of loose shapes.</p>
+          </li>
+          <li class="sfs-principle">
+            <div class="sfs-principle__top"><span class="sfs-principle__badge"><img src="../assets/images/square-foot-story/icons/spark.svg" alt=""></span><h3 class="sfs-principle__title">Named for machines too</h3></div>
+            <p class="sfs-principle__text">Clean layer names and variables mean MCP and AI tools can read the file and generate accurate code.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ 04 Key features ============ -->
+      <section class="cs-section">
+        <div class="cs-head">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">04</span>Key features</p>
+          <h2 class="cs-head__title">Three problems, three features</h2>
+          <p class="cs-head__text">Each core feature answers one of these three problems.</p>
+        </div>
+
+        <!-- Feature 01 -->
+        <article class="cs-feature">
+          <div class="cs-feature__text">
+            <p class="cs-feature__tags"><span class="cs-feature__tag">Feature 01</span><span class="cs-feature__tag cs-feature__tag--solves cs-feature__tag--round">Solves: trust</span></p>
+            <h3 class="cs-feature__title">Builder Credibility score</h3>
+            <p class="cs-feature__intro">Buyers had no way to judge a builder beyond marketing. A single rating would just be another number to doubt.</p>
+            <div class="cs-decisions">
+              <p class="cs-decisions__label">Key design decisions</p>
+              <ol class="cs-decisions__list">
+                <li class="cs-decisions__item"><span class="cs-decisions__num">1</span>Break a 100-point score into 5 weighted factors, so buyers see why a builder scores high or low, not just the number.</li>
+                <li class="cs-decisions__item"><span class="cs-decisions__num">2</span>Explain every factor in a bottom sheet: what data is used, how it moves the score, and its limits.</li>
+                <li class="cs-decisions__item"><span class="cs-decisions__num">3</span>Add plain disclaimers so the score reads as guidance, not a legal verdict.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="sfs-visual sfs-visual--credibility">
+            <div class="sfs-visual__stage">
+              <div class="glow sfs-visual__glow"><img class="glow__image" src="../assets/images/square-foot-story/glow-feature-credibility.svg" alt=""></div>
+              <div class="sfs-visual__slot sfs-visual__slot--credibility-onboarding">
+                <div class="phone phone--static sfs-visual__phone--172"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-credibility-onboarding.webp" alt="Builder credibility onboarding screen" loading="lazy"></div></div>
+              </div>
+              <div class="sfs-visual__slot sfs-visual__slot--credibility-score">
+                <div class="phone phone--static sfs-visual__phone--200"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-credibility-score.webp" alt="Builder credibility score screen showing 54 out of 100" loading="lazy"></div></div>
+              </div>
+              <div class="sfs-mock-card sfs-factor sfs-factor--execution">
+                <p class="sfs-factor__row"><span>Execution Reliability</span><span>14/30</span></p>
+                <span class="sfs-mock-track"><span class="sfs-mock-track__fill sfs-mock-track__fill--amber sfs-factor__fill--execution"></span></span>
+                <p class="sfs-factor__note">Based on construction progress, on-track ratio and delay severity.</p>
+              </div>
+              <div class="sfs-mock-card sfs-factor sfs-factor--promise">
+                <p class="sfs-factor__row"><span>Promise Fulfilment</span><span>17/25</span></p>
+                <span class="sfs-mock-track"><span class="sfs-mock-track__fill sfs-mock-track__fill--green sfs-factor__fill--promise"></span></span>
+                <p class="sfs-factor__note">Derived from stage discipline, handover readiness and delay impact.</p>
+              </div>
+              <p class="sfs-mock-pill sfs-mock-pill--explainer"><img class="sfs-mock-pill__dot" src="../assets/images/square-foot-story/dot-amber.svg" alt="">5 factors, each explained</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Feature 02 (visual on the left) -->
+        <article class="cs-feature cs-feature--reverse">
+          <div class="sfs-visual sfs-visual--tracking">
+            <div class="sfs-visual__stage">
+              <div class="glow sfs-visual__glow sfs-visual__glow--tracking"><img class="glow__image" src="../assets/images/square-foot-story/glow-feature-tracking.svg" alt=""></div>
+              <div class="sfs-visual__slot sfs-visual__slot--comparison">
+                <div class="phone phone--static sfs-visual__phone--172"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-comparison.webp" alt="Property comparison screen" loading="lazy"></div></div>
+              </div>
+              <div class="sfs-visual__slot sfs-visual__slot--tracking">
+                <div class="phone phone--static sfs-visual__phone--200"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-splash.webp" alt="Square Foot Story welcome screen" loading="lazy"></div></div>
+              </div>
+              <div class="sfs-mock-card sfs-project sfs-project--a">
+                <div class="sfs-project__row">
+                  <p class="sfs-project__title"><span class="sfs-project__name">Project A</span><span class="sfs-project__place">Sector 113, Gurugram</span></p>
+                  <span class="sfs-status sfs-status--on-time"><img src="../assets/images/square-foot-story/dot-on-time.svg" alt="">On time</span>
+                </div>
+                <div class="sfs-construction">
+                  <p class="sfs-construction__row"><span>Construction</span><span class="sfs-construction__value">52%</span></p>
+                  <span class="sfs-mock-track sfs-mock-track--amber"><span class="sfs-mock-track__fill sfs-mock-track__fill--green sfs-project__fill--a"></span></span>
+                </div>
+              </div>
+              <div class="sfs-mock-card sfs-project sfs-project--b">
+                <div class="sfs-project__row">
+                  <p class="sfs-project__title"><span class="sfs-project__name">Project B</span><span class="sfs-project__place">Noida Extension</span></p>
+                  <span class="sfs-status sfs-status--delayed"><img src="../assets/images/square-foot-story/dot-delayed.svg" alt="">Delayed</span>
+                </div>
+                <div class="sfs-construction">
+                  <p class="sfs-construction__row"><span>Construction</span><span class="sfs-construction__value">31%</span></p>
+                  <span class="sfs-mock-track sfs-mock-track--amber"><span class="sfs-mock-track__fill sfs-mock-track__fill--amber sfs-project__fill--b"></span></span>
+                </div>
+              </div>
+              <div class="sfs-alert">
+                <span class="sfs-alert__icon" aria-hidden="true">!</span>
+                <p class="sfs-alert__text"><span class="sfs-alert__title">Possession date changed</span><span class="sfs-alert__dates">Mar 2026 → Sep 2026</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="cs-feature__text">
+            <p class="cs-feature__tags"><span class="cs-feature__tag">Feature 02</span><span class="cs-feature__tag cs-feature__tag--solves">Solves: delays</span></p>
+            <h3 class="cs-feature__title">Meter Square construction tracking</h3>
+            <p class="cs-feature__intro">Possession dates slip quietly, and buyers usually find out last. Delay information needed to be impossible to miss.</p>
+            <div class="cs-decisions">
+              <p class="cs-decisions__label">Key design decisions</p>
+              <ol class="cs-decisions__list">
+                <li class="cs-decisions__item"><span class="cs-decisions__num">1</span>Show construction progress and an On time or Delayed status directly on every project card.</li>
+                <li class="cs-decisions__item"><span class="cs-decisions__num">2</span>Flag possession date changes with a clear before-and-after tooltip.</li>
+                <li class="cs-decisions__item"><span class="cs-decisions__num">3</span>Let buyers filter by delivery, construction stage, appreciation and builder credibility.</li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <!-- Feature 03 -->
+        <article class="cs-feature">
+          <div class="cs-feature__text">
+            <p class="cs-feature__tags"><span class="cs-feature__tag">Feature 03</span><span class="cs-feature__tag cs-feature__tag--solves">Solves: hidden costs</span></p>
+            <h3 class="cs-feature__title">Smart Calculators</h3>
+            <p class="cs-feature__intro">The listed price is rarely what a buyer pays. Stamp duty, registration, circle rates and interiors were left for buyers to discover late.</p>
+            <div class="cs-decisions">
+              <p class="cs-decisions__label">Key design decisions</p>
+              <ol class="cs-decisions__list">
+                <li class="cs-decisions__item"><span class="cs-decisions__num">1</span>Four calculators for the costs buyers miss: EMI, stamp duty, circle rate and interior cost.</li>
+                <li class="cs-decisions__item"><span class="cs-decisions__num">2</span>Plain-language results instead of finance jargon, with every input visible and editable.</li>
+                <li class="cs-decisions__item"><span class="cs-decisions__num">3</span>Disclaimer sheets that explain why rates vary and how to verify them before deciding.</li>
+              </ol>
+            </div>
+          </div>
+          <div class="sfs-visual sfs-visual--calculators">
+            <div class="sfs-visual__stage">
+              <div class="sfs-visual__slot sfs-visual__slot--calculator">
+                <div class="phone phone--static sfs-visual__phone--212"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-circle-rate-calculator.webp" alt="Circle rate calculator screen" loading="lazy"></div></div>
+              </div>
+              <p class="sfs-calc-tabs"><span class="sfs-calc-tabs__tab">EMI</span><span class="sfs-calc-tabs__tab">Stamp duty</span><span class="sfs-calc-tabs__tab sfs-calc-tabs__tab--active">Circle rate</span><span class="sfs-calc-tabs__tab">Interior</span></p>
+              <div class="sfs-mock-card sfs-result">
+                <p class="sfs-result__label">Your Property's Circle Rate</p>
+                <p class="sfs-result__value">₹84,72,391</p>
+                <p class="sfs-result__note">Estimated minimum government value</p>
+              </div>
+              <div class="sfs-mock-card sfs-area">
+                <p class="sfs-area__row"><span class="sfs-area__label">Area</span><span class="sfs-area__value">1200 sqft</span></p>
+                <span class="sfs-slider" aria-hidden="true"><span class="sfs-slider__track"></span><span class="sfs-slider__fill"></span><img class="sfs-slider__thumb" src="../assets/images/square-foot-story/slider-thumb.svg" alt=""></span>
+                <p class="sfs-cities"><span class="sfs-cities__chip">Gurugram</span><span class="sfs-cities__chip sfs-cities__chip--active">Delhi</span><span class="sfs-cities__chip">Noida</span></p>
+              </div>
+              <div class="sfs-mock-card sfs-breakdown">
+                <p class="sfs-breakdown__caption">Example estimate</p>
+                <p class="sfs-breakdown__row"><span>Property price</span><span class="sfs-breakdown__amount">₹1.20 Cr</span></p>
+                <p class="sfs-breakdown__row"><span>Stamp duty</span><span class="sfs-breakdown__amount">₹8.4 L</span></p>
+                <p class="sfs-breakdown__row"><span>Registration</span><span class="sfs-breakdown__amount">₹1.2 L</span></p>
+                <p class="sfs-breakdown__row"><span>Interiors (est.)</span><span class="sfs-breakdown__amount">₹12–18 L</span></p>
+                <span class="sfs-breakdown__divider"></span>
+                <p class="sfs-breakdown__row sfs-breakdown__row--total"><span>Closer to the true cost</span><span class="sfs-breakdown__total">≈ ₹1.4 Cr</span></p>
+              </div>
+              <p class="sfs-mock-pill sfs-mock-pill--disclaimer"><img class="sfs-mock-pill__dot" src="../assets/images/square-foot-story/dot-disclaimer.svg" alt="">Rates vary by state · verify before you decide</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- ============ 05 How I worked ============ -->
+      <section class="cs-section">
+        <div class="cs-head">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">05</span>How I worked</p>
+          <h2 class="cs-head__title">Shipping a new feature in 2–3 days</h2>
+          <p class="cs-head__text">New features usually came with a 2–3 day deadline. Instead of cutting corners, I built a workflow that made speed and consistency work together.</p>
+        </div>
+        <ol class="cs-steps">
+          <li class="cs-step"><span class="cs-step__num">01</span><h3 class="cs-step__title">Brief with AI</h3><p class="cs-step__text">Requirements become a clear problem, scope and prompt in ChatGPT or Claude.</p></li>
+          <li class="cs-step"><span class="cs-step__num">02</span><h3 class="cs-step__title">Prototype fast</h3><p class="cs-step__text">Figma Make or Lovable generates a working draft to test the flow early.</p></li>
+          <li class="cs-step"><span class="cs-step__num">03</span><h3 class="cs-step__title">Systemize</h3><p class="cs-step__text">Every element is rebuilt on the design foundation in Figma.</p></li>
+          <li class="cs-step cs-step--dark"><span class="cs-step__num">04</span><h3 class="cs-step__title">Ship same day</h3><p class="cs-step__text">MCP-ready files: developers went from 3–5 days to same-day implementation.</p></li>
+        </ol>
+      </section>
+
+      <!-- ============ 06 The rest of the product ============ -->
+      <section class="cs-section">
+        <div class="cs-head">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">06</span>The rest of the product</p>
+          <h2 class="cs-head__title">50+ screens, one consistent product</h2>
+          <p class="cs-head__text">Beyond the three core features, the same foundation carries every other part of the app.</p>
+        </div>
+
+        <div class="sfs-flow sfs-flow--wide">
+          <div class="sfs-flow__head">
+            <div class="sfs-flow__text"><h3 class="sfs-flow__title">Property deep-dive</h3><p class="sfs-flow__description">Overview, master plan, floor plans, price insights and payment plan for every project.</p></div>
+            <span class="sfs-flow__count">5 screens</span>
+          </div>
+          <ul class="sfs-flow__phones">
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-property-overview.webp" alt="Property overview screen for M3M Jewel with construction progress" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-property-master-plan.webp" alt="Master plan screen with site layout and project stats" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-property-floor-plans.webp" alt="Floor plans screen" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-property-price-insights.webp" alt="Price insights screen with a growth chart" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-property-payment-plan.webp" alt="Construction payment plan screen" loading="lazy"></div></li>
+          </ul>
+        </div>
+
+        <div class="sfs-flows">
+          <div class="sfs-flow">
+            <div class="sfs-flow__head">
+              <div class="sfs-flow__text"><h3 class="sfs-flow__title">Onboarding &amp; sign-in</h3><p class="sfs-flow__description">From first launch to a personalised feed.</p></div>
+              <span class="sfs-flow__count">3 screens</span>
+            </div>
+            <ul class="sfs-flow__phones">
+              <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-splash.webp" alt="Welcome screen: Find properties without the chaos" loading="lazy"></div></li>
+              <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-phone-number.webp" alt="Phone number sign-in screen" loading="lazy"></div></li>
+              <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-location.webp" alt="Location selection screen" loading="lazy"></div></li>
+            </ul>
+          </div>
+          <div class="sfs-flow">
+            <div class="sfs-flow__head">
+              <div class="sfs-flow__text"><h3 class="sfs-flow__title">Cost calculators</h3><p class="sfs-flow__description">Every hidden cost, visible before you buy.</p></div>
+              <span class="sfs-flow__count">3 screens</span>
+            </div>
+            <ul class="sfs-flow__phones">
+              <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-emi-calculator.webp" alt="EMI calculator screen" loading="lazy"></div></li>
+              <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-stamp-duty-calculator.webp" alt="Stamp duty calculator screen" loading="lazy"></div></li>
+              <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-interior-cost-calculator.webp" alt="Interior cost calculator screen" loading="lazy"></div></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="sfs-flow sfs-flow--wide">
+          <div class="sfs-flow__head">
+            <div class="sfs-flow__text"><h3 class="sfs-flow__title">Discovery &amp; services</h3><p class="sfs-flow__description">Projects, interior designers and home brands on the same foundation.</p></div>
+            <span class="sfs-flow__count">5 screens</span>
+          </div>
+          <ul class="sfs-flow__phones">
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-home.webp" alt="Home screen with trending properties" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-interior-designer.webp" alt="Interior designer details screen" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-interior-designer-project.webp" alt="Interior designer project details screen" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-brands.webp" alt="Home brands screen" loading="lazy"></div></li>
+            <li class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-comparison.webp" alt="Property comparison screen" loading="lazy"></div></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ============ 07 Outcomes + 08 Learnings ============ -->
+      <div class="cs-closing">
+        <section class="sfs-outcomes">
+          <div class="glow sfs-outcomes__glow"><img class="glow__image" src="../assets/images/square-foot-story/glow-outcomes.svg" alt=""></div>
+          <div class="sfs-outcomes__content">
+            <div class="cs-head cs-head--loose">
+              <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">07</span>Outcomes</p>
+              <h2 class="cs-head__title cs-head__title--large">What changed</h2>
+              <p class="cs-head__text cs-head__text--small">From an empty canvas to a live product, and a faster way for the team to ship it.</p>
+            </div>
+            <ul class="sfs-stats">
+              <li class="sfs-stat">
+                <div class="sfs-stat__top"><p class="sfs-stat__value">Live</p><span class="sfs-stat__store"><img src="../assets/images/square-foot-story/dot-store.svg" alt="">iOS · Android</span></div>
+                <p class="sfs-stat__text">On the Google Play Store and Apple App Store</p>
+              </li>
+              <li class="sfs-stat">
+                <div class="sfs-stat__top"><p class="sfs-stat__value">100 → 1.6K+</p><span class="sfs-stat__bars" aria-hidden="true"><span class="sfs-stat__bar sfs-stat__bar--before"></span><span class="sfs-stat__bar sfs-stat__bar--after"></span></span></div>
+                <p class="sfs-stat__text">App downloads</p>
+              </li>
+              <li class="sfs-stat">
+                <div class="sfs-stat__top"><p class="sfs-stat__value">Same day</p><span class="sfs-stat__days"><s class="sfs-stat__days-before">3–5 days</s><span class="sfs-stat__days-after">→ 1 day</span></span></div>
+                <p class="sfs-stat__text">Developer implementation, down from 3–5 days to a single day</p>
+              </li>
+              <li class="sfs-stat">
+                <div class="sfs-stat__top"><p class="sfs-stat__value">1 system</p><img class="sfs-stat__swatches" src="../assets/images/square-foot-story/swatches.svg" alt=""></div>
+                <p class="sfs-stat__text">A consistent design language across app and web</p>
+              </li>
+            </ul>
+          </div>
+          <div class="sfs-outcomes__phone">
+            <div class="phone phone--static"><div class="phone__screens"><img class="phone__screen" src="../assets/images/square-foot-story/screen-property-overview.webp" alt="The live Square Foot Story app showing a property overview" loading="lazy"></div></div>
+          </div>
+        </section>
+
+        <section class="cs-section">
+          <div class="cs-head cs-head--loose">
+            <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">08</span>Learnings</p>
+            <h2 class="cs-head__title cs-head__title--large">What this project taught me</h2>
+            <p class="cs-head__text cs-head__text--small">Four ideas I now bring to every product I design.</p>
+          </div>
+          <ul class="cs-learnings">
+            <li class="cs-learning"><span class="cs-learning__num">01</span><h3 class="cs-learning__title">Design for trust</h3><p class="cs-learning__text">In real estate, people don’t act on data they don’t understand. Explaining a score mattered more than the score itself.</p></li>
+            <li class="cs-learning"><span class="cs-learning__num">02</span><h3 class="cs-learning__title">Foundation first</h3><p class="cs-learning__text">Building the system before scaling screens made every later screen faster and more consistent.</p></li>
+            <li class="cs-learning"><span class="cs-learning__num">03</span><h3 class="cs-learning__title">AI drafts, judgment decides</h3><p class="cs-learning__text">AI gives a fast first draft. Refining it and fitting it to the product is what makes it feel right.</p></li>
+            <li class="cs-learning"><span class="cs-learning__num">04</span><h3 class="cs-learning__title">Design for implementation</h3><p class="cs-learning__text">How a Figma file is structured affects how fast it ships as much as how it looks.</p></li>
+          </ul>
+        </section>
+      </div>
+
+      <!-- ============ Next project ============ -->
+      <section class="cs-next">
+        <div class="cs-next__text">
+          <p class="cs-next__label">Next project</p>
+          <h2 class="cs-next__title">Designed an AI astrology experience</h2>
+          <p class="cs-next__meta">AstroBharat AI · Mobile app · Freelance</p>
+        </div>
+        <a class="button button--primary button--pill cs-next__button" href="astrobharat-ai.html">View project →</a>
+      </section>
+    </main>
 
     <footer class="footer">
       <p class="footer__text">© 2026 Mayank Pal  ·  Delhi NCR, India</p>
       <nav class="footer__links" aria-label="Social">
         <a class="footer__link" href="#">LinkedIn</a>
         <a class="footer__link" href="#">X (Twitter)</a>
-        <a class="footer__link" href="../assets/docs/resume.pdf" download>Resume</a>
+        <a class="footer__link" href="mailto:Mayankoct2004@gmail.com">Mayankoct2004@gmail.com</a>
       </nav>
     </footer>
 

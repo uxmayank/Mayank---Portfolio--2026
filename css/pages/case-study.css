@@ -1,1 +1,699 @@
 /* Styles shared by all case study pages in projects/. */
+
+/* ==========================================================
+   Page rhythm
+   ========================================================== */
+.page--case-study,
+.page--case-study .page__main {
+  gap: var(--space-112);
+}
+
+.page--case-study {
+  padding-bottom: var(--space-48);
+}
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+.cs-hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-28);
+  padding-top: var(--space-40);
+}
+
+.cs-hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-16);
+}
+
+.cs-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.cs-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-10);
+  background: var(--color-surface);
+  border-radius: var(--radius-11);
+  color: var(--color-text-body);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-tag__dot {
+  width: 6px;
+  height: 6px;
+}
+
+.cs-hero__title {
+  max-width: 880px;
+  line-height: 62px;
+  letter-spacing: -1.68px;
+}
+
+.cs-hero__intro {
+  max-width: 820px;
+  color: var(--color-text-body);
+  font-size: var(--font-size-18);
+  line-height: 28px;
+}
+
+/* "Check Live Website :- Website" style link rows */
+.cs-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-16);
+}
+
+.cs-links__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--space-8);
+}
+
+.cs-links__label {
+  font-family: var(--font-heading);
+  font-variation-settings: "opsz" 14;
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: -0.32px;
+}
+
+.cs-links__link {
+  color: var(--color-link);
+  font-size: var(--font-size-15);
+  font-weight: var(--font-weight-medium);
+  text-decoration: underline;
+  text-underline-position: from-font;
+}
+
+.cs-links__link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.cs-links__separator {
+  color: var(--color-text-separator);
+  font-size: var(--font-size-15);
+}
+
+/* Role / Worked with / Platforms / Scope / Status */
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-16);
+  margin: 0;
+  padding: var(--space-20) var(--space-24);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-20);
+  font-weight: var(--font-weight-medium);
+}
+
+.cs-meta__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cs-meta__label {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-12);
+  line-height: 16px;
+}
+
+.cs-meta__value {
+  margin: 0;
+  font-size: var(--font-size-15);
+  line-height: 22px;
+}
+
+.cs-meta__value--live {
+  color: var(--color-green-700);
+}
+
+/* ==========================================================
+   Impact numbers
+   ========================================================== */
+.cs-impact {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.cs-impact__card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-20);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-20);
+}
+
+.cs-impact__value {
+  font-family: var(--font-heading);
+  font-variation-settings: "opsz" 14;
+  font-size: var(--font-size-26);
+  font-weight: var(--font-weight-semibold);
+  line-height: 32px;
+  letter-spacing: -0.13px;
+}
+
+.cs-impact__label {
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: 20px;
+}
+
+.cs-impact__note {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-13);
+  line-height: 19px;
+}
+
+/* ==========================================================
+   Sections and numbered section headings
+   ========================================================== */
+.cs-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.cs-section--roomy {
+  gap: var(--space-28);
+}
+
+.cs-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cs-head--loose {
+  gap: var(--space-10);
+}
+
+.cs-head__eyebrow {
+  display: flex;
+  gap: var(--space-8);
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-head__number {
+  color: var(--color-text);
+}
+
+.cs-head__number--accent {
+  color: var(--color-orange-900);
+}
+
+.cs-head__title {
+  max-width: 760px;
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-semibold);
+  line-height: 38px;
+  letter-spacing: -0.64px;
+}
+
+.cs-head__title--large {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-34);
+  line-height: normal;
+  letter-spacing: 0;
+}
+
+.cs-head__text {
+  max-width: 760px;
+  color: var(--color-text-body);
+  font-size: var(--font-size-16);
+  line-height: 25px;
+}
+
+.cs-head__text--small {
+  font-size: var(--font-size-15);
+  line-height: 22px;
+}
+
+/* ==========================================================
+   Problem cards
+   ========================================================== */
+.cs-cards {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.cs-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-20);
+}
+
+.cs-card__badge {
+  padding: var(--space-4) var(--space-10);
+  background: var(--color-red-50);
+  border-radius: var(--radius-round);
+  color: var(--color-red-900);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-card__title {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
+  line-height: 26px;
+}
+
+.cs-card__text {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+  line-height: 22px;
+}
+
+/* ==========================================================
+   Text + side card (e.g. "Starting point" + "What I owned")
+   ========================================================== */
+.cs-split {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-48);
+}
+
+.cs-split__main {
+  flex: 1;
+  min-width: 0;
+}
+
+.cs-role-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+  width: 420px;
+  flex-shrink: 0;
+  padding: var(--space-24);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-20);
+}
+
+.cs-role-card__label {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-role-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-14);
+}
+
+.cs-role-card__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-10);
+  color: var(--color-text-dark);
+  font-size: var(--font-size-14);
+  line-height: 21px;
+}
+
+.cs-role-card__bullet {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: var(--space-6);
+}
+
+/* ==========================================================
+   Feature rows: text on one side, a visual on the other
+   ========================================================== */
+.cs-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-32);
+  padding: var(--space-32);
+  background: var(--color-surface);
+  border-radius: var(--radius-20);
+}
+
+.cs-feature__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  width: 440px;
+  flex-shrink: 0;
+}
+
+.cs-feature__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.cs-feature__tag {
+  padding: var(--space-5) var(--space-10);
+  background: var(--color-surface);
+  border-radius: var(--radius-11);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-feature__tag--solves {
+  background: var(--color-green-50);
+  color: var(--color-green-900);
+}
+
+.cs-feature__tag--round {
+  border-radius: var(--radius-round);
+}
+
+.cs-feature__title {
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-semibold);
+  line-height: 34px;
+  letter-spacing: -0.56px;
+}
+
+.cs-feature__intro {
+  color: var(--color-text-body);
+  font-size: var(--font-size-15);
+  line-height: 24px;
+}
+
+/* Numbered "Key design decisions" list */
+.cs-decisions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  padding-top: var(--space-4);
+}
+
+.cs-decisions__label {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-decisions__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-decisions__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-12);
+  color: var(--color-text-dark);
+  font-size: var(--font-size-14);
+  line-height: 22px;
+}
+
+.cs-decisions__num {
+  flex-shrink: 0;
+  margin-top: var(--space-2);
+  padding: var(--space-2) var(--space-7);
+  background: var(--color-surface);
+  border-radius: var(--radius-6);
+  color: var(--color-orange-900);
+  font-size: var(--font-size-11);
+  font-weight: var(--font-weight-semibold);
+  line-height: 16px;
+}
+
+/* ==========================================================
+   Process steps
+   ========================================================== */
+.cs-steps {
+  display: flex;
+  gap: var(--space-16);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-20);
+  background: var(--color-surface);
+  border-radius: var(--radius-20);
+}
+
+.cs-step__num {
+  color: var(--color-orange-900);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-step__title {
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  line-height: 24px;
+}
+
+.cs-step__text {
+  color: var(--color-text-body);
+  font-size: var(--font-size-13);
+  line-height: 20px;
+}
+
+.cs-step--dark {
+  background: var(--color-grey-900);
+}
+
+.cs-step--dark .cs-step__title {
+  color: var(--color-white);
+}
+
+.cs-step--dark .cs-step__text {
+  color: var(--color-grey-200);
+}
+
+/* ==========================================================
+   Closing: outcomes + learnings sit closer together
+   ========================================================== */
+.cs-closing {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-64);
+}
+
+.cs-learnings {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.cs-learning {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-14);
+  padding: var(--space-24) var(--space-22);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: var(--radius-20);
+}
+
+.cs-learning__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--color-green-50);
+  border-radius: var(--radius-10);
+  color: var(--color-green-900);
+  font-size: var(--font-size-13);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cs-learning__title {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  line-height: 24px;
+}
+
+.cs-learning__text {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+  line-height: 21px;
+}
+
+/* ==========================================================
+   Next project
+   ========================================================== */
+.cs-next {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  padding: var(--space-28) var(--space-32);
+  background: var(--color-surface);
+  border: 1px solid var(--color-grey-900);
+  border-radius: var(--radius-20);
+}
+
+.cs-next__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.cs-next__label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.cs-next__title {
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-semibold);
+  line-height: 34px;
+  letter-spacing: -0.56px;
+}
+
+.cs-next__meta {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+  line-height: 20px;
+}
+
+/* ==========================================================
+   Mobile (matches the 402px Figma frame)
+   ========================================================== */
+@media (max-width: 767px) {
+  .page--case-study,
+  .page--case-study .page__main {
+    gap: var(--space-72);
+  }
+
+  .page--case-study .footer {
+    align-items: flex-start;
+  }
+
+  .cs-hero__title {
+    font-size: var(--font-size-36);
+    line-height: 40px;
+    letter-spacing: -1.08px;
+  }
+
+  .cs-links {
+    flex-direction: column;
+    gap: var(--space-10);
+  }
+
+  .cs-meta {
+    flex-direction: column;
+  }
+
+  .cs-impact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-12);
+  }
+
+  .cs-impact__value {
+    font-size: var(--font-size-22);
+    line-height: 27px;
+    letter-spacing: -0.11px;
+  }
+
+  .cs-head__title {
+    font-size: var(--font-size-26);
+    line-height: 31px;
+    letter-spacing: -0.52px;
+  }
+
+  .cs-head__title--large {
+    line-height: normal;
+    letter-spacing: 0;
+  }
+
+  .cs-cards,
+  .cs-steps,
+  .cs-learnings {
+    flex-direction: column;
+    gap: var(--space-12);
+  }
+
+  .cs-card__title {
+    font-size: var(--font-size-18);
+    line-height: 23px;
+  }
+
+  .cs-split {
+    flex-direction: column;
+    gap: var(--space-24);
+  }
+
+  .cs-role-card {
+    width: 100%;
+  }
+
+  .cs-feature {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-24);
+    padding: var(--space-16);
+  }
+
+  .cs-feature__text {
+    width: auto;
+  }
+
+  .cs-feature__title {
+    font-size: var(--font-size-22);
+    line-height: 28px;
+    letter-spacing: -0.44px;
+  }
+
+  /* Text first, then the visual, like the other features */
+  .cs-feature--reverse .cs-feature__text {
+    order: -1;
+  }
+
+  .cs-next {
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--space-28) var(--space-32);
+  }
+
+  .cs-next__title {
+    font-size: var(--font-size-22);
+    line-height: 28px;
+    letter-spacing: -0.44px;
+  }
+}
