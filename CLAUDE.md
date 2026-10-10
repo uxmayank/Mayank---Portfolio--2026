@@ -30,15 +30,17 @@ css/
     tokens.css          CSS variables: colours, fonts, spacing, radius, shadows (only place for raw values)
     typography.css      heading/body text styles
     layout.css          container, section spacing, grid helpers
-  components/           one file per reusable piece: nav.css, footer.css, buttons.css, cards.css, chips.css, carousel.css, phone-mockup.css
+  components/           one file per reusable piece: nav.css, footer.css, buttons.css, cards.css, chips.css, carousel.css, phone-mockup.css,
+                        browser-mockup.css, media-frame.css (grid frame for video), sfs-cover.css (animated Square Foot Story cover)
   pages/                one file per page: home.css, about.css, case-study.css (shared by all case studies), plus project-specific files only if needed
+                        (square-foot-story.css)
 js/
   main.js               small shared scripts (e.g. mobile nav)
   carousel.js           About page photo carousel
 assets/
   images/home/, images/about/, images/square-foot-story/, images/mechservi/, images/buildmycv/, images/astrobharat-ai/
   icons/
-  videos/home/          showreel.mp4 (keep each video under ~20 MB; GitHub rejects files over 100 MB)
+  videos/home/          sfs-launch-reel.mp4 (keep each video under ~20 MB; GitHub rejects files over 100 MB)
   docs/                 resume.pdf
 ```
 
