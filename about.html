@@ -52,12 +52,18 @@
           </div>
         </div>
 
-        <!-- Photo carousel: add more photos as extra <li> slides (save them as
-             assets/images/about/photo-2.webp, photo-3.webp …). Arrows and dots appear
-             automatically once there is more than one photo. -->
+        <!-- Photo carousel (Figma 336:3423): 5 slides, as in the design.
+             Slides 2–5 are placeholders. To use a real photo, save it as
+             assets/images/about/photo-2.webp (1024 × 800) and replace that slide's line with:
+             <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-2.webp" alt="Describe the photo" draggable="false"></li>
+             The dots and arrows update on their own. -->
         <section class="carousel about-hero__carousel" data-carousel aria-label="Photos of Mayank" tabindex="0">
           <ul class="carousel__track">
             <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-1.webp" alt="Mayank standing on a cricket ground in a black polo shirt" draggable="false"></li>
+            <li class="carousel__slide carousel__slide--placeholder"><span class="carousel__placeholder-label">Image 2</span></li>
+            <li class="carousel__slide carousel__slide--placeholder carousel__slide--placeholder-light"><span class="carousel__placeholder-label">Image 3</span></li>
+            <li class="carousel__slide carousel__slide--placeholder"><span class="carousel__placeholder-label">Image 4</span></li>
+            <li class="carousel__slide carousel__slide--placeholder carousel__slide--placeholder-light"><span class="carousel__placeholder-label">Image 5</span></li>
           </ul>
           <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Previous photo">←</button>
           <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Next photo">→</button>
