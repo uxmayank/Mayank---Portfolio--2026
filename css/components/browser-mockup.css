@@ -83,6 +83,11 @@
   box-shadow: var(--shadow-shot);
 }
 
+/* No drop shadow (BuildMyCV) */
+.browser-shot--flat .browser-shot__window {
+  box-shadow: none;
+}
+
 .browser-shot__bar {
   display: flex;
   align-items: center;

@@ -107,6 +107,8 @@
   --color-browser-bar-cool: #F5F5F7;
   --color-shot-border: #E8E8E8;
   --color-shot-bar: #F4F4F4;
+  --color-week-bg: #F1EAFF;
+  --color-week-text: #6A2BD9;
   --color-glass: rgba(255, 255, 255, 0.7);
   --color-glass-strong: rgba(255, 255, 255, 0.75);
   --color-tab-hover: rgba(255, 255, 255, 0.12);
@@ -149,6 +151,7 @@
   --gradient-mechservi: linear-gradient(150deg, #FFF2F2 0%, #FAF8F8 42.857%, #F1F1F3 71.429%);
   --gradient-buildmycv: linear-gradient(161.99deg, #F3EFFD 0%, #F8F7FB 42.857%, #F1F1F4 71.429%);
   --gradient-buildmycv-mobile: linear-gradient(145.25deg, #F3EFFD 0%, #F8F7FB 42.857%, #F1F1F4 71.429%);
+  --gradient-buildmycv-hero-mobile: linear-gradient(146.46deg, #F3EFFD 0%, #F8F7FB 42.857%, #F1F1F4 71.429%);
 
   /* ---------- Fonts ---------- */
   --font-heading: "Bricolage Grotesque", sans-serif;

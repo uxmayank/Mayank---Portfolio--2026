@@ -1,0 +1,56 @@
+/* BuildMyCV cover: the landing page in a browser window over a soft purple glow.
+   Used on the home page card and the case study hero. 1em = 1 Figma pixel of the 1230 × 400 composition. */
+
+.buildmycv-cover {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  aspect-ratio: 1230 / 400;
+  background: var(--gradient-buildmycv);
+}
+
+.buildmycv-cover__stage {
+  position: absolute;
+  inset: 0;
+  font-size: calc(100cqw / 1230);
+}
+
+.buildmycv-cover__stage img {
+  max-width: none;
+}
+
+.buildmycv-cover__glow { left: 320.1em; top: 78.75em; width: 300em; height: 300em; }
+.buildmycv-cover__glow .glow__image { inset: -30%; width: 160%; height: 160%; }
+
+.buildmycv-cover__browser { width: 466em; height: 360em; }
+.buildmycv-cover__browser .browser__page { height: 336em; }
+
+/* Hero layout (case study page): same picture at full width with larger corners */
+.buildmycv-cover--hero {
+  border-radius: var(--radius-24);
+}
+
+/* On phones the hero is taller: the browser sits centred over a smaller glow
+   (Figma mobile frame: 362 × 240, i.e. 632.8 × 419.5 composition pixels) */
+@media (max-width: 767px) {
+  .buildmycv-cover--hero {
+    aspect-ratio: 362 / 240;
+    background: var(--gradient-buildmycv-hero-mobile);
+    border-radius: var(--radius-16);
+  }
+
+  .buildmycv-cover--hero .buildmycv-cover__stage {
+    font-size: calc(100cqw / 632.8);
+  }
+
+  .buildmycv-cover--hero .buildmycv-cover__browser {
+    top: 29.75em;
+  }
+
+  .buildmycv-cover--hero .buildmycv-cover__glow {
+    left: 164.7em;
+    top: 40.5em;
+    width: 154.3em;
+    height: 154.3em;
+  }
+}
