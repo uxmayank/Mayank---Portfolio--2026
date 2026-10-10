@@ -284,6 +284,23 @@
   justify-content: center;
 }
 
+/* Cal.com booking calendar on a white panel inside the orange card */
+.contact__calendar {
+  width: 100%;
+  margin-top: var(--space-8);
+  overflow: hidden;
+  background: var(--color-surface);
+  border-radius: var(--radius-16);
+  scroll-margin-top: var(--space-24);
+}
+
+/* Cal.com sets the calendar's height itself; this keeps space while it loads */
+.contact__calendar-embed {
+  width: 100%;
+  min-height: 560px;
+  overflow: auto;
+}
+
 /* ==========================================================
    Mobile (matches the 402px Figma frame)
    ========================================================== */
