@@ -1,1 +1,466 @@
 /* Styles for the About page (about.html). */
+
+/* ==========================================================
+   Page rhythm
+   ========================================================== */
+.page--about,
+.page--about .page__main {
+  gap: var(--space-104);
+}
+
+.page--about {
+  padding-bottom: var(--space-48);
+}
+
+/* Small grey label above a section title */
+.about-eyebrow {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.about-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-title {
+  max-width: 760px;
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-semibold);
+  line-height: 38px;
+  letter-spacing: -0.64px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+/* ==========================================================
+   Hero: intro text + photo carousel
+   ========================================================== */
+.about-hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-56);
+  padding-top: var(--space-40);
+}
+
+.about-hero__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-18);
+}
+
+.about-hero__chip {
+  padding: var(--space-5) var(--space-10);
+  background: var(--color-surface);
+  border-radius: var(--radius-11);
+  color: var(--color-text-body);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.about-hero__title {
+  font-size: var(--font-size-48);
+  line-height: 54px;
+  letter-spacing: -1.44px;
+}
+
+.about-hero__intro {
+  color: var(--color-text-body);
+  font-size: var(--font-size-17);
+  line-height: 27px;
+}
+
+.about-hero__carousel {
+  flex-shrink: 0;
+  width: 512px;
+}
+
+/* ==========================================================
+   Quick facts
+   ========================================================== */
+.about-facts {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-16);
+  margin: 0;
+  padding: var(--space-20) var(--space-24);
+  background: var(--color-surface);
+  border-radius: var(--radius-20);
+  font-weight: var(--font-weight-medium);
+}
+
+.about-facts__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.about-facts__label {
+  color: var(--color-text-subtle);
+  font-size: var(--font-size-12);
+  line-height: 16px;
+}
+
+.about-facts__value {
+  margin: 0;
+  font-size: var(--font-size-15);
+  line-height: 22px;
+}
+
+/* ==========================================================
+   My story
+   ========================================================== */
+.about-story {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-56);
+}
+
+.about-story .about-head {
+  flex-shrink: 0;
+  width: 360px;
+}
+
+.about-story__body {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-18);
+  color: var(--color-grey-700);
+  font-size: var(--font-size-17);
+  line-height: 28px;
+}
+
+/* ==========================================================
+   How I think: three principle cards
+   ========================================================== */
+.about-cards {
+  display: flex;
+  gap: var(--space-16);
+}
+
+.about-principle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  padding: var(--space-24);
+  background: var(--color-surface);
+  border-radius: var(--radius-20);
+}
+
+.about-principle__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-12);
+}
+
+.about-principle__number {
+  color: var(--color-grey-200);
+  font-family: var(--font-heading);
+  font-variation-settings: "opsz" 14;
+  font-size: var(--font-size-28);
+  font-weight: var(--font-weight-semibold);
+  line-height: 32px;
+}
+
+.about-principle__chip {
+  padding: var(--space-5) var(--space-10);
+  border-radius: var(--radius-11);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.about-principle__chip--blue  { background: var(--color-blue-50); color: var(--color-grey-900); }
+.about-principle__chip--dark  { background: var(--color-grey-800); color: var(--color-orange-100); }
+.about-principle__chip--green { background: var(--color-green-50); color: var(--color-green-700); }
+
+.about-principle__title {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
+  line-height: 26px;
+  letter-spacing: -0.4px;
+}
+
+.about-principle__text {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+  line-height: 22px;
+}
+
+/* The middle card is dark */
+.about-principle--dark {
+  background: var(--color-grey-900);
+}
+
+.about-principle--dark .about-principle__number { color: var(--color-orange-900); }
+.about-principle--dark .about-principle__title  { color: var(--color-white); }
+.about-principle--dark .about-principle__text   { color: var(--color-grey-200); }
+
+/* ==========================================================
+   Journey: timeline
+   ========================================================== */
+.about-timeline {
+  margin: 0;
+  padding: var(--space-12) var(--space-28);
+  background: var(--color-surface);
+  border-radius: var(--radius-20);
+  list-style: none;
+}
+
+.about-timeline__step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-24);
+  padding: var(--space-18) 0;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.about-timeline__step:last-child {
+  border-bottom: 0;
+}
+
+.about-timeline__year {
+  flex-shrink: 0;
+  width: 90px;
+  color: var(--color-text-subtle);
+  font-family: var(--font-heading);
+  font-variation-settings: "opsz" 14;
+  font-size: var(--font-size-18);
+  font-weight: var(--font-weight-semibold);
+  line-height: 24px;
+}
+
+.about-timeline__step--current .about-timeline__year {
+  color: var(--color-orange-900);
+}
+
+.about-timeline__dot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+}
+
+.about-timeline__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.about-timeline__title {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-semibold);
+  line-height: 22px;
+}
+
+.about-timeline__description {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-14);
+  line-height: 20px;
+}
+
+/* ==========================================================
+   Right now: three status cards
+   ========================================================== */
+.about-now {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+  padding: var(--space-24);
+  background: var(--color-surface);
+  border-radius: var(--radius-20);
+}
+
+.about-now--highlight {
+  background: var(--color-blue-50);
+}
+
+.about-now__label {
+  color: var(--color-orange-900);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+}
+
+.about-now--highlight .about-now__label {
+  color: var(--color-grey-900);
+}
+
+.about-now__title {
+  font-size: var(--font-size-20);
+  font-weight: var(--font-weight-semibold);
+  line-height: 26px;
+  letter-spacing: -0.2px;
+}
+
+.about-now__text {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+  line-height: 22px;
+}
+
+/* ==========================================================
+   "Want the short version?" call-to-action
+   ========================================================== */
+.about-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-24);
+  padding: var(--space-36);
+  background: var(--color-grey-900);
+  border-radius: var(--radius-20);
+}
+
+.about-cta__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.about-cta__title {
+  color: var(--color-white);
+  font-size: var(--font-size-32);
+  font-weight: var(--font-weight-semibold);
+  line-height: 38px;
+  letter-spacing: -0.64px;
+}
+
+.about-cta__description {
+  color: var(--color-grey-200);
+  font-size: var(--font-size-15);
+  line-height: 22px;
+}
+
+/* Download button: charcoal on the black panel */
+.about-cta__download {
+  background: var(--color-grey-800);
+  border-radius: var(--radius-11);
+  color: var(--color-white);
+}
+
+/* ==========================================================
+   Mobile (matches the 402px Figma frame)
+   ========================================================== */
+@media (max-width: 767px) {
+  .page--about,
+  .page--about .page__main {
+    gap: var(--space-64);
+  }
+
+  .page--about {
+    padding-bottom: var(--space-32);
+  }
+
+  .page--about .footer {
+    align-items: flex-start;
+  }
+
+  .about-title {
+    font-size: var(--font-size-26);
+    line-height: 31px;
+    letter-spacing: -0.52px;
+  }
+
+  .about-hero {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-32);
+  }
+
+  .about-hero__title {
+    font-size: var(--font-size-30);
+    line-height: 34px;
+    letter-spacing: -0.9px;
+  }
+
+  .about-hero__carousel {
+    width: 100%;
+  }
+
+  .about-facts {
+    flex-wrap: wrap;
+    gap: var(--space-20) var(--space-16);
+    padding: var(--space-20) var(--space-16);
+  }
+
+  .about-facts__item {
+    flex: 0 0 calc(50% - var(--space-8));
+  }
+
+  .about-story {
+    flex-direction: column;
+    gap: var(--space-20);
+  }
+
+  .about-story .about-head {
+    width: auto;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    gap: var(--space-12);
+  }
+
+  .about-principle,
+  .about-now {
+    padding: var(--space-24) var(--space-20);
+  }
+
+  .about-principle__number {
+    font-size: var(--font-size-22);
+    line-height: 25px;
+  }
+
+  .about-principle__title {
+    font-size: var(--font-size-18);
+    line-height: 23px;
+    letter-spacing: -0.36px;
+  }
+
+  .about-now__title {
+    font-size: var(--font-size-18);
+    line-height: 23px;
+    letter-spacing: -0.18px;
+  }
+
+  .about-timeline__step {
+    gap: var(--space-12);
+  }
+
+  .about-timeline__year {
+    width: 44px;
+  }
+
+  .about-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-24) var(--space-20);
+  }
+
+  .about-cta__title {
+    font-size: var(--font-size-26);
+    line-height: 31px;
+    letter-spacing: -0.52px;
+  }
+
+  .about-cta .button-group {
+    gap: var(--space-10) var(--space-8);
+  }
+}

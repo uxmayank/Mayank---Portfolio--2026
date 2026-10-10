@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — Mayank Pal</title>
+  <meta name="description" content="Mayank Pal is a product designer in Delhi NCR who thinks in systems, plans like a PM, and designs products that stay consistent as they grow.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,12 +21,13 @@
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/footer.css">
   <link rel="stylesheet" href="css/components/buttons.css">
+  <link rel="stylesheet" href="css/components/carousel.css">
 
   <!-- Page -->
   <link rel="stylesheet" href="css/pages/about.css">
 </head>
 <body>
-  <div class="page">
+  <div class="page page--about">
 
     <header class="nav">
       <nav class="nav__tabs" aria-label="Main">
@@ -36,7 +38,151 @@
       <a class="button button--primary button--pill" href="assets/docs/resume.pdf" download>Download Resume</a>
     </header>
 
-    <main class="page__main"></main>
+    <main class="page__main">
+
+      <!-- ============ Hero ============ -->
+      <section class="about-hero">
+        <div class="about-hero__text">
+          <span class="about-hero__chip">About me</span>
+          <h1 class="about-hero__title">Hi, I’m Mayank. I design products that stay consistent as they grow.</h1>
+          <p class="about-hero__intro">I’m a product designer based in Delhi NCR. I think in systems, plan like a PM, and care about the part most people never see: the foundation that lets a whole team ship the same product, every time.</p>
+          <div class="button-group">
+            <a class="button button--primary" href="assets/docs/resume.pdf" download>Download resume</a>
+            <a class="button button--secondary" href="#">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <!-- Photo carousel: add more photos as extra <li> slides (save them as
+             assets/images/about/photo-2.webp, photo-3.webp …). Arrows and dots appear
+             automatically once there is more than one photo. -->
+        <section class="carousel about-hero__carousel" data-carousel aria-label="Photos of Mayank" tabindex="0">
+          <ul class="carousel__track">
+            <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-1.webp" alt="Mayank standing on a cricket ground in a black polo shirt" draggable="false"></li>
+          </ul>
+          <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Previous photo">←</button>
+          <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Next photo">→</button>
+          <div class="carousel__dots"></div>
+        </section>
+      </section>
+
+      <!-- ============ Quick facts ============ -->
+      <dl class="about-facts">
+        <div class="about-facts__item"><dt class="about-facts__label">Experience</dt><dd class="about-facts__value">1.5+ year</dd></div>
+        <div class="about-facts__item"><dt class="about-facts__label">Currently</dt><dd class="about-facts__value">UI/UX Designer, Square Foot Story</dd></div>
+        <div class="about-facts__item"><dt class="about-facts__label">Based in</dt><dd class="about-facts__value">Ghaziabad</dd></div>
+        <div class="about-facts__item"><dt class="about-facts__label">Education</dt><dd class="about-facts__value">BCA, CCS University</dd></div>
+      </dl>
+
+      <!-- ============ My story ============ -->
+      <section class="about-story">
+        <div class="about-head">
+          <p class="about-eyebrow">My story</p>
+          <h2 class="about-title">From freelance screens to owning a whole product</h2>
+        </div>
+        <div class="about-story__body">
+          <p>I started out designing for freelance clients: an AI astrology app, an automotive service website and a resume builder. Each one taught me something different about mobile, web and how people move through a product.</p>
+          <p>Then I joined Square Foot Story as its only designer. There was no app, no screens and no design language, just a clear problem: homebuyers in Delhi NCR couldn’t tell which builders to trust. Working directly with the founder and developers, I designed the product from a blank canvas to a live app on the Play Store and App Store.</p>
+          <p>With short deadlines and no other designers, I learned that speed and consistency only work together when there’s a system underneath. So I built one, and set up an AI-first workflow with MCP-ready files that took developer implementation from 3–5 days to the same day.</p>
+        </div>
+      </section>
+
+      <!-- ============ How I think ============ -->
+      <section class="about-section">
+        <div class="about-head">
+          <p class="about-eyebrow">How I think</p>
+          <h2 class="about-title">Three things I bring to every product</h2>
+        </div>
+        <ul class="about-cards">
+          <li class="about-principle">
+            <div class="about-principle__top"><span class="about-principle__number">01</span><span class="about-principle__chip about-principle__chip--blue">PM mindset</span></div>
+            <h3 class="about-principle__title">Start with the problem</h3>
+            <p class="about-principle__text">Before pixels, I want to know whose problem we’re solving and what the business needs. Then I scope what can ship.</p>
+          </li>
+          <li class="about-principle about-principle--dark">
+            <div class="about-principle__top"><span class="about-principle__number">02</span><span class="about-principle__chip about-principle__chip--dark">Systems thinking</span></div>
+            <h3 class="about-principle__title">Systems over screens</h3>
+            <p class="about-principle__text">One good foundation beats fifty beautiful one-offs. Tokens, components and rules keep every screen consistent.</p>
+          </li>
+          <li class="about-principle">
+            <div class="about-principle__top"><span class="about-principle__number">03</span><span class="about-principle__chip about-principle__chip--green">Implementation</span></div>
+            <h3 class="about-principle__title">Design for the build</h3>
+            <p class="about-principle__text">A design isn’t done until it ships. Clean structure and naming make files developers, and AI tools, can trust.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ Journey ============ -->
+      <section class="about-section">
+        <div class="about-head">
+          <p class="about-eyebrow">Journey</p>
+          <h2 class="about-title">How I got here</h2>
+        </div>
+        <ol class="about-timeline">
+          <li class="about-timeline__step">
+            <span class="about-timeline__year">2023</span>
+            <img class="about-timeline__dot" src="assets/images/about/timeline-dot.svg" alt="">
+            <div class="about-timeline__text"><h3 class="about-timeline__title">Started my BCA</h3><p class="about-timeline__description">Chaudhary Charan Singh University, Ghaziabad.</p></div>
+          </li>
+          <li class="about-timeline__step">
+            <span class="about-timeline__year">2025</span>
+            <img class="about-timeline__dot" src="assets/images/about/timeline-dot.svg" alt="">
+            <div class="about-timeline__text"><h3 class="about-timeline__title">Freelance product design</h3><p class="about-timeline__description">AstroBharat AI, MechServi and BuildMyCV, all live.</p></div>
+          </li>
+          <li class="about-timeline__step">
+            <span class="about-timeline__year">2025</span>
+            <img class="about-timeline__dot" src="assets/images/about/timeline-dot.svg" alt="">
+            <div class="about-timeline__text"><h3 class="about-timeline__title">Joined Square Foot Story</h3><p class="about-timeline__description">Sole designer, building the product from zero.</p></div>
+          </li>
+          <li class="about-timeline__step about-timeline__step--current">
+            <span class="about-timeline__year">2026</span>
+            <img class="about-timeline__dot" src="assets/images/about/timeline-dot-current.svg" alt="">
+            <div class="about-timeline__text"><h3 class="about-timeline__title">SFS goes live</h3><p class="about-timeline__description">On Play Store and App Store, now 1.6K+ downloads. Finished my BCA.</p></div>
+          </li>
+          <li class="about-timeline__step about-timeline__step--current">
+            <span class="about-timeline__year">Now</span>
+            <img class="about-timeline__dot" src="assets/images/about/timeline-dot-current.svg" alt="">
+            <div class="about-timeline__text"><h3 class="about-timeline__title">Leveling up</h3><p class="about-timeline__description">Learning advanced design systems and open to new roles.</p></div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ Right now ============ -->
+      <section class="about-section">
+        <div class="about-head">
+          <p class="about-eyebrow">Right now</p>
+          <h2 class="about-title">What I’m up to</h2>
+        </div>
+        <ul class="about-cards">
+          <li class="about-now">
+            <p class="about-now__label">Learning</p>
+            <h3 class="about-now__title">Advanced design systems</h3>
+            <p class="about-now__text">Going deeper into multi-tier tokens, theming and scaling a system across products.</p>
+          </li>
+          <li class="about-now">
+            <p class="about-now__label">Building</p>
+            <h3 class="about-now__title">Square Foot Story</h3>
+            <p class="about-now__text">Designing new features and growing the app and website on the foundation I built.</p>
+          </li>
+          <li class="about-now about-now--highlight">
+            <p class="about-now__label">Open to</p>
+            <h3 class="about-now__title">Product design roles &amp; freelance</h3>
+            <p class="about-now__text">Teams that care about consistency, clear thinking and shipping fast.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ============ Resume call-to-action ============ -->
+      <section class="about-cta">
+        <div class="about-cta__text">
+          <h2 class="about-cta__title">Want the short version?</h2>
+          <p class="about-cta__description">Everything above on one page, ready to share with your team.</p>
+        </div>
+        <div class="button-group">
+          <a class="button button--primary button--pill" href="mailto:Mayankoct2004@gmail.com">Mayankoct2004@gmail.com</a>
+          <a class="button about-cta__download" href="assets/docs/resume.pdf" download>Download Resume</a>
+        </div>
+      </section>
+    </main>
 
     <footer class="footer">
       <p class="footer__text">© 2026 Mayank Pal  ·  Delhi NCR, India</p>
@@ -50,5 +196,6 @@
   </div>
 
   <script src="js/main.js"></script>
+  <script src="js/carousel.js"></script>
 </body>
 </html>
