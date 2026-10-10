@@ -38,6 +38,13 @@
   translate: 100% 0;
 }
 
+/* In normal page flow (e.g. a row of phones) instead of absolutely placed.
+   Set font-size on the phone to scale it: 1em = 1/247 of the phone's width. */
+.phone--static {
+  position: relative;
+  flex-shrink: 0;
+}
+
 /* ---------- Bezel phone: simple light frame with one screenshot ---------- */
 .phone--bezel {
   padding: 3.5em;

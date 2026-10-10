@@ -1,0 +1,214 @@
+/* Animated Square Foot Story cover: four phones rise in, float and swipe through screens.
+   Used on the home page card and the case study hero. 1em = 1 Figma pixel of the 1230 × 562 composition. */
+
+.sfs-cover {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  aspect-ratio: 1230 / 562;
+  background: var(--gradient-sfs);
+}
+
+.sfs-cover__stage {
+  position: absolute;
+  inset: 0;
+  font-size: calc(100cqw / 1230);
+}
+
+.sfs-cover__stage img {
+  max-width: none;
+}
+
+.sfs-cover__glow-1 { left: 147.6em; top: 309.1em; width: 360em; height: 360em; }
+.sfs-cover__glow-1 .glow__image { inset: -33.33%; width: 166.66%; height: 166.66%; }
+.sfs-cover__glow-2 { left: 861em; top: -80em; width: 420em; height: 420em; }
+.sfs-cover__glow-2 .glow__image { inset: -28.57%; width: 157.14%; height: 157.14%; }
+
+.sfs-cover__phone { top: 21em; }
+.sfs-cover__phone--home { left: 25em; }
+.sfs-cover__phone--splash { left: 333.84em; rotate: 4deg; }
+.sfs-cover__phone--builder { left: 647em; }
+.sfs-cover__phone--calculator { left: 958em; }
+
+/* Hero layout (case study page): 1248 × 640 in Figma, the same phones at 1.1388× size
+   and placed a little closer together. 1em = 1.1388 Figma pixels here. */
+.sfs-cover--hero {
+  aspect-ratio: 1248 / 640;
+  background: var(--gradient-sfs-hero);
+  border-radius: var(--radius-24);
+}
+
+.sfs-cover--hero .sfs-cover__stage {
+  font-size: calc(100cqw / 1095.9);
+}
+
+.sfs-cover--hero .sfs-cover__phone--home       { left: 15.81em; }
+.sfs-cover--hero .sfs-cover__phone--splash     { left: 285.86em; }
+.sfs-cover--hero .sfs-cover__phone--builder    { left: 560.71em; }
+.sfs-cover--hero .sfs-cover__phone--calculator { left: 832.92em; }
+
+@media (max-width: 767px) {
+  .sfs-cover--hero {
+    border-radius: var(--radius-12);
+  }
+}
+
+/* ---------- Animation: one 10s loop, timings from Figma ---------- */
+.sfs-cover__glow-1 { animation: glow-fade 10s linear infinite, glow-pulse-1 10s linear infinite; }
+.sfs-cover__glow-2 { animation: glow-fade 10s linear infinite, glow-pulse-2 10s linear infinite; }
+
+@keyframes glow-fade {
+  0%   { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  12%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes glow-pulse-1 {
+  0%   { scale: 0.6; animation-timing-function: var(--ease-in-out); }
+  15%  { scale: 1;   animation-timing-function: var(--ease-in-out); }
+  40%  { scale: 1.2; animation-timing-function: var(--ease-in-out); }
+  100% { scale: 1; }
+}
+
+@keyframes glow-pulse-2 {
+  0%   { scale: 0.6; animation-timing-function: var(--ease-in-out); }
+  15%  { scale: 1;   animation-timing-function: var(--ease-in-out); }
+  50%  { scale: 1.2; animation-timing-function: var(--ease-in-out); }
+  100% { scale: 1; }
+}
+
+/* Phones rise in one after another, then gently float */
+.sfs-cover__phone--home       { animation: home-in 10s linear infinite, home-float 10s linear infinite; }
+.sfs-cover__phone--splash     { animation: splash-in 10s linear infinite, splash-float 10s linear infinite, splash-tilt 10s linear infinite; }
+.sfs-cover__phone--builder    { animation: builder-in 10s linear infinite, builder-float 10s linear infinite; }
+.sfs-cover__phone--calculator { animation: calculator-in 10s linear infinite, calculator-float 10s linear infinite; }
+
+@keyframes home-in {
+  0%   { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  6%   { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes home-float {
+  0%   { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  11%  { translate: 0 0; }
+  22%  { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  38%  { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  56%  { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  74%  { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  100% { translate: 0 0; }
+}
+
+@keyframes splash-in {
+  0%, 1.5% { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  7.5%     { opacity: 1; }
+  100%     { opacity: 1; }
+}
+
+@keyframes splash-float {
+  0%, 1.5% { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  12.5%    { translate: 0 0; }
+  25%      { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  41%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  59%      { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  77%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  100%     { translate: 0 0; }
+}
+
+@keyframes splash-tilt {
+  0%, 14% { rotate: 8deg;   animation-timing-function: var(--ease-in-out); }
+  50%     { rotate: 5.5deg; animation-timing-function: var(--ease-in-out); }
+  100%    { rotate: 8deg; }
+}
+
+@keyframes builder-in {
+  0%, 3% { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  9%     { opacity: 1; }
+  100%   { opacity: 1; }
+}
+
+@keyframes builder-float {
+  0%, 3% { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  14%    { translate: 0 0; }
+  28%    { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  44%    { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  62%    { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  80%    { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  100%   { translate: 0 0; }
+}
+
+@keyframes calculator-in {
+  0%, 4.5% { opacity: 0; animation-timing-function: var(--ease-in-out); }
+  10.5%    { opacity: 1; }
+  100%     { opacity: 1; }
+}
+
+@keyframes calculator-float {
+  0%, 4.5% { translate: 0 140em; animation-timing-function: var(--ease-in-out); }
+  15.5%    { translate: 0 0; }
+  31%      { translate: 0 0;     animation-timing-function: var(--ease-in-out); }
+  47%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  65%      { translate: 0 -10em; animation-timing-function: var(--ease-in-out); }
+  83%      { translate: 0 10em;  animation-timing-function: var(--ease-in-out); }
+  100%     { translate: 0 0; }
+}
+
+/* Screens inside each phone: the current screen slides left and dims
+   while the next one slides in from the right */
+.sfs-cover__phone--home .phone__screen:nth-child(1)       { animation: home-screen-1 10s linear infinite; }
+.sfs-cover__phone--home .phone__screen:nth-child(2)       { animation: home-screen-2 10s linear infinite; }
+.sfs-cover__phone--home .phone__screen:nth-child(3)       { animation: home-screen-3 10s linear infinite; }
+.sfs-cover__phone--splash .phone__screen:nth-child(1)     { animation: splash-screen-1 10s linear infinite; }
+.sfs-cover__phone--splash .phone__screen:nth-child(2)     { animation: splash-screen-2 10s linear infinite; }
+.sfs-cover__phone--splash .phone__screen:nth-child(3)     { animation: splash-screen-3 10s linear infinite; }
+.sfs-cover__phone--builder .phone__screen:nth-child(1)    { animation: builder-screen-1 10s linear infinite; }
+.sfs-cover__phone--builder .phone__screen:nth-child(2)    { animation: builder-screen-2 10s linear infinite; }
+.sfs-cover__phone--calculator .phone__screen:nth-child(1) { animation: calculator-screen-1 10s linear infinite; }
+.sfs-cover__phone--calculator .phone__screen:nth-child(2) { animation: calculator-screen-2 10s linear infinite; }
+
+@keyframes home-screen-1 {
+  0%, 26%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  33%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes home-screen-2 {
+  0%, 26%   { translate: 100% 0;  opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  33%, 64%  { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  71%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes home-screen-3 {
+  0%, 64%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  71%, 100% { translate: 0 0; }
+}
+
+@keyframes splash-screen-1 {
+  0%, 35%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  42%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes splash-screen-2 {
+  0%, 35%   { translate: 100% 0;  opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  42%, 73%  { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  80%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes splash-screen-3 {
+  0%, 73%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  80%, 100% { translate: 0 0; }
+}
+
+@keyframes builder-screen-1 {
+  0%, 44%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  51%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes builder-screen-2 {
+  0%, 44%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  51%, 100% { translate: 0 0; }
+}
+
+@keyframes calculator-screen-1 {
+  0%, 53%   { translate: 0 0;     opacity: 1;   animation-timing-function: var(--ease-in-out); }
+  60%, 100% { translate: -30% 0;  opacity: 0.4; }
+}
+@keyframes calculator-screen-2 {
+  0%, 53%   { translate: 100% 0;  animation-timing-function: var(--ease-in-out); }
+  60%, 100% { translate: 0 0; }
+}
+

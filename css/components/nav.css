@@ -36,7 +36,23 @@
   color: var(--color-grey-900);
 }
 
+/* Case study pages: a "← Project" back tab sits first and stays highlighted */
+.nav__tab--back {
+  background: var(--color-white);
+  color: var(--color-grey-900);
+  white-space: pre;
+}
+
+.nav__tab--back:hover {
+  background: var(--color-white);
+}
+
 @media (max-width: 767px) {
+  /* On phones, case study pages show only the back tab */
+  .nav__tabs:has(.nav__tab--back) .nav__tab:not(.nav__tab--back) {
+    display: none;
+  }
+
   .nav__tab {
     padding: var(--space-6) var(--space-10);
     font-size: var(--font-size-13);
