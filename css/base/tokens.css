@@ -1,47 +1,148 @@
 /* Design tokens: the only place for raw colour, font, spacing, radius and shadow values. */
 
 :root {
-  /* ---------- Colours (names match the Figma design system) ---------- */
+  /* ---------- Colour palette (names match the Figma design system) ---------- */
   --color-white: #FFFFFF;
+
   --color-grey-50: #FAFAFA;
   --color-grey-100: #D6D6D6;
   --color-grey-200: #BDBDBD;
+  --color-grey-300: #A6A6A6;
   --color-grey-400: #8D8D8D;
   --color-grey-500: #767676;
   --color-grey-600: #5D5D5D;
+  --color-grey-700: #464646;
+  --color-grey-800: #2D2D2D;
   --color-grey-900: #0A0A0A;
-  --color-green-50: #E6F3E6;
-  --color-green-200: #B3DBB3;
-  --color-green-900: #008700;
+
+  --color-orange-50: #FFF0E6;
+  --color-orange-100: #FEDFCC;
   --color-orange-200: #FED0B3;
+  --color-orange-300: #FDBF99;
+  --color-orange-400: #FDB080;
+  --color-orange-500: #FC9F66;
+  --color-orange-600: #FC904D;
+  --color-orange-700: #FB8033;
+  --color-orange-800: #FB701A;
   --color-orange-900: #FA6000;
+
+  --color-yellow-50: #FEF8EC;
+  --color-yellow-100: #FDF0D8;
+  --color-yellow-200: #FBE1B1;
+  --color-yellow-300: #F9D38B;
+  --color-yellow-400: #F7C464;
+  --color-yellow-500: #F5B53D;
+  --color-yellow-600: #DDA438;
+  --color-yellow-700: #AE822E;
+  --color-yellow-800: #7F5F23;
+  --color-yellow-900: #503D19;
+
+  --color-green-50: #E6F3E6;
+  --color-green-100: #CCE7CC;
+  --color-green-200: #B3DBB3;
+  --color-green-300: #99CF99;
+  --color-green-400: #80C380;
+  --color-green-500: #66B766;
+  --color-green-600: #4DAB4D;
+  --color-green-700: #339F33;
+  --color-green-800: #1A931A;
+  --color-green-900: #008700;
+
+  --color-red-50: #F9E6E6;
+  --color-red-100: #F2CCCC;
+  --color-red-200: #ECB3B3;
+  --color-red-300: #E59999;
+  --color-red-400: #DE8080;
+  --color-red-500: #D76666;
+  --color-red-600: #D14D4D;
+  --color-red-700: #CA3333;
+  --color-red-800: #C41A1A;
+  --color-red-900: #BD0000;
+
+  --color-blue-50: #E6ECF0;
+  --color-blue-100: #CCDCF2;
+  --color-blue-200: #B3CCEC;
+  --color-blue-300: #99BAE5;
+  --color-blue-400: #80A9DE;
+  --color-blue-500: #6697D7;
+  --color-blue-600: #4D86D1;
+  --color-blue-700: #3375CA;
+  --color-blue-800: #1A64C4;
   --color-blue-900: #0052BD;
 
-  /* Roles */
+  --color-purple-50: #EFE5FF;
+  --color-purple-100: #DFCCFF;
+  --color-purple-200: #BE99FF;
+  --color-purple-300: #9E66FF;
+  --color-purple-400: #7E33FF;
+  --color-purple-500: #5D00FF;
+  --color-purple-600: #4B00CC;
+  --color-purple-700: #380099;
+  --color-purple-800: #250066;
+  --color-purple-900: #130033;
+
+  /* ---------- Colour roles ---------- */
   --color-primary: var(--color-blue-900);
   --color-page: var(--color-grey-50);
   --color-surface: var(--color-white);
   --color-text: var(--color-grey-900);
+  --color-text-strong: #111111;
+  --color-text-dark: var(--color-grey-800);
   --color-text-body: var(--color-grey-600);
   --color-text-muted: var(--color-grey-500);
   --color-text-subtle: var(--color-grey-400);
+  --color-text-separator: #8C8C8C;
   --color-border: #F0F0F0;
+  --color-border-soft: #EFEFEF;
+  --color-border-swatch: #EAEAEA;
+  --color-border-row: #ECECEC;
   --color-divider: var(--color-grey-100);
+  --color-link: var(--color-primary);
 
-  /* Mockup colours (phone bezels, browser windows, stat chips) */
+  /* ---------- Mockup colours (phone bezels, browser windows, stat chips) ---------- */
   --color-bezel: #F4F3F2;
   --color-browser-border: #E6E6E6;
   --color-browser-border-cool: #E6E6EC;
   --color-browser-bar: #F5F5F6;
   --color-browser-bar-cool: #F5F5F7;
   --color-glass: rgba(255, 255, 255, 0.7);
+  --color-glass-strong: rgba(255, 255, 255, 0.75);
   --color-tab-hover: rgba(255, 255, 255, 0.12);
   --color-mechservi-red: #CC0003;
   --color-mechservi-red-light: #FFE0E0;
 
-  /* Card cover gradients */
+  /* Square Foot Story case study: feature mockup colours */
+  --color-mock-border: #EDEDED;
+  --color-mock-chip-border: #DDDDDD;
+  --color-mock-text-1: #333333;
+  --color-mock-text-2: #444444;
+  --color-mock-text-3: #555555;
+  --color-mock-text-4: #6B6B6B;
+  --color-mock-text-5: #7A7A7A;
+  --color-mock-text-6: #9A9A9A;
+  --color-mock-amber: #F5A833;
+  --color-mock-amber-track: #F1E3CC;
+  --color-mock-amber-dark: #D97A00;
+  --color-mock-amber-light: #FFF4E2;
+  --color-mock-green: #2EA44F;
+  --color-mock-green-dark: #1E8E3E;
+  --color-mock-green-light: #E6F6EA;
+  --color-mock-green-border: #34A853;
+  --color-mock-green-bg: #F6FCF7;
+  --color-mock-red: #D93025;
+  --color-mock-red-light: #FDECEC;
+  --color-mock-bar-empty: #E5DED4;
+  --color-feature-credibility: #FFEDD6;
+  --color-feature-tracking: #FEECD5;
+  --color-feature-calculators: #EEF6F0;
+  --color-outcomes-border: #F1E6D6;
+  --color-outcomes-card-border: #EFE6DA;
+  --gradient-alert: linear-gradient(to right, #FF962A, #F5B33D);
+
+  /* ---------- Card cover gradients ---------- */
   --gradient-sfs: linear-gradient(148.65deg, #FFF0E6 0%, #FCFAF7 35.714%, #E6ECF0 71.429%);
   --gradient-sfs-mobile: linear-gradient(132.72deg, #FFF0E6 0%, #FCFAF7 35.714%, #E6ECF0 71.429%);
+  --gradient-sfs-hero: linear-gradient(145.64deg, #FFF0E6 0%, #FCFAF7 35.714%, #E6ECF0 71.429%);
   --gradient-astro: linear-gradient(150deg, #FFF3EA 0%, #FAF8F6 39.286%, #F2EEF0 71.429%);
   --gradient-mechservi: linear-gradient(150deg, #FFF2F2 0%, #FAF8F8 42.857%, #F1F1F3 71.429%);
   --gradient-buildmycv: linear-gradient(161.99deg, #F3EFFD 0%, #F8F7FB 42.857%, #F1F1F4 71.429%);
@@ -51,12 +152,16 @@
   --font-heading: "Bricolage Grotesque", sans-serif;
   --font-body: "Geist", sans-serif;
   --font-stat: "Anton", sans-serif;
+  --font-sfs-app: "DM Sans", sans-serif; /* the Square Foot Story app's own font */
 
   --font-weight-regular: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
 
+  --font-size-8: 8px;
+  --font-size-9: 9px;
+  --font-size-10: 10px;
   --font-size-11: 11px;
   --font-size-12: 12px;
   --font-size-13: 13px;
@@ -64,12 +169,20 @@
   --font-size-15: 15px;
   --font-size-16: 16px;
   --font-size-18: 18px;
+  --font-size-19: 19px;
   --font-size-20: 20px;
+  --font-size-22: 22px;
   --font-size-24: 24px;
+  --font-size-26: 26px;
+  --font-size-28: 28px;
   --font-size-30: 30px;
+  --font-size-32: 32px;
+  --font-size-34: 34px;
+  --font-size-36: 36px;
   --font-size-40: 40px;
   --font-size-48: 48px;
   --font-size-56: 56px;
+  --font-size-64: 64px;
 
   /* ---------- Spacing (Figma Space/Space-N) ---------- */
   --space-2: 2px;
@@ -91,17 +204,23 @@
   --space-40: 40px;
   --space-48: 48px;
   --space-56: 56px;
+  --space-64: 64px;
+  --space-72: 72px;
   --space-88: 88px;
   --space-96: 96px;
+  --space-112: 112px;
 
   /* ---------- Radius (Figma Corner/radius-N) ---------- */
+  --radius-4: 4px;
   --radius-6: 6px;
   --radius-8: 8px;
   --radius-10: 10px;
   --radius-11: 11px;
   --radius-12: 12px;
   --radius-14: 14px;
+  --radius-16: 16px;
   --radius-20: 20px;
+  --radius-24: 24px;
   --radius-round: 1000px;
 
   /* ---------- Shadows ---------- */
@@ -110,6 +229,11 @@
   --shadow-browser-warm: 0 2em 4em rgba(0, 0, 0, 0.06), 0 18em 40em -6em rgba(77, 13, 13, 0.16);
   --shadow-browser-cool: 0 2em 4em rgba(0, 0, 0, 0.06), 0 18em 40em -6em rgba(51, 26, 102, 0.16);
   --shadow-stat: 0 10em 24em rgba(77, 13, 13, 0.18);
+  --shadow-card-hover: 0 12px 32px -12px rgba(10, 10, 10, 0.18);
+  --shadow-mock-warm: 0 2em 6em rgba(0, 0, 0, 0.12), 0 20em 40em -8em rgba(51, 26, 0, 0.22);
+  --shadow-mock-soft: 0 2em 6em rgba(0, 0, 0, 0.08), 0 14em 30em -6em rgba(51, 26, 0, 0.16);
+  --shadow-mock-cool: 0 2em 6em rgba(0, 0, 0, 0.07), 0 14em 30em -6em rgba(26, 38, 51, 0.14);
+  --shadow-outcome-card: 0 8px 24px rgba(77, 51, 13, 0.06);
 
   /* ---------- Layout ---------- */
   --page-max-width: 1440px;
