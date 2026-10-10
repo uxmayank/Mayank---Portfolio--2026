@@ -112,6 +112,9 @@
   --color-glass: rgba(255, 255, 255, 0.7);
   --color-glass-strong: rgba(255, 255, 255, 0.75);
   --color-tab-hover: rgba(255, 255, 255, 0.12);
+  --color-carousel-bg: #EDEDED;
+  --color-carousel-arrow: rgba(255, 255, 255, 0.9);
+  --color-carousel-dots: rgba(255, 255, 255, 0.85);
   --color-mechservi-red: #CC0003;
   --color-mechservi-red-light: #FFE0E0;
 
@@ -206,12 +209,14 @@
   --space-11: 11px;
   --space-12: 12px;
   --space-14: 14px;
+  --space-18: 18px;
   --space-16: 16px;
   --space-20: 20px;
   --space-22: 22px;
   --space-24: 24px;
   --space-28: 28px;
   --space-32: 32px;
+  --space-36: 36px;
   --space-40: 40px;
   --space-48: 48px;
   --space-56: 56px;
@@ -219,6 +224,7 @@
   --space-72: 72px;
   --space-88: 88px;
   --space-96: 96px;
+  --space-104: 104px;
   --space-112: 112px;
 
   /* ---------- Radius (Figma Corner/radius-N) ---------- */
@@ -247,6 +253,7 @@
   --shadow-outcome-card: 0 8px 24px rgba(77, 51, 13, 0.06);
   --shadow-shot: 0 16px 40px rgba(26, 26, 26, 0.08);
   --shadow-phone-warm: 0 17.1em 38em rgba(89, 26, 13, 0.14);
+  --shadow-carousel-arrow: 0 4px 12px rgba(0, 0, 0, 0.12);
 
   /* ---------- Layout ---------- */
   --page-max-width: 1440px;
