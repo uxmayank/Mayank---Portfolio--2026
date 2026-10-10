@@ -105,6 +105,8 @@
   --color-browser-border-cool: #E6E6EC;
   --color-browser-bar: #F5F5F6;
   --color-browser-bar-cool: #F5F5F7;
+  --color-shot-border: #E8E8E8;
+  --color-shot-bar: #F4F4F4;
   --color-glass: rgba(255, 255, 255, 0.7);
   --color-glass-strong: rgba(255, 255, 255, 0.75);
   --color-tab-hover: rgba(255, 255, 255, 0.12);
@@ -168,6 +170,7 @@
   --font-size-14: 14px;
   --font-size-15: 15px;
   --font-size-16: 16px;
+  --font-size-17: 17px;
   --font-size-18: 18px;
   --font-size-19: 19px;
   --font-size-20: 20px;
@@ -193,6 +196,7 @@
   --space-8: 8px;
   --space-9: 9px;
   --space-10: 10px;
+  --space-11: 11px;
   --space-12: 12px;
   --space-14: 14px;
   --space-16: 16px;
@@ -234,6 +238,7 @@
   --shadow-mock-soft: 0 2em 6em rgba(0, 0, 0, 0.08), 0 14em 30em -6em rgba(51, 26, 0, 0.16);
   --shadow-mock-cool: 0 2em 6em rgba(0, 0, 0, 0.07), 0 14em 30em -6em rgba(26, 38, 51, 0.14);
   --shadow-outcome-card: 0 8px 24px rgba(77, 51, 13, 0.06);
+  --shadow-shot: 0 16px 40px rgba(26, 26, 26, 0.08);
 
   /* ---------- Layout ---------- */
   --page-max-width: 1440px;
