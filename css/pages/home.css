@@ -149,65 +149,6 @@
 .cover-astro__phone--2 { left: 228.2em; top: 46.19em; width: 133em; height: 278em; rotate: 6deg; }
 .cover-astro__phone--3 { left: 397.49em; top: 79.98em; width: 122em; height: 254em; rotate: 9deg; }
 
-/* ---------- MechServi cover (598 × 345) ---------- */
-.cover-mechservi {
-  aspect-ratio: 598 / 345;
-  background: var(--gradient-mechservi);
-}
-
-.cover-mechservi .work-card__stage {
-  font-size: calc(100cqw / 598);
-}
-
-.cover-mechservi__glow { left: 328.9em; top: 86.25em; width: 300em; height: 300em; }
-.cover-mechservi__glow .glow__image { inset: -30%; width: 160%; height: 160%; }
-
-.cover-mechservi__browser { width: 478em; height: 373em; }
-.cover-mechservi__browser .browser__page { height: 349em; }
-
-/* Floating stat chips */
-.stat {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.stat--customers { left: 24em; top: 241.61em; width: 113.71em; height: 64.53em; rotate: -4deg; }
-.stat--vendors { left: 474.02em; top: 102em; width: 107.72em; height: 64.12em; rotate: 4deg; }
-
-.stat__chip {
-  display: flex;
-  flex-direction: column;
-  padding: 10em 14em;
-  background: var(--color-white);
-  border-radius: 8em;
-  box-shadow: var(--shadow-stat);
-  white-space: nowrap;
-}
-
-.stat__chip--red {
-  background: var(--color-mechservi-red);
-  color: var(--color-white);
-}
-
-.stat__value {
-  font-family: var(--font-stat);
-  font-size: 20em;
-  font-weight: var(--font-weight-regular);
-  line-height: 1.2;
-}
-
-.stat__label {
-  color: var(--color-text-muted);
-  font-size: 10em;
-  font-weight: var(--font-weight-medium);
-}
-
-.stat__chip--red .stat__label {
-  color: var(--color-mechservi-red-light);
-}
-
 /* ---------- BuildMyCV cover (1230 × 400) ---------- */
 .cover-buildmycv {
   aspect-ratio: 1230 / 400;
