@@ -148,6 +148,10 @@
   --gradient-sfs-mobile: linear-gradient(132.72deg, #FFF0E6 0%, #FCFAF7 35.714%, #E6ECF0 71.429%);
   --gradient-sfs-hero: linear-gradient(145.64deg, #FFF0E6 0%, #FCFAF7 35.714%, #E6ECF0 71.429%);
   --gradient-astro: linear-gradient(150deg, #FFF3EA 0%, #FAF8F6 39.286%, #F2EEF0 71.429%);
+  --gradient-astro-panel-1: linear-gradient(140.9deg, #FFF4EA 7.143%, #FFE2CF 78.571%);
+  --gradient-astro-panel-2: linear-gradient(140.9deg, #FFF6E8 7.143%, #FBE3C4 78.571%);
+  --gradient-astro-panel-1-mobile: linear-gradient(117deg, #FFF4EA 7.143%, #FFE2CF 78.571%);
+  --gradient-astro-panel-2-mobile: linear-gradient(117deg, #FFF6E8 7.143%, #FBE3C4 78.571%);
   --gradient-mechservi: linear-gradient(150deg, #FFF2F2 0%, #FAF8F8 42.857%, #F1F1F3 71.429%);
   --gradient-buildmycv: linear-gradient(161.99deg, #F3EFFD 0%, #F8F7FB 42.857%, #F1F1F4 71.429%);
   --gradient-buildmycv-mobile: linear-gradient(145.25deg, #F3EFFD 0%, #F8F7FB 42.857%, #F1F1F4 71.429%);
@@ -242,6 +246,7 @@
   --shadow-mock-cool: 0 2em 6em rgba(0, 0, 0, 0.07), 0 14em 30em -6em rgba(26, 38, 51, 0.14);
   --shadow-outcome-card: 0 8px 24px rgba(77, 51, 13, 0.06);
   --shadow-shot: 0 16px 40px rgba(26, 26, 26, 0.08);
+  --shadow-phone-warm: 0 17.1em 38em rgba(89, 26, 13, 0.14);
 
   /* ---------- Layout ---------- */
   --page-max-width: 1440px;

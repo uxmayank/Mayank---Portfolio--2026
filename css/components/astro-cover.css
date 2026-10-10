@@ -1,0 +1,40 @@
+/* AstroBharat AI cover: three tilted phones over warm glows.
+   Used on the home page card and the case study hero. 1em = 1 Figma pixel of the 598 × 345 composition. */
+
+.astro-cover {
+  position: relative;
+  container-type: inline-size;
+  overflow: hidden;
+  aspect-ratio: 598 / 345;
+  background: var(--gradient-astro);
+}
+
+.astro-cover__stage {
+  position: absolute;
+  inset: 0;
+  font-size: calc(100cqw / 598);
+}
+
+.astro-cover__stage img {
+  max-width: none;
+}
+
+.astro-cover__glow-1 { left: 39em; top: 85em; width: 260em; height: 260em; }
+.astro-cover__glow-1 .glow__image { inset: -30.77%; width: 161.54%; height: 161.54%; }
+.astro-cover__glow-2 { left: 379.86em; top: -66em; width: 240em; height: 240em; }
+.astro-cover__glow-2 .glow__image { inset: -33.33%; width: 166.66%; height: 166.66%; }
+
+.astro-cover__phone--1 { left: 57.1em; top: 16em; width: 144em; height: 301em; }
+.astro-cover__phone--2 { left: 228.2em; top: 46.19em; width: 133em; height: 278em; rotate: 6deg; }
+.astro-cover__phone--3 { left: 397.49em; top: 79.98em; width: 122em; height: 254em; rotate: 9deg; }
+
+/* Hero layout (case study page): the same picture at full width with larger corners */
+.astro-cover--hero {
+  border-radius: var(--radius-24);
+}
+
+@media (max-width: 767px) {
+  .astro-cover--hero {
+    border-radius: var(--radius-16);
+  }
+}
