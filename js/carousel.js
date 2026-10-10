@@ -46,8 +46,9 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
     setActiveDot(currentIndex());
   }
 
-  prevButton.addEventListener("click", () => goTo(currentIndex() - 1));
-  nextButton.addEventListener("click", () => goTo(currentIndex() + 1));
+  // Arrow buttons are optional (the About page carousel has none)
+  if (prevButton) prevButton.addEventListener("click", () => goTo(currentIndex() - 1));
+  if (nextButton) nextButton.addEventListener("click", () => goTo(currentIndex() + 1));
   track.addEventListener("scroll", updateDots, { passive: true });
 
   // Left and right arrow keys when the carousel has focus
