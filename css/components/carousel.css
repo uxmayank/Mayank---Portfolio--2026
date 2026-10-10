@@ -38,25 +38,6 @@
   scroll-snap-align: start;
 }
 
-/* Grey stand-in slide with a centred label, until a real photo is added */
-.carousel__slide--placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--color-carousel-placeholder);
-}
-
-.carousel__slide--placeholder-light {
-  background: var(--color-carousel-bg);
-}
-
-.carousel__placeholder-label {
-  color: var(--color-text-subtle);
-  font-size: calc(14 * var(--u));
-  font-weight: var(--font-weight-medium);
-  user-select: none;
-}
-
 .carousel__image {
   width: 100%;
   height: 100%;

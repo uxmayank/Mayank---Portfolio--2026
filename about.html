@@ -52,18 +52,16 @@
           </div>
         </div>
 
-        <!-- Photo carousel (Figma 336:3423): 5 slides, as in the design.
-             Slides 2–5 are placeholders. To use a real photo, save it as
-             assets/images/about/photo-2.webp (1024 × 800) and replace that slide's line with:
-             <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-2.webp" alt="Describe the photo" draggable="false"></li>
-             The dots and arrows update on their own. -->
+        <!-- Photo carousel (Figma component set 336:3354, Count=5): one photo per slide.
+             To add or swap a photo, save it in assets/images/about/ (1024 × 800 works best)
+             and add or edit a <li class="carousel__slide"> line. Dots and arrows update on their own. -->
         <section class="carousel about-hero__carousel" data-carousel aria-label="Photos of Mayank" tabindex="0">
           <ul class="carousel__track">
             <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-1.webp" alt="Mayank standing on a cricket ground in a black polo shirt" draggable="false"></li>
-            <li class="carousel__slide carousel__slide--placeholder"><span class="carousel__placeholder-label">Image 2</span></li>
-            <li class="carousel__slide carousel__slide--placeholder carousel__slide--placeholder-light"><span class="carousel__placeholder-label">Image 3</span></li>
-            <li class="carousel__slide carousel__slide--placeholder"><span class="carousel__placeholder-label">Image 4</span></li>
-            <li class="carousel__slide carousel__slide--placeholder carousel__slide--placeholder-light"><span class="carousel__placeholder-label">Image 5</span></li>
+            <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-2.webp" alt="Mayank in a white shirt leaning on a railing, with green mountains behind him" draggable="false" loading="lazy"></li>
+            <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-3.webp" alt="A laptop showing Mayank’s Case Studies design in Figma" draggable="false" loading="lazy"></li>
+            <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-4.webp" alt="Mayank at his desk editing on a monitor, captioned “Friday looked like this”" draggable="false" loading="lazy"></li>
+            <li class="carousel__slide"><img class="carousel__image" src="assets/images/about/photo-5.webp" alt="A desk at night with a monitor and a glowing lamp" draggable="false" loading="lazy"></li>
           </ul>
           <button class="carousel__arrow carousel__arrow--prev" type="button" aria-label="Previous photo">←</button>
           <button class="carousel__arrow carousel__arrow--next" type="button" aria-label="Next photo">→</button>
