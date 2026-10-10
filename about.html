@@ -19,16 +19,35 @@
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/buttons.css">
 
   <!-- Page -->
   <link rel="stylesheet" href="css/pages/about.css">
 </head>
 <body>
-  <header></header>
+  <div class="page">
 
-  <main></main>
+    <header class="nav">
+      <nav class="nav__tabs" aria-label="Main">
+        <a class="nav__tab" href="index.html">Home</a>
+        <a class="nav__tab" href="index.html#work">Work</a>
+        <a class="nav__tab" href="about.html" aria-current="page">About</a>
+      </nav>
+      <a class="button button--primary button--pill" href="assets/docs/resume.pdf" download>Download Resume</a>
+    </header>
 
-  <footer></footer>
+    <main class="page__main"></main>
+
+    <footer class="footer">
+      <p class="footer__text">© 2026 Mayank Pal  ·  Delhi NCR, India</p>
+      <nav class="footer__links" aria-label="Social">
+        <a class="footer__link" href="#">LinkedIn</a>
+        <a class="footer__link" href="#">X (Twitter)</a>
+        <a class="footer__link" href="assets/docs/resume.pdf" download>Resume</a>
+      </nav>
+    </footer>
+
+  </div>
 
   <script src="js/main.js"></script>
 </body>
