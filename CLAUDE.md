@@ -38,6 +38,7 @@ css/
 js/
   main.js               small shared scripts (e.g. mobile nav)
   carousel.js           About page photo carousel
+  schedule.js           Cal.com booking calendar in the home page contact card
 assets/
   images/home/, images/about/, images/square-foot-story/, images/mechservi/, images/buildmycv/, images/astrobharat-ai/
   icons/
