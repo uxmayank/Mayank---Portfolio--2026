@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BuildMyCV — Mayank Pal</title>
+  <meta name="description" content="How Mayank Pal designed BuildMyCV, an AI-powered resume builder with editable templates, an ATS score checker and AI writing suggestions.">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,30 +21,187 @@
   <link rel="stylesheet" href="../css/components/nav.css">
   <link rel="stylesheet" href="../css/components/footer.css">
   <link rel="stylesheet" href="../css/components/buttons.css">
+  <link rel="stylesheet" href="../css/components/cards.css">
+  <link rel="stylesheet" href="../css/components/browser-mockup.css">
+  <link rel="stylesheet" href="../css/components/buildmycv-cover.css">
 
   <!-- Page -->
   <link rel="stylesheet" href="../css/pages/case-study.css">
 </head>
 <body>
-  <div class="page">
+  <div class="page page--case-study page--case-study-compact">
 
     <header class="nav">
       <nav class="nav__tabs" aria-label="Main">
+        <a class="nav__tab nav__tab--back" href="../index.html#work">←  Project</a>
         <a class="nav__tab" href="../index.html">Home</a>
-        <a class="nav__tab" href="../index.html#work">Work</a>
         <a class="nav__tab" href="../about.html">About</a>
       </nav>
       <a class="button button--primary button--pill" href="../assets/docs/resume.pdf" download>Download Resume</a>
     </header>
 
-    <main class="page__main"></main>
+    <main class="page__main">
+
+      <!-- ============ Hero ============ -->
+      <section class="cs-hero cs-hero--compact">
+        <div class="cs-hero__text">
+          <ul class="cs-tags cs-tags--pills">
+            <li class="cs-tag">Team project</li>
+            <li class="cs-tag">Website</li>
+            <li class="cs-tag">AI resume builder</li>
+          </ul>
+          <h1 class="cs-hero__title">An AI-powered resume builder</h1>
+          <p class="cs-hero__intro">BuildMyCV helps job seekers create resumes and portfolios that stand out. It combines editable templates, an ATS score checker and AI writing suggestions in one place. I designed it as part of a two-person design team.</p>
+          <a class="cs-links__link cs-hero__link" href="#">Check live website ↗</a>
+        </div>
+
+        <dl class="cs-meta cs-meta--lined">
+          <div class="cs-meta__item"><dt class="cs-meta__label">Role</dt><dd class="cs-meta__value">Junior UI/UX designer</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Team</dt><dd class="cs-meta__value">2 designers</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Platform</dt><dd class="cs-meta__value">Website · Desktop</dd></div>
+          <div class="cs-meta__item"><dt class="cs-meta__label">Scope</dt><dd class="cs-meta__value">Templates, landing, builder, blogs</dd></div>
+        </dl>
+
+        <!-- Same cover as the home page card, at full width -->
+        <div class="buildmycv-cover buildmycv-cover--hero">
+          <div class="buildmycv-cover__stage">
+            <div class="glow buildmycv-cover__glow"><img class="glow__image" src="../assets/images/buildmycv/glow-cover.svg" alt=""></div>
+            <div class="browser browser--cool buildmycv-cover__browser">
+              <div class="browser__bar">
+                <img class="browser__dot" src="../assets/icons/browser-dot-red.svg" alt="">
+                <img class="browser__dot" src="../assets/icons/browser-dot-yellow.svg" alt="">
+                <img class="browser__dot" src="../assets/icons/browser-dot-green.svg" alt="">
+                <span class="browser__url"><span class="browser__url-text">buildmycv.com</span></span>
+              </div>
+              <img class="browser__page" src="../assets/images/buildmycv/landing.webp" alt="BuildMyCV landing page: Build a job winning resume in minutes">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 01 The product ============ -->
+      <section class="cs-overview">
+        <div class="cs-head cs-head--overview">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">01</span>The product</p>
+          <h2 class="cs-head__title cs-head__title--tight">Resume tools that felt generic and gave no guidance</h2>
+          <p class="cs-head__text">Most resume builders relied on rigid templates, gave no feedback on how a resume performs with applicant tracking systems (ATS), and offered no writing help. BuildMyCV set out to fix all three, and to let users add a portfolio alongside their resume.</p>
+        </div>
+        <ol class="cs-highlights">
+          <li class="cs-highlight">
+            <span class="cs-highlight__num">01</span>
+            <div class="cs-highlight__text">
+              <h3 class="cs-highlight__title">Generic templates, no personalisation</h3>
+              <p class="cs-highlight__description">Category-based editable templates with flexible layouts that adapt to different industries and goals.</p>
+            </div>
+          </li>
+          <li class="cs-highlight">
+            <span class="cs-highlight__num">02</span>
+            <div class="cs-highlight__text">
+              <h3 class="cs-highlight__title">No ATS feedback or scoring</h3>
+              <p class="cs-highlight__description">An ATS checker with a visual progress bar and improvement tips, so users see how job-ready their resume is.</p>
+            </div>
+          </li>
+          <li class="cs-highlight">
+            <span class="cs-highlight__num">03</span>
+            <div class="cs-highlight__text">
+              <h3 class="cs-highlight__title">No AI help or portfolio space</h3>
+              <p class="cs-highlight__description">AI writing suggestions with prompt-based editing, plus portfolio sections for blogs, videos and podcasts.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- ============ 02 My role ============ -->
+      <section class="cs-overview">
+        <div class="cs-head cs-head--overview">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">02</span>My role</p>
+          <h2 class="cs-head__title cs-head__title--tight">Visual execution in a two-designer team</h2>
+          <p class="cs-head__text">I worked as the junior designer alongside Kulsum Siddiqui, a senior UI/UX designer who led the overall direction, structure and information flow.</p>
+          <p class="cs-head__text">My focus was the visual execution: building reusable layout structures, designing key screens including the resume editor, template section and blog layouts, and iterating on feedback to bring polish to the interface.</p>
+        </div>
+        <div class="cs-process">
+          <p class="cs-process__label">Design process</p>
+          <ol class="cs-process__steps">
+            <li class="cs-process__step">
+              <span class="cs-process__week">Week 1</span>
+              <div class="cs-process__text">
+                <h3 class="cs-process__title">Resume templates</h3>
+                <p class="cs-process__description">A range of modern, creative and corporate templates that became the visual backbone of the product.</p>
+              </div>
+            </li>
+            <li class="cs-process__step">
+              <span class="cs-process__week">Week 2–3</span>
+              <div class="cs-process__text">
+                <h3 class="cs-process__title">Landing page</h3>
+                <p class="cs-process__description">A clean, futuristic look with an ATS checker preview, template showcase and a guided getting-started flow.</p>
+              </div>
+            </li>
+            <li class="cs-process__step">
+              <span class="cs-process__week">Week 4</span>
+              <div class="cs-process__text">
+                <h3 class="cs-process__title">Resume builder</h3>
+                <p class="cs-process__description">The editing panel, template switching, ATS progress bar and AI content suggestions.</p>
+              </div>
+            </li>
+            <li class="cs-process__step">
+              <span class="cs-process__week">Week 5</span>
+              <div class="cs-process__text">
+                <h3 class="cs-process__title">Supporting screens</h3>
+                <p class="cs-process__description">Blogs, videos and podcasts, plus login and sign-up flows aligned with the rest of the product.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ 03 Inside the product ============ -->
+      <section class="cs-section">
+        <div class="cs-head cs-head--compact">
+          <p class="cs-head__eyebrow"><span class="cs-head__number cs-head__number--accent">03</span>Inside the product</p>
+          <h2 class="cs-head__title cs-head__title--tight">Key screens</h2>
+        </div>
+        <div class="cs-shots">
+          <figure class="browser-shot browser-shot--flat cs-shots__wide">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/buildmycv/screen-ats-resume-checker.webp" alt="Free AI ATS resume checker page with an upload box and sample resumes" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">Free AI ATS resume checker</figcaption>
+          </figure>
+          <figure class="browser-shot browser-shot--flat">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/buildmycv/screen-template-gallery.webp" alt="Template gallery with resume templates for every industry" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">Template gallery</figcaption>
+          </figure>
+          <figure class="browser-shot browser-shot--flat">
+            <div class="browser-shot__window">
+              <div class="browser-shot__bar"><img class="browser-shot__dot" src="../assets/icons/browser-dot-red.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-yellow.svg" alt=""><img class="browser-shot__dot" src="../assets/icons/browser-dot-green.svg" alt=""></div>
+              <img class="browser-shot__image" src="../assets/images/buildmycv/screen-ats-score.webp" alt="ATS score screen with an improvement roadmap and resume tips" loading="lazy">
+            </div>
+            <figcaption class="browser-shot__caption">ATS score</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ Next project ============ -->
+      <section class="cs-next">
+        <div class="cs-next__text">
+          <p class="cs-next__label">Next project</p>
+          <h2 class="cs-next__title">Making real estate decisions trustworthy</h2>
+          <p class="cs-next__meta">Square Foot Story · Mobile app &amp; web</p>
+        </div>
+        <a class="button button--primary button--pill cs-next__button" href="square-foot-story.html">View project →</a>
+      </section>
+    </main>
 
     <footer class="footer">
       <p class="footer__text">© 2026 Mayank Pal  ·  Delhi NCR, India</p>
       <nav class="footer__links" aria-label="Social">
         <a class="footer__link" href="#">LinkedIn</a>
         <a class="footer__link" href="#">X (Twitter)</a>
-        <a class="footer__link" href="../assets/docs/resume.pdf" download>Resume</a>
+        <a class="footer__link" href="mailto:Mayankoct2004@gmail.com">Mayankoct2004@gmail.com</a>
       </nav>
     </footer>
 
