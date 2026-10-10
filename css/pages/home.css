@@ -149,22 +149,6 @@
 .cover-astro__phone--2 { left: 228.2em; top: 46.19em; width: 133em; height: 278em; rotate: 6deg; }
 .cover-astro__phone--3 { left: 397.49em; top: 79.98em; width: 122em; height: 254em; rotate: 9deg; }
 
-/* ---------- BuildMyCV cover (1230 × 400) ---------- */
-.cover-buildmycv {
-  aspect-ratio: 1230 / 400;
-  background: var(--gradient-buildmycv);
-}
-
-.cover-buildmycv .work-card__stage {
-  font-size: calc(100cqw / 1230);
-}
-
-.cover-buildmycv__glow { left: 320.1em; top: 78.75em; width: 300em; height: 300em; }
-.cover-buildmycv__glow .glow__image { inset: -30%; width: 160%; height: 160%; }
-
-.cover-buildmycv__browser { width: 466em; height: 360em; }
-.cover-buildmycv__browser .browser__page { height: 336em; }
-
 /* ==========================================================
    Capabilities bento
    ========================================================== */
@@ -354,16 +338,16 @@
 
   /* BuildMyCV: same browser (already centred), cropped to the centre,
      so only the glow needs shifting by the cropped amount (326.67) */
-  .cover-buildmycv {
+  .case-studies .buildmycv-cover {
     aspect-ratio: 346 / 240;
     background: var(--gradient-buildmycv-mobile);
   }
 
-  .cover-buildmycv .work-card__stage {
+  .case-studies .buildmycv-cover__stage {
     font-size: calc(100cqw / 576.67);
   }
 
-  .cover-buildmycv__glow {
+  .case-studies .buildmycv-cover__glow {
     left: -6.57em;
   }
 
