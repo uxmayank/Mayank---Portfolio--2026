@@ -98,6 +98,7 @@
   background: var(--color-surface);
   border-radius: var(--radius-20);
   font-weight: var(--font-weight-medium);
+  border: 1px solid var(--color-border);
 }
 
 .about-facts__item {
@@ -159,6 +160,7 @@
   padding: var(--space-24);
   background: var(--color-surface);
   border-radius: var(--radius-20);
+  border: 1px solid var(--color-border);
 }
 
 .about-principle__top {
@@ -221,6 +223,7 @@
   background: var(--color-surface);
   border-radius: var(--radius-20);
   list-style: none;
+  border: 1px solid var(--color-border);
 }
 
 .about-timeline__step {
@@ -285,6 +288,7 @@
   padding: var(--space-24);
   background: var(--color-surface);
   border-radius: var(--radius-20);
+  border: 1px solid var(--color-border);
 }
 
 .about-now--highlight {
