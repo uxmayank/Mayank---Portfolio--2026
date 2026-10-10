@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="css/components/cards.css">
   <link rel="stylesheet" href="css/components/phone-mockup.css">
   <link rel="stylesheet" href="css/components/browser-mockup.css">
+  <link rel="stylesheet" href="css/components/sfs-cover.css">
+  <link rel="stylesheet" href="css/components/media-frame.css">
 
   <!-- Page -->
   <link rel="stylesheet" href="css/pages/home.css">
@@ -94,11 +96,10 @@
         </div>
       </section>
 
-      <!-- Showreel: plays silently on a loop, like a moving image.
-           Add the file at assets/videos/home/showreel.mp4. Until then the grid frame shows. -->
-      <section class="showreel" aria-label="Showreel">
-        <video class="showreel__video" autoplay muted loop playsinline preload="metadata" aria-label="Showreel of Mayank Pal’s design work">
-          <source src="assets/videos/home/showreel.mp4" type="video/mp4">
+      <!-- Showreel: plays silently on a loop, like a moving image -->
+      <section class="media-frame" aria-label="Showreel">
+        <video class="media-frame__video" autoplay muted loop playsinline preload="metadata" aria-label="Square Foot Story launch reel">
+          <source src="assets/videos/home/sfs-launch-reel.mp4" type="video/mp4">
         </video>
       </section>
 
@@ -109,44 +110,43 @@
           <h2 class="section-head__title">Case studies</h2>
         </div>
 
-        <!-- Square Foot Story (animated cover) -->
-        <article class="work-card">
+        <!-- Square Foot Story (animated cover) — the whole card links to the case study -->
+        <article class="work-card work-card--link">
           <div class="work-card__meta">
             <div class="work-card__text">
-              <h3 class="work-card__title work-card__title--large">Making real estate decisions trustworthy</h3>
+              <h3 class="work-card__title work-card__title--large"><a class="work-card__link" href="projects/square-foot-story.html">Making real estate decisions trustworthy</a></h3>
               <p class="work-card__subtitle">Square Foot Story · Mobile app &amp; Website</p>
             </div>
             <span class="chip chip--round"><img class="chip__dot" src="assets/icons/dot-green.svg" alt="">Live</span>
           </div>
-          <div class="work-card__cover cover-sfs">
-            <div class="work-card__stage">
-              <div class="glow cover-sfs__glow-1"><img class="glow__image" src="assets/images/home/glow-sfs-1.svg" alt=""></div>
-              <div class="glow cover-sfs__glow-2"><img class="glow__image" src="assets/images/home/glow-sfs-2.svg" alt=""></div>
-
-              <div class="phone cover-sfs__phone cover-sfs__phone--home">
+          <div class="work-card__cover sfs-cover">
+            <div class="sfs-cover__stage">
+              <div class="glow sfs-cover__glow-1"><img class="glow__image" src="assets/images/square-foot-story/glow-cover-1.svg" alt=""></div>
+              <div class="glow sfs-cover__glow-2"><img class="glow__image" src="assets/images/square-foot-story/glow-cover-2.svg" alt=""></div>
+              <div class="phone sfs-cover__phone sfs-cover__phone--home">
                 <div class="phone__screens">
-                  <img class="phone__screen" src="assets/images/home/sfs-home-1.webp" alt="Square Foot Story home screen with a property search and trending properties">
-                  <img class="phone__screen" src="assets/images/home/sfs-home-2.webp" alt="Square Foot Story home screen, second view">
-                  <img class="phone__screen" src="assets/images/home/sfs-home-3.webp" alt="Square Foot Story home screen, third view">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-home.webp" alt="Square Foot Story home screen with a property search and trending properties">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-interior-designer.webp" alt="Interior designer profile screen">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-interior-designer-project.webp" alt="Interior designer project details screen">
                 </div>
               </div>
-              <div class="phone cover-sfs__phone cover-sfs__phone--splash">
+              <div class="phone sfs-cover__phone sfs-cover__phone--splash">
                 <div class="phone__screens">
-                  <img class="phone__screen" src="assets/images/home/sfs-splash-1.webp" alt="Square Foot Story welcome screen: Find properties without the chaos">
-                  <img class="phone__screen" src="assets/images/home/sfs-splash-2.webp" alt="Square Foot Story onboarding screen, second step">
-                  <img class="phone__screen" src="assets/images/home/sfs-splash-3.webp" alt="Square Foot Story onboarding screen, third step">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-splash.webp" alt="Welcome screen: Find properties without the chaos">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-phone-number.webp" alt="Sign-in screen asking for a phone number">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-credibility-onboarding.webp" alt="Builder credibility onboarding screen">
                 </div>
               </div>
-              <div class="phone cover-sfs__phone cover-sfs__phone--builder">
+              <div class="phone sfs-cover__phone sfs-cover__phone--builder">
                 <div class="phone__screens">
-                  <img class="phone__screen" src="assets/images/home/sfs-builder-1.webp" alt="Builder credibility screen showing a 54 out of 100 score">
-                  <img class="phone__screen" src="assets/images/home/sfs-builder-2.webp" alt="Builder credibility screen, details view">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-credibility-score.webp" alt="Builder credibility screen showing a score of 54 out of 100">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-comparison.webp" alt="Property comparison screen">
                 </div>
               </div>
-              <div class="phone cover-sfs__phone cover-sfs__phone--calculator">
+              <div class="phone sfs-cover__phone sfs-cover__phone--calculator">
                 <div class="phone__screens">
-                  <img class="phone__screen" src="assets/images/home/sfs-calculator-1.webp" alt="Circle rate calculator screen with property inputs">
-                  <img class="phone__screen" src="assets/images/home/sfs-calculator-2.webp" alt="Circle rate calculator result screen">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-circle-rate-calculator.webp" alt="Circle rate calculator screen with property inputs">
+                  <img class="phone__screen" src="assets/images/square-foot-story/screen-brands.webp" alt="Home brands screen">
                 </div>
               </div>
             </div>
