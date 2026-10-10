@@ -793,6 +793,66 @@
   line-height: 21px;
 }
 
+/* Phone panels: a gradient panel with a heading and a centred row of phones (AstroBharat AI) */
+.cs-phone-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-40);
+  padding: var(--space-40) var(--space-40) var(--space-48);
+  overflow: hidden;
+  border-radius: var(--radius-24);
+}
+
+.cs-phone-panel--warm  { background: var(--gradient-astro-panel-1); }
+.cs-phone-panel--sand  { background: var(--gradient-astro-panel-2); }
+
+.cs-phone-panel__head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.cs-phone-panel__title {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-22);
+  font-weight: var(--font-weight-semibold);
+}
+
+.cs-phone-panel__text {
+  color: var(--color-text-body);
+  font-size: var(--font-size-14);
+}
+
+.cs-phone-panel__phones {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-56);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cs-phone-panel__item {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-16);
+  margin: 0;
+}
+
+/* 260px-wide glass phones (the phone component is 247em wide) */
+.cs-phone-panel__item .phone {
+  font-size: calc(260px / 247);
+  box-shadow: var(--shadow-phone-warm);
+}
+
+.cs-phone-panel__caption {
+  color: var(--color-text-strong);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+}
+
 /* "Key screens": browser shots in rows of two, the last one full width */
 .cs-shots {
   display: grid;
@@ -850,6 +910,32 @@
 
   .cs-process__step {
     padding: var(--space-16);
+  }
+
+  .cs-phone-panel {
+    gap: var(--space-24);
+    padding: var(--space-24) var(--space-20) var(--space-28);
+  }
+
+  .cs-phone-panel--warm { background: var(--gradient-astro-panel-1-mobile); }
+  .cs-phone-panel--sand { background: var(--gradient-astro-panel-2-mobile); }
+
+  .cs-phone-panel__title {
+    font-size: var(--font-size-18);
+  }
+
+  /* Phones scroll sideways instead of shrinking */
+  .cs-phone-panel__phones {
+    justify-content: flex-start;
+    gap: var(--space-16);
+    margin-right: calc(-1 * var(--space-20));
+    padding-right: var(--space-20);
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .cs-phone-panel__item .phone {
+    font-size: calc(170px / 247);
   }
 
   .cs-shots {
