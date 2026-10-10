@@ -130,25 +130,6 @@
 }
 
 
-/* ---------- AstroBharat AI cover (598 × 345) ---------- */
-.cover-astro {
-  aspect-ratio: 598 / 345;
-  background: var(--gradient-astro);
-}
-
-.cover-astro .work-card__stage {
-  font-size: calc(100cqw / 598);
-}
-
-.cover-astro__glow-1 { left: 39em; top: 85em; width: 260em; height: 260em; }
-.cover-astro__glow-1 .glow__image { inset: -30.77%; width: 161.54%; height: 161.54%; }
-.cover-astro__glow-2 { left: 379.86em; top: -66em; width: 240em; height: 240em; }
-.cover-astro__glow-2 .glow__image { inset: -33.33%; width: 166.66%; height: 166.66%; }
-
-.cover-astro__phone--1 { left: 57.1em; top: 16em; width: 144em; height: 301em; }
-.cover-astro__phone--2 { left: 228.2em; top: 46.19em; width: 133em; height: 278em; rotate: 6deg; }
-.cover-astro__phone--3 { left: 397.49em; top: 79.98em; width: 122em; height: 254em; rotate: 9deg; }
-
 /* ==========================================================
    Capabilities bento
    ========================================================== */
