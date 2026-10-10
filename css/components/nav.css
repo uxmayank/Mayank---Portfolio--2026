@@ -1,1 +1,49 @@
 /* Top navigation bar, shared by every page. */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-16);
+}
+
+/* Black pill holding the page tabs */
+.nav__tabs {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-grey-900);
+  border-radius: var(--radius-14);
+}
+
+.nav__tab {
+  padding: var(--space-7) var(--space-14);
+  border-radius: var(--radius-11);
+  color: var(--color-grey-50);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: 20px;
+  transition: background 0.2s;
+}
+
+.nav__tab:hover {
+  background: var(--color-tab-hover);
+}
+
+/* The tab for the page you're on (set with aria-current="page") */
+.nav__tab[aria-current="page"] {
+  background: var(--color-white);
+  color: var(--color-grey-900);
+}
+
+@media (max-width: 767px) {
+  .nav__tab {
+    padding: var(--space-6) var(--space-10);
+    font-size: var(--font-size-13);
+  }
+
+  .nav .button {
+    padding: var(--space-8) var(--space-12);
+    font-size: var(--font-size-13);
+  }
+}

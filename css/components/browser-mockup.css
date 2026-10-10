@@ -1,0 +1,64 @@
+/* Browser window frame that holds a website screenshot. Sizes are in em (1em = 1 Figma pixel inside a cover stage). */
+
+.browser {
+  position: absolute;
+  left: 50%;
+  top: 20em;
+  translate: -50% 0;
+  overflow: hidden;
+  background: var(--color-white);
+  border: 1em solid var(--color-browser-border);
+  border-radius: 12em;
+  box-shadow: var(--shadow-browser-warm);
+}
+
+.browser--cool {
+  border-color: var(--color-browser-border-cool);
+  box-shadow: var(--shadow-browser-cool);
+}
+
+/* Title bar with the three window dots and the URL pill */
+.browser__bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5em;
+  height: 23em;
+  padding-left: 11em;
+  background: var(--color-browser-bar);
+}
+
+.browser--cool .browser__bar {
+  background: var(--color-browser-bar-cool);
+}
+
+.browser__dot {
+  width: 8em;
+  height: 8em;
+}
+
+.browser__url {
+  position: absolute;
+  left: 50%;
+  top: 4em;
+  translate: -50% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150em;
+  height: 14em;
+  background: var(--color-white);
+  border-radius: 7em;
+}
+
+/* 8em here means 8 Figma pixels, because the parent's font-size is the stage unit */
+.browser__url-text {
+  color: var(--color-text-muted);
+  font-size: 8em;
+  font-weight: var(--font-weight-medium);
+}
+
+.browser__page {
+  width: 100%;
+  object-fit: cover;
+}

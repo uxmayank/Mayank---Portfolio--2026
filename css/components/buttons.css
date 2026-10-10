@@ -1,1 +1,52 @@
 /* Buttons and button-style links. */
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  padding: var(--space-9) var(--space-16);
+  border-radius: var(--radius-12);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: 20px;
+  white-space: nowrap;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.button:hover {
+  opacity: 0.85;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+/* Black */
+.button--primary {
+  background: var(--color-grey-900);
+  color: var(--color-white);
+}
+
+/* White with a light border */
+.button--secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+/* White without a border (for coloured backgrounds) */
+.button--white {
+  background: var(--color-white);
+  color: var(--color-text);
+}
+
+/* Fully rounded ends */
+.button--pill {
+  border-radius: 240px;
+}
+
+/* A row of buttons */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}

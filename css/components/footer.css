@@ -1,1 +1,33 @@
 /* Site footer, shared by every page. */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  font-size: var(--font-size-13);
+  line-height: 18px;
+}
+
+.footer__text {
+  color: var(--color-text-subtle);
+  white-space: pre;
+}
+
+.footer__links {
+  display: flex;
+  gap: var(--space-20);
+  color: var(--color-text-body);
+  font-weight: var(--font-weight-medium);
+}
+
+.footer__link:hover {
+  color: var(--color-text);
+}
+
+@media (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+}

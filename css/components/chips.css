@@ -1,1 +1,26 @@
 /* Small status chips and tags. */
+
+/* Green status chip with a dot, e.g. "Live" or "Working Full Time" */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-5) var(--space-10);
+  background: var(--color-green-50);
+  border-radius: var(--radius-11);
+  color: var(--color-green-900);
+  font-size: var(--font-size-12);
+  font-weight: var(--font-weight-medium);
+  line-height: 16px;
+  white-space: nowrap;
+}
+
+.chip--round {
+  padding: var(--space-5) var(--space-16);
+  border-radius: var(--radius-round);
+}
+
+.chip__dot {
+  width: 6px;
+  height: 6px;
+}

@@ -1,1 +1,54 @@
-/* Phone frames that hold app screenshots. */
+/* Phone frames that hold app screenshots. Sizes are in em (1em = 1 Figma pixel inside a cover stage). */
+
+/* ---------- Glass phone: frosted frame with sliding screens ---------- */
+.phone {
+  position: absolute;
+  width: 247em;
+  height: 520em;
+  overflow: hidden;
+  background: var(--color-glass);
+  backdrop-filter: blur(6em);
+  -webkit-backdrop-filter: blur(6em);
+  border: 1.5em solid var(--color-white);
+  border-radius: 36em;
+  box-shadow: var(--shadow-phone);
+}
+
+.phone__screens {
+  position: absolute;
+  left: 5.5em;
+  top: 5.5em;
+  width: 233em;
+  height: 506em;
+  overflow: hidden;
+  border-radius: 29em;
+}
+
+.phone__screen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 29em;
+}
+
+/* Later screens wait off to the right until an animation slides them in */
+.phone__screen + .phone__screen {
+  translate: 100% 0;
+}
+
+/* ---------- Bezel phone: simple light frame with one screenshot ---------- */
+.phone--bezel {
+  padding: 3.5em;
+  background: var(--color-bezel);
+  border-radius: 12em;
+  box-shadow: var(--shadow-bezel);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+.phone--bezel .phone__screen {
+  position: static;
+  border-radius: 7em;
+}

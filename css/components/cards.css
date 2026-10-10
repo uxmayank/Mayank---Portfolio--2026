@@ -1,1 +1,101 @@
 /* Project and content cards. */
+
+/* ---------- Work card: white card with a title row and a cover ---------- */
+.work-card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-8);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-20);
+  overflow: hidden;
+}
+
+.work-card__meta {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-12);
+  padding: var(--space-12);
+}
+
+.work-card__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.work-card__title {
+  font-size: var(--font-size-16);
+  font-weight: var(--font-weight-medium);
+  line-height: 22px;
+  letter-spacing: -0.32px;
+}
+
+.work-card__title--large {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-semibold);
+  line-height: 1.2;
+  letter-spacing: -0.72px;
+}
+
+.work-card__subtitle {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-14);
+  line-height: 20px;
+}
+
+.work-card__tag {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-14);
+  font-weight: var(--font-weight-medium);
+  line-height: 20px;
+  white-space: nowrap;
+}
+
+/*
+  Cover: holds a fixed-size Figma composition (phones, browser windows).
+  The stage's font-size is set per cover so that 1em = 1 Figma pixel.
+  Everything inside is sized in em, so the whole picture scales with the card.
+*/
+.work-card__cover {
+  position: relative;
+  container-type: inline-size;
+  border-radius: var(--radius-12);
+  overflow: hidden;
+}
+
+.work-card__stage {
+  position: absolute;
+  inset: 0;
+}
+
+.work-card__stage img {
+  max-width: none;
+}
+
+/* Soft blurred glow. The SVG is larger than its slot to make room for the blur. */
+.glow {
+  position: absolute;
+}
+
+.glow__image {
+  position: absolute;
+}
+
+@media (max-width: 767px) {
+  .work-card__meta {
+    padding: var(--space-10) var(--space-8) var(--space-12);
+  }
+
+  .work-card__title--large {
+    font-size: var(--font-size-18);
+    letter-spacing: -0.54px;
+  }
+
+  .work-card__cover {
+    border-radius: var(--radius-6);
+  }
+}
