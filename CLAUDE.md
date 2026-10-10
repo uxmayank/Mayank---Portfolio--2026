@@ -31,7 +31,8 @@ css/
     typography.css      heading/body text styles
     layout.css          container, section spacing, grid helpers
   components/           one file per reusable piece: nav.css, footer.css, buttons.css, cards.css, chips.css, carousel.css, phone-mockup.css,
-                        browser-mockup.css, media-frame.css (grid frame for video), sfs-cover.css (animated Square Foot Story cover)
+                        browser-mockup.css (incl. browser-shot), media-frame.css (grid frame for video),
+                        sfs-cover.css (animated Square Foot Story cover), mechservi-cover.css
   pages/                one file per page: home.css, about.css, case-study.css (shared by all case studies), plus project-specific files only if needed
                         (square-foot-story.css)
 js/
