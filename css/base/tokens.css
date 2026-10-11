@@ -3,6 +3,7 @@
 :root {
   /* ---------- Colour palette (names match the Figma design system) ---------- */
   --color-white: #FFFFFF;
+  --color-black: #000000;
 
   --color-grey-50: #FAFAFA;
   --color-grey-100: #D6D6D6;
@@ -170,6 +171,7 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
 
   --font-size-8: 8px;
   --font-size-9: 9px;
@@ -260,4 +262,13 @@
 
   /* ---------- Motion ---------- */
   --ease-in-out: cubic-bezier(0.5, 0, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+  --ease-overshoot: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ---------- Preloader (Figma 405:16947, a 1440 × 931 frame) ---------- */
+  --preloader-word-size: min(30.56vw, 55vh); /* 440px at 1440 wide */
+  --preloader-word-edge: 9.1vw;              /* 131px at 1440 wide: places the ink where the Figma frame has it */
+  --preloader-label-edge: 64px;
+  --preloader-label-bottom: 54px;
 }

@@ -11,6 +11,9 @@
   <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/icon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
 
+  <!-- Preloader: runs first so the page is never seen before the preloader (see js/preloader.js) -->
+  <script src="js/preloader.js"></script>
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,6 +28,7 @@
   <!-- Components -->
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/preloader.css">
   <link rel="stylesheet" href="css/components/buttons.css">
   <link rel="stylesheet" href="css/components/chips.css">
   <link rel="stylesheet" href="css/components/cards.css">
@@ -40,6 +44,15 @@
   <link rel="stylesheet" href="css/pages/home.css">
 </head>
 <body>
+  <!-- Preloader (Figma 405:16947). Hidden unless js/preloader.js turns it on. -->
+  <div class="preloader" aria-hidden="true">
+    <p class="preloader__word">
+      <span class="preloader__mask"><span class="preloader__letter">M</span></span><span class="preloader__mask"><span class="preloader__letter">y</span></span><span class="preloader__mask"><span class="preloader__letter">n</span></span><span class="preloader__mask"><span class="preloader__letter">k</span></span><span class="preloader__mask"><span class="preloader__letter preloader__letter--dot">.</span></span>
+    </p>
+    <p class="preloader__label preloader__label--left">Product Designer</p>
+    <p class="preloader__label preloader__label--right">Portfolio</p>
+  </div>
+
   <div class="page">
 
     <header class="nav">
