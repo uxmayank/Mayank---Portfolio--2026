@@ -355,7 +355,6 @@
 /* Download button: charcoal on the black panel */
 .about-cta__download {
   background: var(--color-grey-800);
-  border-radius: var(--radius-11);
   color: var(--color-white);
 }
 

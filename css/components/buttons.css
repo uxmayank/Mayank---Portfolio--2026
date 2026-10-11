@@ -1,19 +1,51 @@
 /* Buttons and button-style links. */
 
 .button {
+  position: relative;
   display: inline-flex;
   justify-content: center;
-  padding: var(--space-9) var(--space-16);
-  border-radius: var(--radius-12);
-  font-size: var(--font-size-14);
+  overflow: hidden;          /* clips the orange fill to the button's rounded shape */
+  isolation: isolate;        /* keeps the fill behind the text but above the button colour */
+  padding: var(--space-8) var(--space-12);
+  border-radius: var(--radius-round);
+  font-size: var(--font-size-13);
   font-weight: var(--font-weight-medium);
   line-height: 20px;
   white-space: nowrap;
-  transition: opacity 0.2s, transform 0.2s;
+  transition: color 0.3s var(--ease-out-expo), transform 0.2s;
 }
 
-.button:hover {
-  opacity: 0.85;
+/* Hover fill (Figma 412:17019): an orange circle grows out of the bottom centre until it covers the button */
+.button::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: -1;
+  width: 160%;
+  aspect-ratio: 1;
+  border-radius: var(--radius-round);
+  background: var(--color-orange-900);
+  translate: -50% 50%;
+  scale: 0;
+  transition: scale 0.5s var(--ease-out-expo);
+}
+
+@media (hover: hover) {
+  .button:hover,
+  .button:focus-visible {
+    color: var(--color-white);
+    /* Once the circle has covered the button, make the button itself orange too, so no thin
+       edge of the old colour shows around the rounded corners */
+    background-color: var(--color-orange-900);
+    border-color: var(--color-orange-900);
+    transition: color 0.3s var(--ease-out-expo), transform 0.2s, background-color 0s 0.4s;
+  }
+
+  .button:hover::before,
+  .button:focus-visible::before {
+    scale: 1;
+  }
 }
 
 .button:active {
@@ -37,11 +69,6 @@
 .button--white {
   background: var(--color-white);
   color: var(--color-text);
-}
-
-/* Fully rounded ends */
-.button--pill {
-  border-radius: 240px;
 }
 
 /* A row of buttons */
