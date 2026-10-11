@@ -7,6 +7,7 @@
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (!hasMouse || reduceMotion) return;
 
+  const OFFSET = { x: 28, y: 28 }; // how far the dot sits from the pointer (right and below)
   const FOLLOW = 0.2; // 0–1: how much of the gap to the mouse is closed each frame (lower = lazier)
 
   const dot = document.createElement("div");
@@ -35,8 +36,8 @@
   }
 
   window.addEventListener("mousemove", (event) => {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
+    mouseX = event.clientX + OFFSET.x;
+    mouseY = event.clientY + OFFSET.y;
     if (!dot.classList.contains("is-visible")) {
       x = mouseX; // first move: appear right under the pointer
       y = mouseY;
