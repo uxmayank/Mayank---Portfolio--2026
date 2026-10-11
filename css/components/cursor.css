@@ -27,6 +27,12 @@
     opacity: 1;
   }
 
+  /* Gone instantly over cards that have their own hover effect (it fades back in afterwards) */
+  html.has-cursor .cursor.is-hidden {
+    opacity: 0;
+    transition: none;
+  }
+
   /* Grows over links and buttons */
   html.has-cursor .cursor.is-active {
     scale: var(--cursor-active-scale);

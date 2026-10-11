@@ -49,9 +49,11 @@
     }
   }, { passive: true });
 
-  // Grow over anything clickable
+  // Grow over anything clickable, and vanish over cards that have their own hover effect
   document.addEventListener("mouseover", (event) => {
-    dot.classList.toggle("is-active", !!event.target.closest("a, button, summary, [role='button']"));
+    const overCard = !!event.target.closest(".work-card--link");
+    dot.classList.toggle("is-hidden", overCard);
+    dot.classList.toggle("is-active", !overCard && !!event.target.closest("a, button, summary, [role='button']"));
   });
 
   // Hide only when the mouse really leaves the window. Moving onto an embedded frame (the Cal.com
