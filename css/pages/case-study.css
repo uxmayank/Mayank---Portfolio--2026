@@ -615,11 +615,6 @@
   line-height: normal;
 }
 
-/* Single "Check live website ↗" link under the intro */
-.cs-hero__link {
-  align-self: flex-start;
-}
-
 /* Meta row with lines above and below instead of a card */
 .cs-meta--lined {
   flex-wrap: nowrap;
