@@ -54,6 +54,12 @@
     dot.classList.toggle("is-active", !!event.target.closest("a, button, summary, [role='button']"));
   });
 
-  // Hide when the mouse leaves the window
-  document.documentElement.addEventListener("mouseleave", () => dot.classList.remove("is-visible"));
+  // Hide only when the mouse really leaves the window. Moving onto an embedded frame (the Cal.com
+  // calendar) also looks like "no element on the other side", so check the pointer is at the window edge.
+  document.addEventListener("mouseout", (event) => {
+    if (event.relatedTarget) return;
+    const atEdge = event.clientX <= 0 || event.clientY <= 0 ||
+      event.clientX >= window.innerWidth - 1 || event.clientY >= window.innerHeight - 1;
+    if (atEdge) dot.classList.remove("is-visible");
+  });
 })();
