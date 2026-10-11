@@ -15,7 +15,7 @@
 
 (function () {
   // ---- Settings you can tweak ----
-  const SPEED = 1.4;          // 1 = timing as designed here; higher = faster overall (about 4.5s in total at 1.4)
+  const SPEED = 1.2;           // 1 = timing as designed here; higher = faster overall (about 4.5s in total at 1.4)
   const DIP_PX = 10;           // how far a letter is pushed down when the dot lands (8–12 looks right)
   const EXIT_DELAY_S = 0.35;   // pause on the finished "Mynk." before the screen slides away
   const MAX_WAIT_MS = 5000;    // never keep visitors waiting longer than this for a slow page
