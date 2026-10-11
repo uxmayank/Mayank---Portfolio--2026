@@ -1,4 +1,6 @@
-/* Full-screen preloader for the home page (Figma 405:16947).
+/* Full-screen preloader for the home page (Figma 405:17006).
+   An outlined "Mynk" fills in letter by letter as an orange dot hops across it.
+   The motion itself is done by GSAP in js/preloader.js; this file holds the layout and starting states.
    It only shows when js/preloader.js adds the "has-preloader" class to <html>,
    so without JavaScript the page is never covered. */
 
@@ -19,116 +21,74 @@ html.has-preloader .preloader {
   font-family: var(--font-body);
 }
 
-/* ---------- The wordmark: "Mynk" + an orange full stop ---------- */
+/* ---------- The word + dot, drawn as one SVG ----------
+   Everything inside is measured in the design's own units (the SVG's viewBox), so it
+   scales with the screen. The SVG may draw outside its box: the dot starts above and left of the word. */
+.preloader__stage {
+  position: absolute;
+  top: calc(50% + var(--preloader-word-offset-y));
+  left: calc(50% + var(--preloader-word-offset-x));
+  translate: -50% -50%;
+  width: var(--preloader-word-width);
+  aspect-ratio: 1118.06 / 398.2;
+}
+
 .preloader__word {
   position: absolute;
-  top: 50%;
-  right: var(--preloader-word-edge);
-  translate: 0 -50%;
-  display: flex;
-  color: var(--color-black);
-  font-family: var(--font-heading);
-  font-variation-settings: "opsz" 14;
-  font-size: var(--preloader-word-size);
-  font-weight: var(--font-weight-extrabold);
-  line-height: 1;
+  top: -0.25%;
+  left: 0;
+  width: 100.2%;
+  height: auto;
+  overflow: visible;
 }
 
-/* Each letter sits in its own mask and rises up into view.
-   The mask is taller than the line so the "y" tail and the "k" top aren't cut off,
-   and the negative right margin recreates the tight spacing of the design. */
-.preloader__mask {
-  display: block;
-  overflow: hidden;
-  padding: 0.15em 0 0.3em;
-  margin: -0.15em -0.06em -0.3em 0;
+/* Letters start as thin outlines; a black copy is revealed on top of each one as it fills */
+.preloader__outline,
+.preloader__fill {
+  stroke: var(--color-grey-900);
+  stroke-width: 1px; /* stays 1px on screen at every size (vector-effect in the markup) */
 }
 
-.preloader__letter {
-  display: block;
-  translate: 0 150%;
+.preloader__outline {
+  fill: none;
+  opacity: 0; /* faded in by the animation */
 }
 
-.preloader__letter--dot {
-  color: var(--color-orange-900);
-  scale: 0;
-  translate: 0 0;
-  transform-origin: 50% 75%; /* the dot grows from where it sits on the baseline */
+.preloader__fill {
+  fill: var(--color-grey-900);
+}
+
+.preloader__dot {
+  opacity: 0; /* appears at the start of the animation */
+}
+
+.preloader__dot path {
+  fill: var(--color-orange-900);
 }
 
 /* ---------- Small labels at the bottom corners ---------- */
 .preloader__label {
   position: absolute;
   bottom: var(--preloader-label-bottom);
-  color: var(--color-grey-900);
+  color: var(--color-grey-500);
   font-size: var(--font-size-24);
   font-weight: var(--font-weight-medium);
   line-height: 20px;
   letter-spacing: -0.02em;
   white-space: nowrap;
-  opacity: 0;
-  translate: 0 var(--space-12);
+  opacity: 0; /* faded in by the animation */
 }
 
 .preloader__label--left  { left: var(--preloader-label-edge); }
 .preloader__label--right { right: var(--preloader-label-edge); }
 
 /* ==========================================================
-   Animation: starts when js/preloader.js adds "is-playing"
-   ========================================================== */
-.preloader.is-playing .preloader__letter {
-  animation: preloader-rise 0.9s var(--ease-out-expo) both;
-}
-
-.preloader.is-playing .preloader__mask:nth-child(1) .preloader__letter { animation-delay: 0.1s; }
-.preloader.is-playing .preloader__mask:nth-child(2) .preloader__letter { animation-delay: 0.19s; }
-.preloader.is-playing .preloader__mask:nth-child(3) .preloader__letter { animation-delay: 0.28s; }
-.preloader.is-playing .preloader__mask:nth-child(4) .preloader__letter { animation-delay: 0.37s; }
-
-/* The full stop pops in last, with a small bounce */
-.preloader.is-playing .preloader__letter--dot {
-  animation: preloader-pop 0.7s var(--ease-overshoot) 0.85s both;
-}
-
-.preloader.is-playing .preloader__label {
-  animation: preloader-fade-up 0.7s var(--ease-out-expo) 0.7s both;
-}
-
-.preloader.is-playing .preloader__label--right {
-  animation-delay: 0.8s;
-}
-
-@keyframes preloader-rise {
-  from { translate: 0 150%; }
-  to   { translate: 0 0; }
-}
-
-@keyframes preloader-pop {
-  from { scale: 0; }
-  to   { scale: 1; }
-}
-
-@keyframes preloader-fade-up {
-  from { opacity: 0; translate: 0 var(--space-12); }
-  to   { opacity: 1; translate: 0 0; }
-}
-
-/* Exit: the whole screen slides up and away, revealing the page */
-.preloader.is-leaving {
-  animation: preloader-exit 0.9s var(--ease-in-out-quart) forwards;
-}
-
-@keyframes preloader-exit {
-  from { translate: 0 0; }
-  to   { translate: 0 -100%; }
-}
-
-/* ==========================================================
-   Mobile (the design has no phone frame, so the wordmark simply
-   scales with the screen width and the labels move closer in)
+   Mobile (the design has no phone frame, so the word is
+   made wider relative to the screen and the labels move closer in)
    ========================================================== */
 @media (max-width: 767px) {
   html.has-preloader .preloader {
+    --preloader-word-width: 80vw;
     --preloader-label-edge: var(--space-20);
     --preloader-label-bottom: var(--space-32);
   }

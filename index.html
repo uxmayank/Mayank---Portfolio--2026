@@ -44,11 +44,43 @@
   <link rel="stylesheet" href="css/pages/home.css">
 </head>
 <body>
-  <!-- Preloader (Figma 405:16947). Hidden unless js/preloader.js turns it on. -->
+  <!-- Preloader (Figma 405:17006). The word and dot are the exact vector shapes from the design.
+       Hidden unless js/preloader.js turns it on; the animation is driven by GSAP (js/vendor/gsap.min.js). -->
   <div class="preloader" aria-hidden="true">
-    <p class="preloader__word">
-      <span class="preloader__mask"><span class="preloader__letter">M</span></span><span class="preloader__mask"><span class="preloader__letter">y</span></span><span class="preloader__mask"><span class="preloader__letter">n</span></span><span class="preloader__mask"><span class="preloader__letter">k</span></span><span class="preloader__mask"><span class="preloader__letter preloader__letter--dot">.</span></span>
-    </p>
+    <div class="preloader__stage">
+      <svg class="preloader__word" viewBox="0 0 1120.35 400.2" focusable="false">
+        <defs>
+          <path id="preloader-m" d="M107.391 27.3398L107.51 27.6699L183.071 236.34H184.566L258.368 27.6729L258.486 27.3398H360.54V318.74H292.65L292.66 318.23L296.611 100.5H292.624L208.707 318.42L208.583 318.74H149.814L149.692 318.416L67.5342 100.5H63.5488L67.5 318.23L67.5088 318.74H0.5V27.3398H107.391Z" vector-effect="non-scaling-stroke"/>
+          <clipPath id="preloader-clip-m"><rect class="preloader__clip" x="-2.50" y="25.34" width="366.04" height="0" data-full-height="295.40"/></clipPath>
+          <path id="preloader-y" d="M460.895 85.4199V164.68C460.895 191.656 463.537 210.925 468.771 222.555C471.526 228.205 475.026 232.415 479.26 235.213C483.494 238.012 488.493 239.42 494.274 239.42C500.332 239.42 505.805 237.691 510.706 234.231C515.619 230.764 519.825 225.84 523.315 219.44C526.805 213.042 529.431 205.32 531.184 196.265L531.186 196.253C533.23 186.907 534.255 176.531 534.255 165.12V85.4199H606.095V256.64C606.095 275.151 604.332 292.056 600.802 307.353C597.566 322.646 592.562 336.042 585.785 347.534C579.301 359.026 571.046 368.61 561.019 376.277L561.018 376.276C550.991 384.237 539.347 390.131 526.093 393.96C512.839 397.789 497.831 399.7 481.074 399.7C469.312 399.7 457.257 398.671 444.912 396.613C432.563 394.555 420.799 391.468 409.621 387.35V387.349C398.723 383.519 389.287 378.36 381.318 371.867L381.066 371.662L381.152 371.349L398.312 308.429L398.531 307.625L399.138 308.196C409.346 317.821 421.599 324.971 435.906 329.644C450.53 334.323 464.559 336.66 477.994 336.66C493.478 336.66 506.139 333.592 516.012 327.494L516.019 327.49L516.026 327.486C526.186 321.681 533.892 312.677 539.135 300.443L539.137 300.438C544.678 287.896 547.897 272.415 548.775 253.977V253.972L550.945 216.22H541.348C538.692 235.125 534.007 250.59 527.274 262.596C520.784 274.692 512.363 283.714 502.003 289.634L501.998 289.637C491.936 295.259 479.969 298.06 466.114 298.06C449.015 298.06 434.678 293.784 423.136 285.201C411.596 276.62 402.893 263.766 397.002 246.683L396.998 246.673C391.404 229.301 388.614 207.833 388.614 182.28V85.4199H460.895Z" vector-effect="non-scaling-stroke"/>
+          <clipPath id="preloader-clip-y"><rect class="preloader__clip" x="378.07" y="83.42" width="231.03" height="0" data-full-height="318.28"/></clipPath>
+          <path id="preloader-n" d="M781.33 79.2598C808.739 79.2599 829.579 88.8468 843.769 108.059C858.24 127.256 865.43 157.751 865.43 199.44V318.74H793.149V207.36C793.149 183.333 789.629 166.001 782.67 155.272L782.662 155.259C776.01 144.268 766.055 138.78 752.729 138.78C741.692 138.78 732.578 142.116 725.349 148.768C718.384 155.445 713.145 164.312 709.646 175.391C706.144 186.481 704.39 198.895 704.39 212.64V318.74H632.55V85.4199H690.743L690.75 85.9131L691.623 153.62H699.534C703.352 137.323 708.766 123.61 715.787 112.493C722.872 101.275 731.886 92.9944 742.831 87.6699C753.766 82.057 766.604 79.2598 781.33 79.2598Z" vector-effect="non-scaling-stroke"/>
+          <clipPath id="preloader-clip-n"><rect class="preloader__clip" x="629.55" y="77.26" width="238.88" height="0" data-full-height="243.48"/></clipPath>
+          <path id="preloader-k" d="M959.404 0.5V175.135C967.592 169.154 975.23 162.763 982.317 155.959L982.325 155.952C989.935 148.928 996.811 141.612 1002.96 134.006L1002.96 133.997C1009.4 126.387 1015.11 118.632 1020.08 110.733L1020.08 110.729C1025.35 102.536 1029.88 94.1985 1033.69 85.7158L1033.82 85.4199H1115.8L1115.58 86.0781C1111.75 97.5547 1106.46 109.027 1099.69 120.494L1099.69 120.499C1092.92 131.682 1084.68 142.127 1074.98 151.834L1074.97 151.839C1065.25 161.264 1053.62 169.358 1040.09 176.124L1040.09 176.125C1026.95 182.842 1012.08 187.381 995.484 189.752V196.636C1016.37 192.637 1033.56 192.661 1047.04 196.758H1047.04C1060.9 200.591 1071.98 206.939 1080.27 215.818C1088.53 224.668 1094.87 234.992 1099.29 246.784C1103.42 257.799 1106.91 268.686 1109.75 279.445L1110.31 281.596V281.598L1119.55 318.117L1119.71 318.74H1041.65L1041.57 318.338L1037.17 296.34C1034.24 281.987 1030.73 269.697 1026.64 259.466L1026.63 259.454V259.453C1022.85 249.259 1017.33 241.424 1010.08 235.918L1010.07 235.91C1002.86 230.141 992.428 227.22 978.704 227.22H959.404V318.74H888.884V0.5H959.404Z" vector-effect="non-scaling-stroke"/>
+          <clipPath id="preloader-clip-k"><rect class="preloader__clip" x="885.88" y="-1.50" width="236.83" height="0" data-full-height="322.24"/></clipPath>
+        </defs>
+        <g class="preloader__composition">
+        <g class="preloader__letter" data-letter="m">
+          <use class="preloader__outline" href="#preloader-m"/>
+          <use class="preloader__fill" href="#preloader-m" clip-path="url(#preloader-clip-m)"/>
+        </g>
+        <g class="preloader__letter" data-letter="y">
+          <use class="preloader__outline" href="#preloader-y"/>
+          <use class="preloader__fill" href="#preloader-y" clip-path="url(#preloader-clip-y)"/>
+        </g>
+        <g class="preloader__letter" data-letter="n">
+          <use class="preloader__outline" href="#preloader-n"/>
+          <use class="preloader__fill" href="#preloader-n" clip-path="url(#preloader-clip-n)"/>
+        </g>
+        <g class="preloader__letter" data-letter="k">
+          <use class="preloader__outline" href="#preloader-k"/>
+          <use class="preloader__fill" href="#preloader-k" clip-path="url(#preloader-clip-k)"/>
+        </g>
+          <!-- The orange dot: it hops from letter to letter, then settles after the "k" -->
+          <g class="preloader__dot"><path d="M45.32 79.64C30.0667 79.64 18.6267 76.4133 11 69.96C3.66667 63.5067 0 53.5333 0 40.04C0 26.2533 3.66667 16.1333 11 9.68C18.6267 3.22667 30.0667 0 45.32 0C60.8667 0 72.4533 3.22667 80.08 9.68C87.7067 16.1333 91.52 26.2533 91.52 40.04C91.52 66.44 76.12 79.64 45.32 79.64Z"/></g>
+        </g>
+      </svg>
+    </div>
     <p class="preloader__label preloader__label--left">Product Designer</p>
     <p class="preloader__label preloader__label--right">Portfolio</p>
   </div>

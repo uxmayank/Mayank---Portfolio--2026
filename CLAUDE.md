@@ -39,7 +39,8 @@ js/
   main.js               small shared scripts (e.g. mobile nav)
   carousel.js           About page photo carousel
   schedule.js           Cal.com booking calendar in the home page contact card
-  preloader.js          Home page preloader (loaded in <head> so it runs before the first paint)
+  preloader.js          Home page preloader: outlined "Mynk" filled by a hopping orange dot (loaded in <head> so it runs before the first paint)
+  vendor/gsap.min.js    GSAP 3.12.5 animation library, used only by preloader.js (downloaded only when the preloader plays)
 assets/
   images/home/, images/about/, images/square-foot-story/, images/mechservi/, images/buildmycv/, images/astrobharat-ai/
   icons/
