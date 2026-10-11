@@ -1,0 +1,38 @@
+/* Orange dot that follows the mouse on every page (js/cursor.js).
+   Only shown for devices with a real mouse; touch screens never see it. */
+
+.cursor {
+  display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  html.has-cursor .cursor {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-cursor);
+    width: var(--cursor-size);
+    height: var(--cursor-size);
+    margin: calc(var(--cursor-size) / -2) 0 0 calc(var(--cursor-size) / -2); /* centre the dot on the pointer */
+    border-radius: var(--radius-full);
+    background: var(--color-orange-900);
+    pointer-events: none; /* never blocks clicks */
+    opacity: 0;           /* revealed on the first mouse move */
+    transition: opacity 0.2s var(--ease-in-out);
+    will-change: transform;
+  }
+
+  html.has-cursor .cursor.is-visible {
+    opacity: 1;
+  }
+
+  /* Grows over links and buttons */
+  html.has-cursor .cursor.is-active {
+    scale: var(--cursor-active-scale);
+  }
+
+  html.has-cursor .cursor {
+    transition: opacity 0.2s var(--ease-in-out), scale 0.25s var(--ease-out-expo);
+  }
+}

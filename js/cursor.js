@@ -1,0 +1,58 @@
+// Orange dot that follows the mouse on every page.
+// It trails the pointer slightly (easing) so it feels smooth, and grows over links and buttons.
+// Touch devices and people who prefer reduced motion get the normal cursor only.
+
+(function () {
+  const hasMouse = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!hasMouse || reduceMotion) return;
+
+  const FOLLOW = 0.2; // 0–1: how much of the gap to the mouse is closed each frame (lower = lazier)
+
+  const dot = document.createElement("div");
+  dot.className = "cursor";
+  dot.setAttribute("aria-hidden", "true");
+  document.body.appendChild(dot);
+  document.documentElement.classList.add("has-cursor");
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let x = 0;
+  let y = 0;
+  let running = false;
+
+  function frame() {
+    x += (mouseX - x) * FOLLOW;
+    y += (mouseY - y) * FOLLOW;
+    dot.style.transform = `translate(${x}px, ${y}px)`;
+
+    // Stop the loop once the dot has caught up, so it uses no CPU while the mouse is still
+    if (Math.abs(mouseX - x) > 0.1 || Math.abs(mouseY - y) > 0.1) {
+      requestAnimationFrame(frame);
+    } else {
+      running = false;
+    }
+  }
+
+  window.addEventListener("mousemove", (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+    if (!dot.classList.contains("is-visible")) {
+      x = mouseX; // first move: appear right under the pointer
+      y = mouseY;
+      dot.classList.add("is-visible");
+    }
+    if (!running) {
+      running = true;
+      requestAnimationFrame(frame);
+    }
+  }, { passive: true });
+
+  // Grow over anything clickable
+  document.addEventListener("mouseover", (event) => {
+    dot.classList.toggle("is-active", !!event.target.closest("a, button, summary, [role='button']"));
+  });
+
+  // Hide when the mouse leaves the window
+  document.documentElement.addEventListener("mouseleave", () => dot.classList.remove("is-visible"));
+})();
