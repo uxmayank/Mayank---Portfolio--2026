@@ -31,14 +31,13 @@ css/
     typography.css      heading/body text styles
     layout.css          container, section spacing, grid helpers
   components/           one file per reusable piece: nav.css, footer.css, buttons.css, cards.css, chips.css, carousel.css, phone-mockup.css,
-                        browser-mockup.css (incl. browser-shot), cursor.css (orange cursor follower, all pages), media-frame.css (grid frame for video), preloader.css (home page),
+                        browser-mockup.css (incl. browser-shot), media-frame.css (grid frame for video), preloader.css (home page),
                         sfs-cover.css (animated Square Foot Story cover), mechservi-cover.css, buildmycv-cover.css, astro-cover.css
   pages/                one file per page: home.css, about.css, case-study.css (shared by all case studies), plus project-specific files only if needed
                         (square-foot-story.css)
 js/
   main.js               small shared scripts (e.g. mobile nav)
   carousel.js           About page photo carousel
-  cursor.js             Orange cursor follower on every page (mouse devices only)
   schedule.js           Cal.com booking calendar in the home page contact card
   preloader.js          Home page preloader: outlined "Mynk" filled by a hopping orange dot (loaded in <head> so it runs before the first paint)
   vendor/gsap.min.js    GSAP 3.12.5 animation library, used only by preloader.js (downloaded only when the preloader plays)

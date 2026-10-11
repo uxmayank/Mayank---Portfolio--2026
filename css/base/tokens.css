@@ -271,9 +271,4 @@
   --preloader-word-offset-y: 1.9vw;  /* 27.4px below centre */
   --preloader-label-edge: 64px;
   --preloader-label-bottom: 54px;
-
-  /* ---------- Cursor follower ---------- */
-  --cursor-size: 16px;
-  --cursor-active-scale: 2.5;  /* how much the dot grows over links and buttons */
-  --z-cursor: 1100;            /* above the preloader (1000) */
 }
