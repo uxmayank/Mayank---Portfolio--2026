@@ -15,7 +15,7 @@
 
 (function () {
   // ---- Settings you can tweak ----
-  const SPEED = 1.4;           // 1 = timing as designed here; higher = faster overall (about 4.5s in total at 1.4)
+  const SPEED = 1.4;          // 1 = timing as designed here; higher = faster overall (about 4.5s in total at 1.4)
   const DIP_PX = 10;           // how far a letter is pushed down when the dot lands (8–12 looks right)
   const EXIT_DELAY_S = 0.35;   // pause on the finished "Mynk." before the screen slides away
   const MAX_WAIT_MS = 5000;    // never keep visitors waiting longer than this for a slow page
@@ -140,14 +140,14 @@
     // The dot pops in at the top left
     tl.fromTo(dot, { opacity: 1, scale: 0 }, { scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 0.25);
 
-    // Hop from one point to another along an arc. "progress" eases from 0 to 1; the dot's height
-    // follows a parabola on top of the straight line between the two points.
+    // Hop from one point to another along an arc, like a bouncing ball. "progress" runs from 0 to 1 at a
+    // steady pace; the dot's height follows a parabola on top of the straight line between the two points.
     function hop(from, to, arcHeight, startAt, duration) {
       const progress = { p: 0 };
       tl.to(progress, {
         p: 1,
         duration,
-        ease: "power1.inOut",
+        ease: "none", // constant sideways speed: the ball never slows down, it just keeps bouncing
         onUpdate() {
           const p = progress.p;
           gsap.set(dot, {
@@ -158,12 +158,13 @@
       }, startAt);
     }
 
-    // For each letter: hop there, hit it (letter and dot dip together), fill it, spring back
+    // For each letter: hop there, hit it (the letter dips), fill it, spring back.
+    // The dot never pauses: the next hop starts at the exact moment the previous one lands.
     let cursor = 0.6;        // time the next hop starts (in timeline seconds)
     let from = START;
     const hopDurations = [0.6, 0.46, 0.4, 0.4];
-    const IMPACT_S = 0.09;   // how long the dip takes
-    const REST_S = 0.04;     // tiny pause at the bottom of the dip, so the hit reads clearly
+    const IMPACT_S = 0.09;   // how long the letter's dip takes
+    const REST_S = 0.04;     // tiny pause at the bottom of the letter's dip, so the hit reads clearly
 
     letters.forEach((letter, i) => {
       const dx = Math.abs(letter.landing.x - from.x);
@@ -172,19 +173,17 @@
 
       const hitAt = cursor + hopDurations[i];
 
-      // The hit: letter and dot are pushed down together
+      // The hit: the letter is pushed down while the dot bounces straight off it
       tl.to(letter.group, { y: dip, duration: IMPACT_S, ease: "power2.out" }, hitAt);
-      tl.to(dot, { y: letter.landing.y + dip, duration: IMPACT_S, ease: "power2.out" }, hitAt);
 
       // The black fill pours into the letter from the top, smoothly
       tl.to(letter.clip, { attr: { height: letter.fullHeight }, duration: 0.8, ease: "power2.out" }, hitAt);
 
-      // The dot leaves, and the letter springs back up with a little bounce
-      const leaveAt = hitAt + IMPACT_S + REST_S;
-      tl.to(letter.group, { y: 0, duration: 0.7, ease: "elastic.out(1, 0.45)" }, leaveAt);
+      // The letter springs back up with a little bounce
+      tl.to(letter.group, { y: 0, duration: 0.7, ease: "elastic.out(1, 0.45)" }, hitAt + IMPACT_S + REST_S);
 
-      from = { x: letter.landing.x, y: letter.landing.y + dip };
-      cursor = leaveAt;
+      from = letter.landing;
+      cursor = hitAt;   // the dot takes off again immediately
     });
 
     // Finale: the dot swings round the right side of the "k" down to the baseline,
@@ -195,7 +194,7 @@
     tl.to(finalProgress, {
       p: 1,
       duration: finalDuration,
-      ease: "power2.inOut",
+      ease: "power1.out",   // leaves the "k" at full speed, then settles gently into place
       onUpdate() {
         const p = finalProgress.p;
         const a = (1 - p) * (1 - p);
